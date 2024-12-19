@@ -13,7 +13,7 @@ import corp6 from '@/public/images/corporate/6.jpg'
 import corp7 from '@/public/images/corporate/7.jpg'
 import CustomFooter from "@/components/CustomFooter";
 
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/Futura-Medium.ttf' });
+const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 
 const images = [

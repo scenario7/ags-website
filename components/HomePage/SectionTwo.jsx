@@ -6,9 +6,9 @@ import img1 from '@/public/images/1.jpg'
 import img14 from '@/public/images/14.jpg'
 import img15 from '@/public/images/15.jpg'
 
-const futuraLight = localFont({ src: '../../public/fonts/Futura/Futura-Std-Light.ttf' });
-const expansiva = localFont({ src: '../../public/fonts/Expansiva/Expansiva-Bold.otf', weight: '700' });
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/Futura-Medium.ttf' });
+const futuraLight = localFont({ src: '../../public/fonts/Futura/futura-std-light.ttf' });
+const expansiva = localFont({ src: '../../public/fonts/Expansiva/expansiva-bold.otf', weight: '700' });
+const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 const SectionTwo = () => {

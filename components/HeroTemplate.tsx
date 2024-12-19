@@ -1,8 +1,8 @@
 import React from "react";
 import localFont from 'next/font/local';
 
-const futuraMedium = localFont({ src: '../public/fonts/Futura/Futura-Medium.ttf' });
-const expansiva = localFont({ src: '../public/fonts/Expansiva/Expansiva-Bold.otf', weight: '700' });
+const futuraMedium = localFont({ src: '../public/fonts/Futura/futura-medium.ttf' });
+const expansiva = localFont({ src: '../public/fonts/Expansiva/expansiva-bold.otf', weight: '700' });
 
 interface HeroTemplateProps {
   image: string; // The URL or path to the image

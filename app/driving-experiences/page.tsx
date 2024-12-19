@@ -12,7 +12,7 @@ import ActivityCard from '@/components/HomePage/ActivityCard'
 
 
 
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/Futura-Medium.ttf' });
+const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 
 import packageHeader1 from '@/public/images/5.jpg'; // Example header images
@@ -271,7 +271,7 @@ const page = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-20'>
                 {experiences.map((experience) => {
                     return(
-                        <ActivityCard image={experience.image.src} title={`${experience.name} Experience`} link={experience.link} key={experience.link}/>
+                        <ActivityCard image={experience.image.src} title={`${experience.name} Experience`} link={experience.experienceID} key={experience.link}/>
                     )
                 })}
             </div>
