@@ -9,7 +9,7 @@ import img19 from '@/public/images/19.jpg'
 import img20 from '@/public/images/20.jpg'
 import img21 from '@/public/images/21.jpg'
 
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
+const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 
 const page = () => {

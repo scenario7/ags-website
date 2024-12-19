@@ -12,7 +12,7 @@ import ActivityCard from '@/components/HomePage/ActivityCard'
 
 
 
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
+const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 
 import packageHeader1 from '@/public/images/5.jpg'; // Example header images

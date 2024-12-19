@@ -16,7 +16,7 @@ import race9 from '@/public/images/racing/9.jpg'
 import CustomFooter from '@/components/CustomFooter'
 
 
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
+const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 
 const images = [

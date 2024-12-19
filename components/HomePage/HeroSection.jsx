@@ -2,9 +2,9 @@ import localFont from 'next/font/local';
 import NavBar from '../NavBar';
 import img from '@/public/images/10.jpg'
 
-const futuraLight = localFont({ src: '../../public/fonts/Futura/futura-std-light.ttf' });
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
-const expansiva = localFont({ src: '../../public/fonts/Expansiva/expansiva-bold.otf', weight: '700' });
+const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light.ttf' });
+const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
+const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.otf', weight: '700' });
 
 const HeroSection = () => {
   return (

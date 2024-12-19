@@ -3,9 +3,9 @@ import { Inter } from "next/font/google"
 import partner1 from '@/public/images/partner-logo-1.png'
 
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
-const futuraLight = localFont({ src: '../../public/fonts/Futura/futura-std-light.ttf' });
-const futuraMedium = localFont({ src: '../../public/fonts/Futura/futura-medium.ttf' });
-const expansiva = localFont({ src: '../../public/fonts/Expansiva/expansiva-bold.otf', weight: '700' });
+const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light.ttf' });
+const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
+const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.otf', weight: '700' });
 
 const SectionSix = () => {
   return (
