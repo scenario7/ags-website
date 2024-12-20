@@ -24,28 +24,28 @@ const NavBar: React.FC<NavBarProps> = ({ homePage }) => {
       </Link>
       
       <div className="hidden md:flex gap-5 items-center">
-        <Link href="" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
+        <Link href="/driving-experiences" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Driving Experiences
         </Link>
-        <Link href="" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
+        <Link href="/events" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Corporate Events
         </Link>
-        <Link href="" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
+        <Link href="/academy" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Driver Academy
         </Link>
-        <Link href="" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
+        <Link href="/racing" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Racing
         </Link>
         <Link href="/events" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Events
         </Link>
-        <Link href="" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
+        <Link href="/facilities" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           About Us
         </Link>
-        <Link href="" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
+        <Link href="/shop" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Shop
         </Link>
-        <Link href="" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
+        <Link href="/contact" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Contact
         </Link>
         <SignedIn>

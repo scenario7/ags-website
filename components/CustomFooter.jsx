@@ -10,9 +10,9 @@ const expansiva = localFont({ src: '../public/fonts/expansiva/expansiva-bold.otf
 
 const CustomFooter = () => {
     return (
-      <div className="relative flex items-center justify-between px-10 py-16 text-[#0B1237]">
+      <div className=" flex items-center justify-between px-10 py-16 text-[#0B1237]">
         {/* Left Section */}
-        <div className="flex flex-col gap-2">
+        <div className="hidden md:flex flex-col gap-2">
           <p className={`text-left ${futuraMedium.className} tracking-tighter`}>
             Opening Hours:<br />8:30A.M. to 6:00P.M.<br />(Excluding Event Days)
           </p>
@@ -31,7 +31,7 @@ const CustomFooter = () => {
         </div>
   
         {/* Center Section */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-[#0B1237]">
+        <div className="flex flex-col items-center gap-3 text-[#0B1237]">
           <img src={logoBlue.src} alt="" className="h-20" />
           <p className={`${futuraMedium.className} tracking-tighter text-center`}>
             ZA Circuit du Var<br />83590 GONFARON - FRANCE
@@ -39,7 +39,7 @@ const CustomFooter = () => {
         </div>
   
         {/* Right Section */}
-        <div className="flex flex-col text-right tracking-tighter gap-2">
+        <div className="hidden md:flex flex-col text-right tracking-tighter gap-2">
           <p className={`${futuraMedium.className}`}>Follow Us</p>
           <div className="flex gap-2">
             <FaTiktok className='h-8 w-8 text-[#0B1237]'/>
