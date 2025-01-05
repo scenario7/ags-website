@@ -30,17 +30,17 @@ const SectionTwo = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mt-8 place-items-center">
         <ActivityCard
           image={img1.src}
-          link=""
+          link="/driving-experiences"
           title="Driving Experiences"
         />
         <ActivityCard
           image={img14.src}
-          link=""
+          link="/events"
           title="Events & Companies"
         />
         <ActivityCard
           image={img15.src}
-          link=""
+          link="/academy"
           title="Driver Academy"
         />
       </div>

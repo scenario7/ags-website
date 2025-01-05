@@ -40,7 +40,7 @@ const HeroSection = () => {
             <h2 className={`${expansiva.className} text-xs md:text-md text-white tracking-widest`}>
               SINGLE-SEATER DRIVING EXPERIENCES
             </h2>
-            <a href="#">
+            <a href="/driving-experiences">
               <button
                 className={`${futuraMedium.className} bg-gradient-to-tr from-[#1B2C99] to-[#0B1237] text-white px-3 py-2`}
               >
