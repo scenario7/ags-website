@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Experience {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  name     String    @unique // F1, F3.5, F4
+  packages Package[]
+}
+
+model Package {
+  id           String     @id @default(auto()) @map("_id") @db.ObjectId
+  name         String // Discover, Intermediary, Race
+  price        Float
+  experience   Experience @relation(fields: [experienceId], references: [id])
+  experienceId String     @db.ObjectId
+  addOns       AddOn[]
+  bookings     Booking[] // Reverse relation to Booking
+}
+
+model AddOn {
+  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  price         Float
+  package       Package        @relation(fields: [packageId], references: [id])
+  packageId     String         @db.ObjectId
+  bookingAddOns BookingAddOn[] // Relation to the join table
+}
+
+model Booking {
+  id            String         @id @default(auto()) @map("_id") @db.ObjectId
+  userId        String         @db.ObjectId
+  user          User           @relation("UserBookings", fields: [userId], references: [id]) // Explicit relation name
+  date          DateTime // Booking date
+  timeSlot      String // Time slot for the booking (e.g., "10:00 AM - 11:00 AM")
+  package       Package        @relation(fields: [packageId], references: [id])
+  packageId     String         @db.ObjectId
+  bookingAddOns BookingAddOn[] // Relation to the join table
+  createdAt     DateTime       @default(now())
+}
+
+model BookingAddOn {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  booking   Booking @relation(fields: [bookingId], references: [id])
+  bookingId String  @db.ObjectId
+  addOn     AddOn   @relation(fields: [addOnId], references: [id])
+  addOnId   String  @db.ObjectId
+}
+
+model User {
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId  String    @unique // Clerk's user ID
+  name     String
+  email    String
+  bookings Booking[] @relation("UserBookings") // Explicit relation name
+}

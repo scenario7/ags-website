@@ -3,7 +3,6 @@ import logo from '@/images/AGSWhiteLogo.png'; // White logo for the homepage
 import logoDark from '@/images/AGSBlueLogo.png'; // Dark logo for non-homepages
 import Link from "next/link";
 import { Inter } from "next/font/google";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
@@ -48,12 +47,6 @@ const NavBar: React.FC<NavBarProps> = ({ homePage }) => {
         <Link href="/contact" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Contact
         </Link>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
       </div>
     </div>
   );
