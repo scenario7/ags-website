@@ -258,7 +258,7 @@ const page = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-20 py-10'>
             {experience?.packages.map((pkg) => {
                 return(
-                    <ActivityCard title={pkg.name} image={pkg.headerImage.src} link={`/driving-experiences/${experience.experienceID}/${pkg.name}`} key={pkg.name}/>
+                    <ActivityCard title={pkg.name} image={pkg.headerImage.src} link={`/driving-experiences/${experience.experienceID}/package/${pkg.name}`} key={pkg.name}/>
                 )
             })}
         </div>

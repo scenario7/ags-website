@@ -271,7 +271,7 @@ const page = () => {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-20'>
                 {experiences.map((experience) => {
                     return(
-                        <ActivityCard image={experience.image.src} title={`${experience.name} Experience`} link={experience.experienceID} key={experience.link}/>
+                        <ActivityCard image={experience.image.src} title={`${experience.name} Experience`} link={`driving-experiences/${experience.experienceID}`} key={experience.link}/>
                     )
                 })}
             </div>

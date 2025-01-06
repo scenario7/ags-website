@@ -11,6 +11,7 @@ import img21 from '@/public/images/21.jpg'
 import { FaLocationPin } from 'react-icons/fa6'
 import { FaCar, FaPlane, FaTrain } from 'react-icons/fa'
 import CustomFooter from '@/components/CustomFooter'
+import map from '@/public/images/map.png'
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
@@ -109,11 +110,11 @@ const page = () => {
                         )
                     })}
                 </div>
-                <div className='bg-[#101010] min-w-full rounded-2xl'>
-                    <div className='py-10 flex flex-col items-center gap-3'>
+                <div className='bg-[#101010] min-w-full rounded-2xl' style={{ backgroundImage: `url(${map.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className='py-16 flex flex-col items-center gap-3 bg-black bg-opacity-50 rounded-2xl'>
                     <h2 className={`${futuraMedium.className} tracking-tighter text-4xl text-white text-center`}>An Exceptional Location</h2>
                     <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
-                    </div>
+                </div>
                 </div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm py-10`}>
                 Just a few kilometres from the French Riviera, AGS is located in the heart of the Maures mountains. Enjoy nature in all its forms... From vineyards to marinas and breathtaking views, the Var region offers you the best of the Mediterranean coast... Its central location means you can reach us in a number of ways.

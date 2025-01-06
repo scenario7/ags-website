@@ -21,7 +21,7 @@ const HeroTemplate: React.FC<HeroTemplateProps> = ({ image, title, subtitle }) =
   />
   
   {/* Blur Overlay for Small Screens and Gradient for Larger Screens */}
-  <div className="absolute inset-0 bg-[#f6f9ff] opacity-50 md:bg-gradient-to-b md:from-[#f6f9ff] md:to-transparent backdrop-blur-md md:backdrop-blur-none"></div>
+  <div className="absolute inset-0 bg-[#f6f9ff10] md:bg-gradient-to-r md:from-[#f6f9ff80] md:to-transparent backdrop-blur-md md:backdrop-blur-none"></div>
   
   {/* Text Content */}
   <div className="absolute inset-0 flex flex-col md:items-start items-center justify-center md:text-left text-center gap-5 px-5">

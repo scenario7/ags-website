@@ -35,9 +35,6 @@ const NavBar: React.FC<NavBarProps> = ({ homePage }) => {
         <Link href="/racing" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           Racing
         </Link>
-        <Link href="/events" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
-          Events
-        </Link>
         <Link href="/facilities" className={`text-${homePage ? "white" : "black"} ${inter.className} tracking-tighter`}>
           About Us
         </Link>
