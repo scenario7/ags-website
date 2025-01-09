@@ -29,7 +29,7 @@ const page = () => {
             <HeroTemplate image={img.src} title="Events & Companies" subtitle="OUR SOLUTIONS FOR PROFESSIONALS"/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Excellence on Track</h1>
-                <div className='bg-gradient-to-r from-transparent via-[#ED2939] to-transparent h-1 w-1/4'></div>
+                <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
                 Offer your staff or clients an unforgettable driving experience, perfectly tailored to their wishes and needs. We&apos;ll take care of the entire organisation of your corporate event, guaranteeing you a tailor-made experience.<br/>
                 Take advantage of our top-of-the-range facilities: changing rooms, showers, briefing rooms, professional simulator, reception room, visit to the workshop, as well as exclusive privatisation of the circuit with direct access to the track and even the possibility of arriving by helicopter.<br/>

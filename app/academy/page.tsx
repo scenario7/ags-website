@@ -53,7 +53,7 @@ const page = () => {
             <HeroTemplate image={img.src} title="Driver Academy" subtitle="LEVEL UP YOUR RACING TECHNIQUE"/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Tailor Made Training</h1>
-                <div className='bg-gradient-to-r from-transparent via-[#ED2939] to-transparent h-1 w-1/4'></div>
+                <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
                 We offer tailor-made driving courses, designed to help each young talent progress towards their competition goals. Whether it&apos;s a one-off session or a complete training programme, our expert coaches are with you every step of the way.<br/>
                 Our mission: to reveal and develop your potential, while equipping you with the advanced technical skills to excel on the track. With personalised follow-up and detailed analyses, we help you to become an accomplished driver, ready to take on the challenges of the biggest circuits.
@@ -96,7 +96,7 @@ const page = () => {
             </div>
             <div className='flex flex-col items-center gap-3 py-20'>
             <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Why Us</h1>
-            <div className='bg-gradient-to-r from-transparent via-[#ED2939] to-transparent h-1 w-1/4'></div>
+            <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
             <div className='py-10'>
             {whyUsPoints.map((point) => {
                 return(
