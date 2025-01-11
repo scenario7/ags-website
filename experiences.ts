@@ -4,7 +4,6 @@ import img4 from "@/public/images/4.jpg";
 import packageHeader1 from "@/public/images/5.jpg"; // Example header images
 import packageHeader2 from "@/public/images/6.jpg";
 import packageHeader3 from "@/public/images/7.jpg";
-import { add } from "date-fns";
 
 const addons = [
     {

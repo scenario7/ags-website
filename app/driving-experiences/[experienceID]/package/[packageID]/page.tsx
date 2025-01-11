@@ -12,7 +12,6 @@ import { useRouter } from "next/navigation";
 import { experiences } from "@/experiences";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
-import { Calendar } from "@/components/ui/calendar";
 
 const futuraMedium = localFont({
   src: "../../../../../public/fonts/futura/futura-medium.ttf",
@@ -25,7 +24,6 @@ const expansiva = localFont({
 const Page = () => {
   const { packageID, experienceID } = useParams();
   const { toast } = useToast();
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
   const [loading, setLoading] = useState(false);
 
   // Assuming `experiences` data is available (imported or declared above this component)
@@ -181,44 +179,6 @@ const Page = () => {
                   </label>
                 </div>
               ))}
-            </div>
-            <div>
-              <Calendar
-                mode="single"
-                selected={date}
-                onSelect={setDate}
-                className="rounded-md border"
-                disabled={(day) => {
-                  // Only allow these specific dates in 2025
-                  const allowedDates = [
-                    new Date(2025, 0, 18),
-                    new Date(2025, 1, 22),
-                    new Date(2025, 0, 18),
-                    new Date(2025, 1, 28),
-                    new Date(2025, 3, 18),
-                    new Date(2025, 3, 22),
-                    new Date(2025, 4, 26),
-                    new Date(2025, 5, 13),
-                    new Date(2025, 5, 14),
-                    new Date(2025, 8, 12),
-                    new Date(2025, 8, 26),
-                    new Date(2025, 9, 17),
-                    new Date(2025, 9, 24),
-                    new Date(2025, 9, 31),
-                  ];
-
-                  // Check if the day is one of the allowed dates
-                  const isAllowed = allowedDates.some(
-                    (allowedDate) =>
-                      day.getDate() === allowedDate.getDate() &&
-                      day.getMonth() === allowedDate.getMonth() &&
-                      day.getFullYear() === allowedDate.getFullYear()
-                  );
-
-                  // Disable the day if it's not in 2025 or not an allowed date
-                  return day.getFullYear() !== 2025 || !isAllowed;
-                }}
-              />
             </div>
           </div>
           <div className="bg-[#2341FF] flex items-center rounded-xl gap-3">
