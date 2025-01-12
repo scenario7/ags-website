@@ -1,7 +1,7 @@
 import localFont from 'next/font/local';
 import NavBar from '../NavBar';
 import img from '@/public/images/10.jpg'
-
+import CustomNavbar from '../CustomNavbar';
 const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light.ttf' });
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.otf', weight: '700' });
@@ -27,7 +27,7 @@ const HeroSection = () => {
       {/* Foreground Content */}
       <div className="absolute inset-0 flex flex-col">
         {/* Navbar at the top */}
-        <NavBar className="z-10" homePage={true}/>
+        <CustomNavbar isHomePage={true}/>
 
         {/* Centered Content */}
         <div className="flex flex-grow items-center justify-center">

@@ -1,6 +1,5 @@
 import React from 'react'
 import HeroTemplate from '@/components/HeroTemplate'
-import NavBar from '@/components/NavBar'
 import img from '@/public/images/16.jpg'
 import localFont from 'next/font/local'
 import { Inter } from 'next/font/google'
@@ -14,6 +13,7 @@ import race7 from '@/public/images/racing/7.jpg'
 import race8 from '@/public/images/racing/8.jpg'
 import race9 from '@/public/images/racing/9.jpg'
 import CustomFooter from '@/components/CustomFooter'
+import CustomNavbar from '@/components/CustomNavbar'
 
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
@@ -58,8 +58,8 @@ const infoCards = [
 const page = () => {
   return (
     <div className="flex flex-col">
-    <NavBar homePage={false}/>
-    <div className=" items-center justify-center px-10">
+    <CustomNavbar isHomePage={false}/>
+    <div className=" items-center justify-center px-3 md:px-10">
         <HeroTemplate image={img.src} title="Racing Team" subtitle=""/>
         <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Participate in a Race or Championship with AGS</h1>
@@ -77,7 +77,7 @@ const page = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10 tracking-tighter'>
             {infoCards.map((infoCard) => {
                 return(
-                    <div className={`bg-[#${infoCard.color}] py-10 px-10 flex flex-col gap-10`} key={infoCard.title}>
+                    <div className={`bg-[#${infoCard.color}] py-10 px-10 flex flex-col gap-10 rounded-2xl shadow-lg`} key={infoCard.title}>
                         <h3 className={`${futuraMedium.className} text-3xl text-center text-white`}>{infoCard.title}</h3>
                         <div>
                         {infoCard.points.map((point) => {

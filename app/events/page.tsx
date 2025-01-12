@@ -1,5 +1,4 @@
 import HeroTemplate from "@/components/HeroTemplate"
-import NavBar from "@/components/NavBar"
 import img from '@/public/images/14.jpg'
 import localFont from 'next/font/local';
 import { Inter } from "next/font/google";
@@ -12,6 +11,7 @@ import corp5 from '@/public/images/corporate/5.jpg'
 import corp6 from '@/public/images/corporate/6.jpg'
 import corp7 from '@/public/images/corporate/7.jpg'
 import CustomFooter from "@/components/CustomFooter";
+import CustomNavbar from "@/components/CustomNavbar";
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
@@ -24,8 +24,8 @@ const images = [
 const page = () => {
   return (
     <div className="flex flex-col">
-        <NavBar homePage={false}/>
-        <div className=" items-center justify-center px-10">
+        <CustomNavbar isHomePage={false}/>
+        <div className=" items-center justify-center px-3 md:px-10">
             <HeroTemplate image={img.src} title="Events & Companies" subtitle="OUR SOLUTIONS FOR PROFESSIONALS"/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Excellence on Track</h1>
@@ -50,7 +50,7 @@ const page = () => {
             className="rounded-lg"
             >
             {/* Optional: Content over the background */}
-            <div className={`bg-[#1B2C9930] rounded-lg px-5 py-5 flex justify-between ${futuraMedium.className} tracking-tight`}>
+            <div className={`bg-[#1B2C9930] rounded-lg px-5 py-5 flex md:flex-row flex-col items-center gap-10 justify-between ${futuraMedium.className} tracking-tight`}>
                 <a>
                     <button className={`bg-[#1B2C99] px-3 py-2 text-white rounded-lg`}>
                         Reservations by Email Only

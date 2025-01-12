@@ -1,11 +1,11 @@
 "use client";
 import HeroTemplate from "@/components/HeroTemplate";
-import NavBar from "@/components/NavBar";
 import React, { useState } from "react";
 import img26 from "@/public/images/26.jpg";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import CustomFooter from "@/components/CustomFooter";
+import CustomNavbar from "@/components/CustomNavbar";
 
 const futuraMedium = localFont({
   src: "../../public/fonts/futura/futura-medium.ttf",
@@ -52,14 +52,14 @@ const Page = () => {
 
   return (
     <div>
-      <NavBar homePage={false} />
-      <div className="px-10">
+        <CustomNavbar isHomePage={false}/>
+        <div className="px-3 md:px-10">
         <HeroTemplate
           image={img26.src}
           subtitle="GET IN TOUCH"
           title="Contact Us"
         />
-        <div className="flex items-center py-10 justify-evenly">
+        <div className="flex flex-col md:flex-row gap-10 items-center py-10 justify-evenly">
           <form
             onSubmit={handleSubmit}
             className="bg-[#0B1237] shadow-lg rounded-lg p-6 w-full max-w-lg"
@@ -188,7 +188,7 @@ const Page = () => {
             </div>
             <div className="flex flex-col gap-5">
             <h2 className={`${futuraMedium.className} text-3xl tracking-tighter`}>How to Find Us</h2>
-            <div><iframe width="100%" height="300" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=AGS%20Formule%201+(AGS%20Formule%201)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
+            <div><iframe className="rounded-xl shadow-lg" width="100%" height="300" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=AGS%20Formule%201+(AGS%20Formule%201)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
             </div>
           </div>
         </div>

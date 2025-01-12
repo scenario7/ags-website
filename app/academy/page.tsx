@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '@/components/NavBar'
 import HeroTemplate from '@/components/HeroTemplate'
 import img from '@/public/images/15.jpg'
 import localFont from 'next/font/local'
@@ -8,6 +7,7 @@ import img2 from '@/public/images/racing/1.jpg'
 import { FaCalendar, FaPersonMilitaryPointing } from 'react-icons/fa6'
 import { FaCar, FaFlagCheckered } from 'react-icons/fa'
 import CustomFooter from '@/components/CustomFooter'
+import CustomNavbar from '@/components/CustomNavbar'
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
@@ -48,8 +48,8 @@ const whyUsPoints = [
 const page = () => {
   return (
     <div className="flex flex-col">
-        <NavBar homePage={false}/>
-        <div className=" items-center justify-center px-10">
+        <CustomNavbar isHomePage={false}/>
+        <div className=" items-center justify-center px-3 md:px-10">
             <HeroTemplate image={img.src} title="Driver Academy" subtitle="LEVEL UP YOUR RACING TECHNIQUE"/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Tailor Made Training</h1>
@@ -97,18 +97,18 @@ const page = () => {
             <div className='flex flex-col items-center gap-3 py-20'>
             <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Why Us</h1>
             <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
-            <div className='py-10'>
+            <div className='py-10 grid grid-cols-1 gap-10'>
             {whyUsPoints.map((point) => {
                 return(
-                    <div className='flex md:flex-row flex-col md:text-left text-center items-center gap-10 justify-between' key={point.title}>
+                    <div className='flex md:flex-row flex-col md:text-left text-center items-center gap-10 justify-center' key={point.title}>
                         <div className='bg-[#0B1237] rounded-full p-5 text-white'>
                             {point.icon}
                         </div>
-                        <div className='flex flex-col items-start gap-3 w-1/2 md:text-left text-center'>
+                        <div className='flex flex-col items-center md:items-start md:w-1/2 gap-3  md:text-left text-center'>
                             <h2 className={`${futuraMedium.className} text-[#0B1237] text-xl`}>{point.title}</h2>
                             <p className={`${inter.className} md:text-md text-sm text-[#0B1237]`}>{point.description}</p>
                         </div>
-                        <img src={point.image.src} alt="" className='h-80 object-cover'/>
+                        <img src={point.image.src} alt="" className='h-80 object-cover rounded-2xl shadow-lg'/>
                     </div>
                 )
             })}

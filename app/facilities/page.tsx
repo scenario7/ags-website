@@ -1,4 +1,3 @@
-import NavBar from '@/components/NavBar'
 import React from 'react'
 import img from '@/public/images/16.jpg'
 import HeroTemplate from '@/components/HeroTemplate'
@@ -12,6 +11,7 @@ import { FaLocationPin } from 'react-icons/fa6'
 import { FaCar, FaPlane, FaTrain } from 'react-icons/fa'
 import CustomFooter from '@/components/CustomFooter'
 import map from '@/public/images/map.png'
+import CustomNavbar from '@/components/CustomNavbar'
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
@@ -75,8 +75,8 @@ const waysToReach = [
 const page = () => {
   return (
     <div className='flex flex-col'>
-        <NavBar homePage={false}/>
-        <div className='flex flex-col px-10'>
+        <CustomNavbar isHomePage={false}/>
+        <div className='flex flex-col px-3 md:px-10'>
             <HeroTemplate image={img.src} title='Facilities & Location' subtitle=''/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Trackside Excellence</h1>
@@ -103,7 +103,7 @@ const page = () => {
                         return(
                             <div className='flex flex-col gap-5 items-center' key={facility.name}>
                                 <ActivityCard image={facility.image.src} link='' title={facility.name}/>
-                                <div className={`${inter.className} px-10 tracking-tighter font-medium`}>
+                                <div className={`${inter.className} text-center md:text-left tracking-tighter font-medium`}>
                                     {facility.description}
                                 </div>
                             </div>

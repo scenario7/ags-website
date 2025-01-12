@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from '@/components/NavBar'
 import HeroTemplate from '@/components/HeroTemplate'
 import img1 from '@/public/images/1.jpg'
 import localFont from 'next/font/local'
@@ -7,6 +6,7 @@ import { Inter } from 'next/font/google'
 import CustomFooter from '@/components/CustomFooter'
 import ActivityCard from '@/components/HomePage/ActivityCard'
 import { experiences } from '@/experiences'
+import CustomNavbar from '@/components/CustomNavbar'
 
 
 
@@ -18,8 +18,8 @@ const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 const page = () => {
   return (
     <div className="flex flex-col">
-        <NavBar homePage={false}/>
-        <div className="flex flex-col items-center justify-center px-5 md:px-10">
+        <CustomNavbar isHomePage={false}/>
+        <div className="flex flex-col items-center justify-center px-3 md:px-10">
             <HeroTemplate image={img1.src} title="Driving Experiences" subtitle="BE A RACING DRIVER DURING THE DAY"/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Choose an Experience</h1>
