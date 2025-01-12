@@ -14,6 +14,7 @@ import {
   onAuthStateChanged,
   User,
 } from "firebase/auth";
+import localFont from "next/font/local";
 
 const menuItems = [
   { name: "Driving Experiences", link: "/driving-experiences" },
@@ -24,6 +25,8 @@ const menuItems = [
   { name: "Shop", link: "/shop" },
   { name: "Contact Us", link: "/contact" },
 ];
+const futuraMedium = localFont({ src: '../public/fonts/futura/futura-medium.ttf' });
+
 
 interface CustomNavbarProps {
   isHomePage: boolean;
@@ -114,7 +117,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
               role="button"
               className="btn btn-ghost btn-circle avatar"
             >
-              <div className="w-10 rounded-full bg-white p-3">
+              <div className="w-5 md:w-10 rounded-full bg-white p-3">
                 <img
                   src="https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png"
                   alt="User Avatar"
@@ -135,7 +138,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
         ) : (
           <button
             onClick={handleSignIn}
-            className="btn btn-md px-4 py-2 text-white rounded-md"
+            className={`btn btn-sm px-4 py-2 text-white rounded-md ${futuraMedium.className}`}
           >
             Sign In
           </button>
