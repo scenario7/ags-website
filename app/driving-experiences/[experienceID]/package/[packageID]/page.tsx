@@ -12,6 +12,7 @@ import { experiences } from "@/experiences";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import CustomNavbar from "@/components/CustomNavbar";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 import "cally";
 
 const futuraMedium = localFont({
@@ -67,39 +68,68 @@ const Page = () => {
   };
 
   const router = useRouter();
+    // const provider = new GoogleAuthProvider();
+
+    const handleSignIn = async () => {
+      try {
+        // const result = await signInWithPopup(auth, provider);
+      } catch (error) {
+        console.error("Sign-in error:", error);
+      }
+    };
 
   const purchase = async () => {
     setLoading(true);
     const app = initFirebase();
     const authUser = auth.currentUser; // Check the current user
+  
     if (!authUser) {
-      console.log("Not Authenticated");
-      toast({
-        title: "Authentication Required",
-        description: "You need to log in to proceed with the purchase.",
-        variant: "default",
-      });
-      return; // Exit the function if the user is not authenticated
+      handleSignIn();
+      setLoading(false); // Ensure loading state resets
+      return;
     }
-
+  
     const priceIds = [
       packageData?.priceID,
       ...selectedAddons.map((addon) => addon.priceID),
     ].filter((id): id is string => id !== undefined);
-
+  
+    const bookingDetails = {
+      experienceName: experience?.name,
+      packageName: packageData?.name,
+      addons: selectedAddons,
+      totalPrice,
+      date: '21 July', // Add the selected date
+      createdAt: new Date().toISOString(), // Optional: add a timestamp
+    };
+  
     try {
+      // Start the checkout process
       const checkoutUrl = await getCheckoutUrl(app, priceIds);
       router.push(checkoutUrl);
+  
+      // Once the checkout is successful, add booking details to Firestore
+      const db = getFirestore(app);
+      const bookingsRef = collection(db, "customers", authUser.uid, "bookings");
+      await addDoc(bookingsRef, bookingDetails);
+  
+      toast({
+        title: "Booking Successful",
+        description: "Your booking has been confirmed and saved.",
+        variant: "default",
+      });
     } catch (error) {
-      console.error("Error initiating checkout:", error);
+      console.error("Error completing purchase:", error);
       toast({
         title: "Error",
-        description: "Failed to initiate the checkout. Please try again later.",
+        description: "Failed to complete the booking. Please try again later.",
+        variant: "destructive",
       });
     } finally {
-      setLoading(false);
+      setLoading(false); // Reset loading state
     }
   };
+  
 
   const title =
     experience && packageData
@@ -187,7 +217,7 @@ const Page = () => {
             </div>
             <div>
               <select defaultValue="Choose a Date" className="select select-ghost">
-                <option disabled={true}>Pick a color</option>
+                <option disabled={true}>Choose a Date</option>
                 <option>18th January, 2025</option>
                 <option>31st January, 2025</option>
                 <option>22nd February, 2025</option>

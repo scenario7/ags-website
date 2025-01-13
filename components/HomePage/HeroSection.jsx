@@ -10,15 +10,15 @@ const HeroSection = () => {
   return (
     <div className="relative w-full h-screen">
       {/* Background Video */}
-      {/* <video
-        src={require('@/public/video1.mp4')}
+      <video
+        src={require('@/public/videos/video1.mp4')}
         autoPlay
         loop
         muted
         className="absolute top-0 left-0 w-full h-full object-cover"
-      /> */}
+      />
 
-      <img src={img.src} alt="" className="absolute top-0 left-0 w-full h-full object-cover"/>
+      {/* <img src={img.src} alt="" className="absolute top-0 left-0 w-full h-full object-cover"/> */}
 
 
       {/* Overlay */}

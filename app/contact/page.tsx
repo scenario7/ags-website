@@ -87,7 +87,7 @@ const Page = () => {
                 value={formData.first_name}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 p-3 block w-full rounded-full border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 p-3 block w-full rounded-full bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="First Name"
               />
               <input
@@ -97,7 +97,7 @@ const Page = () => {
                 value={formData.last_name}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Last Name"
               />
             </div>
@@ -109,7 +109,7 @@ const Page = () => {
                 value={formData.town}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 p-3 block w-full rounded-full border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 p-3 block w-full rounded-full bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Town"
               />
               <input
@@ -119,7 +119,7 @@ const Page = () => {
                 value={formData.country}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Country"
               />
             </div>
@@ -131,7 +131,7 @@ const Page = () => {
                 value={formData.email}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Your email"
               />
             </div>
@@ -143,7 +143,7 @@ const Page = () => {
                 value={formData.phone}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Phone Number"
               />
             </div>
@@ -155,7 +155,7 @@ const Page = () => {
                 value={formData.request}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Request"
               />
             </div>
@@ -167,7 +167,7 @@ const Page = () => {
                 onChange={(e) => handleChange(e)}
                 required
                 rows={4}
-                className="mt-1 block w-full rounded-xl p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-xl bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Your message"
               ></textarea>
             </div>
