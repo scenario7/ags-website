@@ -11,7 +11,7 @@ const HeroSection = () => {
     <div className="relative w-full h-screen">
       {/* Background Video */}
       <video
-        src={require('@/public/videos/video1.mp4')}
+        src='https://res.cloudinary.com/dp79lqyv8/video/upload/v1736838771/pafux1hyt4wtrwamtn0j.mp4'
         autoPlay
         loop
         muted
