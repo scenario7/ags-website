@@ -102,7 +102,7 @@ const page = () => {
                     {facilities.map((facility) => {
                         return(
                             <div className='flex flex-col gap-5 items-center' key={facility.name}>
-                                <ActivityCard image={facility.image.src} link='' title={facility.name}/>
+                                <ActivityCard dontShowArrows image={facility.image.src} link='' title={facility.name}/>
                                 <div className={`${inter.className} text-center md:text-left tracking-tighter font-medium`}>
                                     {facility.description}
                                 </div>
