@@ -154,26 +154,16 @@ const Page = () => {
           <div className="bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/2"></div>
           <div className="flex flex-col md:flex-row justify-evenly items-center gap-20 w-full py-10">
             <div className="grid grid-cols-2 md:grid-cols-1 gap-3 justify-between">
-              <img
-                src={packageData?.headerImage.src}
-                alt=""
-                className="h-36 w-96 object-cover"
-              />
-              <img
-                src={packageData?.headerImage.src}
-                alt=""
-                className="h-36 w-96 object-cover"
-              />
-              <img
-                src={packageData?.headerImage.src}
-                alt=""
-                className="h-36 w-96 object-cover"
-              />
-              <img
-                src={packageData?.headerImage.src}
-                alt=""
-                className="h-36 w-96 object-cover"
-              />
+              {experience?.checkoutImages.map((image) => {
+                return(
+                  <img
+                  key={image.src}
+                  src={image.src}
+                  alt=""
+                  className="h-36 w-96 object-cover"
+                />
+                )
+              })}
             </div>
             <div className="flex flex-col">
               <h2
@@ -350,6 +340,31 @@ const Page = () => {
               <li>Test day insurance</li>
             </ul>
           </div>
+        </div>
+        <div className="flex flex-col items-center w-full gap-3">
+        <h1
+          className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}
+        >
+          Description
+        </h1>
+        <div className="bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4"></div>
+        <p className={`${futuraMedium.className} pb-10`}>
+            {experience?.description.text}
+        </p>
+        <ul className={`${futuraMedium.className} text-center`}>
+          {experience?.description.points.map((point) => {
+            return(
+              <div className="flex flex-col" key={point.heading}>
+                <h2 className="text-xl">
+                {point.heading}
+                </h2>
+                <h3 className="text-md text-gray-500 pb-5">
+                  {point.subtitle}
+                </h3>
+              </div>
+            )
+          })}
+        </ul>
         </div>
       </div>
       <Toaster />

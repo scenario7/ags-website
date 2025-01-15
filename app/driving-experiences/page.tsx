@@ -29,10 +29,13 @@ const page = () => {
                 From Formula 4 to Formula 1, come and discover how to drive a single-seater in complete safety. Briefings, provision of equipment, professional coaches... AGS takes care of everything!
                 </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-20'>
+            <div className='flex gap-20'>
                 {experiences.map((experience) => {
                     return(
-                        <ActivityCard image={experience.image.src} title={`${experience.name} Experience`} link={`driving-experiences/${experience.experienceID}`} key={experience.link}/>
+                      <div className='flex flex-col'>
+                        <div className='w-80 h-1 bg-transparent'></div>
+                        <ActivityCard image={experience.image.src} title={`${experience.name} Experience`} link={`driving-experiences/${experience.experienceID}`} key={experience.experienceID}/>
+                      </div>
                     )
                 })}
             </div>
