@@ -63,7 +63,7 @@ const page = () => {
         <p className="text-center">
           He also wants to revive the history of AGS: we are rebuilding the
           historic vehicles that raced in the World Championship. Tarquini&apos;s
-          JH25 and 24 have already taken to the track for the first time!
+          JH25 and 24 have already taken to the track for the first time
         </p>
 
         <p className="text-center">Do you want to be part of our history?</p>
