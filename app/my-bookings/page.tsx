@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import { collection, getDocs, query } from "firebase/firestore";
 import { auth, db } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { User } from "firebase/auth";
 
 const futuraMedium = localFont({ src: "../../public/fonts/futura/futura-medium.ttf" });
 
@@ -36,9 +37,9 @@ interface Item {
 const Page = () => {
   const [payments, setPayments] = useState<Payment[]>([]);
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
 
-  const fetchUserPayments = async (user: any): Promise<Payment[]> => {
+  const fetchUserPayments = async (user: User): Promise<Payment[]> => {
     try {
       const userPaymentsQuery = query(
         collection(db, `customers/${user.uid}/payments`)

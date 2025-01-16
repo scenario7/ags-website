@@ -32,7 +32,7 @@ const page = () => {
             <div className='flex gap-20'>
                 {experiences.map((experience) => {
                     return(
-                      <div className='flex flex-col'>
+                      <div className='flex flex-col' key={experience.experienceID}>
                         <div className='w-80 h-1 bg-transparent'></div>
                         <ActivityCard image={experience.image.src} title={`${experience.name} Experience`} link={`driving-experiences/${experience.experienceID}`} key={experience.experienceID}/>
                       </div>
