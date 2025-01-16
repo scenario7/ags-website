@@ -19,6 +19,7 @@ import localFont from "next/font/local";
 const menuItems = [
   { name: "Driving Experiences", link: "/driving-experiences" },
   { name: "Events", link: "/events" },
+  { name: "Our History", link: "/history" },
   { name: "Corporate Events", link: "/corporate-events" },
   { name: "Racing", link: "/racing" },
   { name: "Driver Academy", link: "/academy" },

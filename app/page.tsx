@@ -5,6 +5,7 @@ import SectionThree from '@/components/HomePage/SectionThree'
 import SectionFour from '@/components/HomePage/SectionFour'
 import SectionSix from '@/components/HomePage/SectionSix'
 import CustomFooter from '@/components/CustomFooter'
+import SectionSeven from '@/components/HomePage/SectionSeven'
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <SectionTwo/>
       <SectionThree/>
       <SectionFour/>
+      <SectionSeven/>
       <SectionSix/>
       <CustomFooter/>
     </div>

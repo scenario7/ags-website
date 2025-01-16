@@ -104,19 +104,23 @@ const Page = () => {
           payments.map((payment) => (
             <div
               key={payment.id}
-              className="w-full flex flex-col gap-3 items-center p-5 border rounded-2xl bg-[#0B1237]"
+              className="w-full flex flex-col md:flex-row shadow-lg justify-between items-center md:items-start p-5 border rounded-2xl bg-[#ffffff]"
             >
-            <img src={`https://barcodeapi.org/api/${payment.id}`} alt="" className="rounded-2xl"/>
-              <p className={`${futuraMedium.className} text-white font-semibold text-3xl`}>€{payment.amount/100}</p>
-              <ul className="text-white">
-                <p className="text-center">Add Ons</p>
-                {payment.items.map((item) => {
+                <div className="flex  gap-10">
+            <img src={`https://barcodeapi.org/api/${payment.id}`} alt="" className="rounded-lg w-36 h-36"/>
+            <ul className="text-white">
+                <li className={`${futuraMedium.className} text-black text-center text-2xl pb-3 md:text-left`} key={payment.items[0].description}>{payment.items[0].description}</li>
+                {payment.items.slice(1).map((item) => {
                     return(
-                        <li className={`${futuraMedium.className} text-center`} key={item.description}>{item.description}</li>
+                        <li className={`${futuraMedium.className} text-stone-500 text-center md:text-left`} key={item.description}>{item.description}</li>
                     )
                 })}
               </ul>
+              </div>
+            <div className="flex items-center gap-10">
+              <p className={`${futuraMedium.className} text-white font-semibold text-3xl`}>€{payment.amount/100}</p>
               <a href={payment.charges.data[0].receipt_url} className="text-center text-white px-3 py-1 rounded-full bg-blue-600">Receipt</a>
+              </div>
             </div>
           ))
         )}

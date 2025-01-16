@@ -29,7 +29,7 @@ const page = () => {
                 From Formula 4 to Formula 1, come and discover how to drive a single-seater in complete safety. Briefings, provision of equipment, professional coaches... AGS takes care of everything!
                 </p>
             </div>
-            <div className='flex gap-20'>
+            <div className='flex flex-col md:flex-row gap-20'>
                 {experiences.map((experience) => {
                     return(
                       <div className='flex flex-col' key={experience.experienceID}>
