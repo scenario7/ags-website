@@ -14,7 +14,7 @@ const HeroSection = () => {
         src='https://res.cloudinary.com/dp79lqyv8/video/upload/v1736838771/pafux1hyt4wtrwamtn0j.mp4'
         autoPlay
         loop
-        
+        muted
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 

@@ -131,6 +131,11 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
               className="menu menu-sm dropdown-content gap-3 bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
+                <a href="/my-bookings" className="text-black">
+                  My Bookings
+                </a>
+              </li>
+              <li>
                 <button onClick={handleSignOut} className="text-red-600">
                   Logout
                 </button>

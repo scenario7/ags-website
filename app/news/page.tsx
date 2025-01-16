@@ -40,7 +40,7 @@ async function getNewsPosts(): Promise<Article[]> {
           date,
           tag,
           slug,
-          image { asset { url } },
+          image { asset -> { url } },
           _createdAt
         } | order(_createdAt desc)`
       );
@@ -103,13 +103,16 @@ const Page = async () => {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-          {articles.map((article: Article) => (
+          {articles.slice(1).map((article: Article) => (
             <div className="flex md:flex-row flex-col items-center gap-5" key={article.slug}>
               <img src={article.image} alt={article.title} className="h-72 w-72 object-cover" />
               <div className="flex flex-col items-start gap-5 px-3">
                 <h2 className={`${futuraMedium.className} text-2xl tracking-tighter text-center md:text-left`}>
                   {article.title}
                 </h2>
+                <h1 className={`${inter.className} text-lg tracking-tighter text-center md:text-left text-gray-400`}>
+                    {article.date}
+                </h1>
                 <p className={`${inter.className} tracking-tighter text-center md:text-left`}>
                   {article.description}
                 </p>
