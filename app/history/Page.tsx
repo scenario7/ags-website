@@ -37,13 +37,13 @@ const page = () => {
           AGS Formule 1 (Automobiles Gonfaronnaises Sportives) took part in the
           Formula 1 World Championships from 86 to 92, thanks to its founder
           Henri Julien. After these participations, he developed the concept of
-          Formula 1 training courses. This was AGS's main activity for many
+          Formula 1 training courses. This was AGS&apos;s main activity for many
           years.
         </p>
 
         <p className="text-center">
           The unique facilities of this former racing team based on the Côte
-          d'Azur, and private access to the Var circuit, make it an exceptional
+          d&apos;Azur, and private access to the Var circuit, make it an exceptional
           setting for any motor sport activity.
         </p>
 
@@ -62,7 +62,7 @@ const page = () => {
 
         <p className="text-center">
           He also wants to revive the history of AGS: we are rebuilding the
-          historic vehicles that raced in the World Championship. Tarquini's
+          historic vehicles that raced in the World Championship. Tarquini&apos;s
           JH25 and 24 have already taken to the track for the first time!
         </p>
 

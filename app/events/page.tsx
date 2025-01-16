@@ -74,7 +74,7 @@ const page = () => {
             </li>
             <li>Possibility of a logo on the car</li>
             <li>VIP parking space</li>
-            <li>A driver's pass</li>
+            <li>A driver&apos;s pass</li>
             <li>Soft drinks and food during the 3 days on the circuit</li>
             <li>
               Two accompanying persons throughout the weekend, exclusive access
@@ -94,7 +94,7 @@ const page = () => {
                 The only Formula 1 race in France
               </h2>
               <p className={`${inter.className} text-center`}>
-              From 25 to 27 April 2025, this exceptional event will celebrate the 20th anniversary of the Renault team's triumph as constructors' world champion alongside Fernando Alonso. For this special occasion, the legendary 2005 Formula 1 R25 will make its grand return to the track to the sound of the legendary naturally-aspirated V10 engine.
+              From 25 to 27 April 2025, this exceptional event will celebrate the 20th anniversary of the Renault team&apos;s triumph as constructors&apos; world champion alongside Fernando Alonso. For this special occasion, the legendary 2005 Formula 1 R25 will make its grand return to the track to the sound of the legendary naturally-aspirated V10 engine.
               </p>
               <h2 className={`${inter.className} font-semibold text-3xl tracking-tighter bg-blue-400 p-2 text-white rounded-full px-4`}>
                 80K Spectators in 2024

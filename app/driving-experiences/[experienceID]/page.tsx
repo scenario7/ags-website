@@ -31,7 +31,7 @@ const Page = () => {
                     <div className={`${futuraMedium.className} bg-gradient-to-t from-[#2341FF] to-[#2341FF80] -mt-4 rounded-xl pt-8 pb-4 text-white text-sm`}>
                       {pkg.laps.map((type) => {
                         return(
-                          <div>
+                          <div key={type.quantity}>
                             {type.car} : {type.quantity}
                           </div>
                         )
