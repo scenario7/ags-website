@@ -12,7 +12,6 @@ import { experiences } from "@/experiences";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import CustomNavbar from "@/components/CustomNavbar";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
 import "cally";
 
 const futuraMedium = localFont({
@@ -95,14 +94,14 @@ const Page = () => {
       ...selectedAddons.map((addon) => addon.priceID),
     ].filter((id): id is string => id !== undefined);
 
-    const bookingDetails = {
-      experienceName: experience?.name,
-      packageName: packageData?.name,
-      addons: selectedAddons,
-      totalPrice,
-      date: "21 July", // Add the selected date
-      createdAt: new Date().toISOString(), // Optional: add a timestamp
-    };
+    // const bookingDetails = {
+    //   experienceName: experience?.name,
+    //   packageName: packageData?.name,
+    //   addons: selectedAddons,
+    //   totalPrice,
+    //   date: "21 July", // Add the selected date
+    //   createdAt: new Date().toISOString(), // Optional: add a timestamp
+    // };
 
     try {
       // Start the checkout process
