@@ -1,9 +1,16 @@
 import img2 from "@/public/images/2.jpg";
 import img3 from "@/public/images/3.jpg";
 import img4 from "@/public/images/4.jpg";
-import packageHeader1 from "@/public/images/5.jpg"; // Example header images
-import packageHeader2 from "@/public/images/6.jpg";
-import packageHeader3 from "@/public/images/7.jpg";
+import f4packageHeader1 from "@/public/images/5.jpg"; // Example header images
+import f4packageHeader2 from "@/public/images/6.jpg";
+import f4packageHeader3 from "@/public/images/7.jpg";
+import f35packageHeader1 from "@/public/images/8.jpg";
+import f35packageHeader2 from "@/public/images/9.jpg";
+import f35packageHeader3 from "@/public/images/10.jpg";
+import f1packageHeader1 from "@/public/images/11.jpg";
+import f1packageHeader2 from "@/public/images/12.jpg";
+import f1packageHeader3 from "@/public/images/13.jpg";
+
 import f1Checkout1 from '@/public/images/checkout/f1/1.jpg'
 import f1Checkout2 from '@/public/images/checkout/f1/2.jpg'
 import f1Checkout3 from '@/public/images/checkout/f1/3.jpg'
@@ -96,7 +103,7 @@ export const experiences = [
     packages: [
       {
         name: "Discover",
-        headerImage: packageHeader1,
+        headerImage: f4packageHeader1,
         price: 1650,
         priceID: "price_1QfHzGG0uhOoAJjDUPJ2Xhxb",
         laps: [
@@ -107,7 +114,7 @@ export const experiences = [
       },
       {
         name: "Intermediary",
-        headerImage: packageHeader2,
+        headerImage: f4packageHeader2,
         price: 2200,
         priceID: "price_1QfHzZG0uhOoAJjDZtqWlvn2",
         laps: [
@@ -118,7 +125,7 @@ export const experiences = [
       },
       {
         name: "Race",
-        headerImage: packageHeader3,
+        headerImage: f4packageHeader3,
         price: 2500,
         priceID: "price_1QfHzpG0uhOoAJjDhl9FRm9Y",
         laps: [
@@ -134,7 +141,7 @@ export const experiences = [
     link: "/driving-experiences/f35",
     experienceID: "f35",
     checkoutImages : [f35Checkout1, f35Checkout2, f35Checkout3, f35Checkout4],
-    image: img3,
+    image: img4,
     description: {
       text: "Climb the ranks of single-seaters by discovering Formula 3.5. A school of Formula 1, these single-seaters offer impressive sensations!",
       points: [
@@ -173,26 +180,26 @@ export const experiences = [
     packages: [
       {
         name: "Discover",
-        headerImage: packageHeader1,
+        headerImage: f1packageHeader1,
         price: 3500,
         priceID: "price_1QfI08G0uhOoAJjDsXNV8yDX",
-        laps: [{ quantity: "3x8", car: "F3.5" }],
+        laps: [{ quantity: "3x8", car: "F4" },{ quantity: "1x6", car: "F3.5" }],
         addons: addons,
       },
       {
         name: "Intermediary",
-        headerImage: packageHeader2,
+        headerImage: f1packageHeader2,
         price: 4500,
         priceID: "price_1QfI0OG0uhOoAJjDMnqK1tTN",
-        laps: [{ quantity: "4x8", car: "F3.5" }],
+        laps: [{ quantity: "3x8", car: "F4" },{ quantity: "2x6", car: "F3.5" }],
         addons: addons,
       },
       {
         name: "Race",
-        headerImage: packageHeader3,
+        headerImage: f1packageHeader3,
         price: 5500,
         priceID: "price_1QfI0eG0uhOoAJjDHBaTWSS4",
-        laps: [{ quantity: "6x8", car: "F3.5" }],
+        laps: [{ quantity: "3x8", car: "F4" },{ quantity: "3x6", car: "F3.5" }],
         addons: addons,
       },
     ],
@@ -202,7 +209,7 @@ export const experiences = [
     link: "/driving-experiences/f1",
     experienceID: "f1",
     checkoutImages : [f1Checkout1, f1Checkout2, f1Checkout3, f1Checkout4],
-    image: img4,
+    image: img3,
     description: {
       text: "The ultimate F1 experience, driving one of the most iconic cars on the planet at incredible speeds.",
       points: [
@@ -232,26 +239,26 @@ export const experiences = [
     packages: [
       {
         name: "Discover",
-        headerImage: packageHeader1,
+        headerImage: f35packageHeader1,
         price: 4600,
         priceID: "price_1QfI1IG0uhOoAJjDJUPpga4V",
-        laps: [{ quantity: "2x8", car: "F1" }],
+        laps: [{ quantity: "3x8", car: "F4" },{ quantity: "1x6", car: "F1" }],
         addons: addons,
       },
       {
         name: "Intermediary",
-        headerImage: packageHeader2,
+        headerImage: f35packageHeader2,
         price: 5200,
         priceID: "price_1QfI1jG0uhOoAJjDAGkTtrE0",
-        laps: [{ quantity: "4x8", car: "F1" }],
+        laps: [{ quantity: "3x8", car: "F4" },{ quantity: "2x6", car: "F1" }],
         addons: addons,
       },
       {
         name: "Race",
-        headerImage: packageHeader3,
+        headerImage: f35packageHeader3,
         price: 7200,
         priceID: "price_1QfI1zG0uhOoAJjD6Hqvsoss",
-        laps: [{ quantity: "6x8", car: "F1" }],
+        laps: [{ quantity: "3x8", car: "F4" },{ quantity: "3x6", car: "F1" }],
         addons: addons,
       },
     ],

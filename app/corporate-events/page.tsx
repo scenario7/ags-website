@@ -51,7 +51,7 @@ const page = () => {
             >
             {/* Optional: Content over the background */}
             <div className={`bg-[#1B2C9930] rounded-lg px-5 py-5 flex md:flex-row flex-col items-center gap-10 justify-between ${futuraMedium.className} tracking-tight`}>
-                <a>
+                <a href="mailto:stage@agsracing.com">
                     <button className={`bg-[#1B2C99] px-3 py-2 text-white rounded-lg`}>
                         Reservations by Email Only
                     </button>

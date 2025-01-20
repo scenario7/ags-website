@@ -3,7 +3,10 @@ import HeroTemplate from '@/components/HeroTemplate'
 import img from '@/public/images/15.jpg'
 import localFont from 'next/font/local'
 import { Inter } from 'next/font/google'
-import img2 from '@/public/images/racing/1.jpg'
+import img1 from '@/public/images/academy/1.jpg'
+import img2 from '@/public/images/academy/2.jpg'
+import img3 from '@/public/images/academy/3.jpg'
+import img4 from '@/public/images/academy/4.jpg'
 import { FaCalendar, FaPersonMilitaryPointing } from 'react-icons/fa6'
 import { FaCar, FaFlagCheckered } from 'react-icons/fa'
 import CustomFooter from '@/components/CustomFooter'
@@ -17,7 +20,7 @@ const whyUsPoints = [
     {
         title : 'Tailor Made Training',
         description : 'Our advanced training courses offer personalised sessions and tailor-made coaching workshops, adapted to the specific needs of each rider, such as braking. These targeted courses enable precise and effective technical development.',
-        image : img2,
+        image : img1,
         icon : (<FaFlagCheckered className='w-8 h-8'/>)
 
     },
@@ -31,14 +34,14 @@ const whyUsPoints = [
     {
         title : 'Discovering Talent',
         description : 'We make it a point of honour to identify and train new talent. Our courses are designed to reveal the potential of young drivers and prepare them for the challenges of professional racing.',
-        image : img2,
+        image : img3,
         icon : (<FaCar className='w-8 h-8'/>)
 
     },
     {
         title : 'Exclusive Experiences',
         description : 'We offer the possibility of privatising a days training or booking one on other circuits such as the Circuit Paul Ricard, the Circuit Club de Nevers Magny-Cours.',
-        image : img2,
+        image : img4,
         icon : (<FaCalendar className='w-8 h-8'/>)
 
     },
@@ -81,7 +84,7 @@ const page = () => {
                 </h2>
             </div>
             <div className={`bg-[#1B2C9930] rounded-lg px-5 py-5 flex items-center md:items-end gap-5 flex-col ${futuraMedium.className} tracking-tight`}>
-                <a>
+            <a href="mailto:stage@agsracing.com">
                     <button className={`bg-[#1B2C99] px-3 py-2 text-white rounded-lg`}>
                         Reservations by Email Only
                     </button>

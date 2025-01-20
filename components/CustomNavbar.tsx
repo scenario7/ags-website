@@ -17,12 +17,13 @@ import {
 import localFont from "next/font/local";
 
 const menuItems = [
+  { name: "Home", link: "/" },
   { name: "Driving Experiences", link: "/driving-experiences" },
+  { name: "Corporate Events", link: "/corporate-events" },
+  { name: "Driver Academy", link: "/academy" },
   { name: "Events", link: "/events" },
   { name: "Our History", link: "/history" },
-  { name: "Corporate Events", link: "/corporate-events" },
   { name: "Racing", link: "/racing" },
-  { name: "Driver Academy", link: "/academy" },
   { name: "About Us", link: "/facilities" },
   { name: "News", link: "/news" },
   { name: "Shop", link: "/shop" },

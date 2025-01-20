@@ -27,6 +27,7 @@ const Page = () => {
   const { packageID, experienceID } = useParams();
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   // Assuming `experiences` data is available (imported or declared above this component)
   const experience = experiences.find(
@@ -68,51 +69,46 @@ const Page = () => {
   };
 
   const router = useRouter();
-    // const provider = new GoogleAuthProvider();
+  // const provider = new GoogleAuthProvider();
 
-    const handleSignIn = async () => {
-      try {
-        // const result = await signInWithPopup(auth, provider);
-      } catch (error) {
-        console.error("Sign-in error:", error);
-      }
-    };
+  const handleSignIn = async () => {
+    try {
+      // const result = await signInWithPopup(auth, provider);
+    } catch (error) {
+      console.error("Sign-in error:", error);
+    }
+  };
 
   const purchase = async () => {
     setLoading(true);
     const app = initFirebase();
     const authUser = auth.currentUser; // Check the current user
-  
+
     if (!authUser) {
       handleSignIn();
       setLoading(false); // Ensure loading state resets
       return;
     }
-  
+
     const priceIds = [
       packageData?.priceID,
       ...selectedAddons.map((addon) => addon.priceID),
     ].filter((id): id is string => id !== undefined);
-  
+
     const bookingDetails = {
       experienceName: experience?.name,
       packageName: packageData?.name,
       addons: selectedAddons,
       totalPrice,
-      date: '21 July', // Add the selected date
+      date: "21 July", // Add the selected date
       createdAt: new Date().toISOString(), // Optional: add a timestamp
     };
-  
+
     try {
       // Start the checkout process
       const checkoutUrl = await getCheckoutUrl(app, priceIds);
       router.push(checkoutUrl);
-  
-      // Once the checkout is successful, add booking details to Firestore
-      const db = getFirestore(app);
-      const bookingsRef = collection(db, "customers", authUser.uid, "bookings");
-      await addDoc(bookingsRef, bookingDetails);
-  
+
       toast({
         title: "Booking Successful",
         description: "Your booking has been confirmed and saved.",
@@ -129,7 +125,6 @@ const Page = () => {
       setLoading(false); // Reset loading state
     }
   };
-  
 
   const title =
     experience && packageData
@@ -155,14 +150,14 @@ const Page = () => {
           <div className="flex flex-col md:flex-row justify-evenly items-center gap-20 w-full py-10">
             <div className="grid grid-cols-2 md:grid-cols-1 gap-3 justify-between">
               {experience?.checkoutImages.map((image) => {
-                return(
+                return (
                   <img
-                  key={image.src}
-                  src={image.src}
-                  alt=""
-                  className="h-36 w-96 object-cover"
-                />
-                )
+                    key={image.src}
+                    src={image.src}
+                    alt=""
+                    className="h-36 w-96 object-cover"
+                  />
+                );
               })}
             </div>
             <div className="flex flex-col">
@@ -206,7 +201,10 @@ const Page = () => {
               ))}
             </div>
             <div>
-              <select defaultValue="Choose a Date" className="select select-ghost">
+              <select
+                defaultValue="Choose a Date"
+                className="select select-ghost"
+              >
                 <option disabled={true}>Choose a Date</option>
                 <option>18th January, 2025</option>
                 <option>31st January, 2025</option>
@@ -225,6 +223,25 @@ const Page = () => {
               </select>
             </div>
           </div>
+          <div className="flex items-center gap-2">
+                <Checkbox
+                  id="terms-and-conditions"
+                  onCheckedChange={(checked) =>
+                    setTermsAccepted(checked === true)
+                  }
+                />
+
+                <label
+                  htmlFor="terms-and-conditions"
+                  className={`${futuraMedium.className} text-sm text-gray-700 cursor-pointer`}
+                >
+                  I have read and agree to the{" "}
+                  <a href="gs://ags-website-dc96a.firebasestorage.app/terms.pdf" target="_blank" className="text-blue-500 underline">
+                    Terms and Conditions
+                  </a>
+                  .
+                </label>
+              </div>
           <div className="bg-[#2341FF] flex flex-col md:flex-row items-center rounded-xl gap-3">
             <div className="bg-[#1B2C99] rounded-xl flex justify-between items-center px-5 gap-10">
               <div className=" items-start flex flex-col">
@@ -245,15 +262,17 @@ const Page = () => {
                 €{totalPrice}
               </h2>
             </div>
-            <div className="flex items-center w-full px-2">
+            <div className="flex flex-col items-start gap-2">
               <button
                 onClick={purchase}
-                disabled={loading} // Disable the button while loading
+                disabled={!termsAccepted || loading} // Disable if T&C not accepted or loading
                 className={`flex items-center gap-2 px-5 py-3 rounded-lg ${
-                  loading ? "cursor-not-allowed" : ""
+                  !termsAccepted || loading
+                    ? "cursor-not-allowed opacity-50"
+                    : ""
                 }`}
               >
-                {loading ? ( // Show spinner when loading
+                {loading ? (
                   <svg
                     className="animate-spin h-6 w-6 text-white"
                     xmlns="http://www.w3.org/2000/svg"
@@ -342,29 +361,27 @@ const Page = () => {
           </div>
         </div>
         <div className="flex flex-col items-center w-full gap-3">
-        <h1
-          className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}
-        >
-          Description
-        </h1>
-        <div className="bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4"></div>
-        <p className={`${futuraMedium.className} pb-10`}>
+          <h1
+            className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}
+          >
+            Description
+          </h1>
+          <div className="bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4"></div>
+          <p className={`${futuraMedium.className} pb-10`}>
             {experience?.description.text}
-        </p>
-        <ul className={`${futuraMedium.className} text-center`}>
-          {experience?.description.points.map((point) => {
-            return(
-              <div className="flex flex-col" key={point.heading}>
-                <h2 className="text-xl">
-                {point.heading}
-                </h2>
-                <h3 className="text-md text-gray-500 pb-5">
-                  {point.subtitle}
-                </h3>
-              </div>
-            )
-          })}
-        </ul>
+          </p>
+          <ul className={`${futuraMedium.className} text-center`}>
+            {experience?.description.points.map((point) => {
+              return (
+                <div className="flex flex-col" key={point.heading}>
+                  <h2 className="text-xl">{point.heading}</h2>
+                  <h3 className="text-md text-gray-500 pb-5">
+                    {point.subtitle}
+                  </h3>
+                </div>
+              );
+            })}
+          </ul>
         </div>
       </div>
       <Toaster />

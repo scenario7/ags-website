@@ -131,17 +131,6 @@ const NavBar: React.FC<NavBarProps> = ({ homePage }) => {
           )}
         </NavbarItem>
       </NavbarContent>
-
-      {/* Mobile menu */}
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item.name}-${index}`}>
-            <Link className="w-full" href={item.link}>
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
     </Navbar>
   );
 };

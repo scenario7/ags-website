@@ -32,11 +32,14 @@ export const getCheckoutUrl = async (
 
   // Create a one-time checkout session with multiple line items
   const docRef = await addDoc(checkoutSessionRef, {
-    line_items: lineItems, // Pass line items array
-    success_url: window.location.origin + "/success", // Set your success URL
-    cancel_url: window.location.origin + "/cancel", // Set your cancel URL
-    mode: "payment", // Explicitly setting mode to "payment" for one-time payments
-  });
+    line_items: lineItems,
+    success_url: window.location.origin + "/success",
+    cancel_url: window.location.origin + "/cancel",
+    mode: "payment",
+    metadata: {
+        firebaseUID: 'shaVteV4blO5rTWAgK95pmhmyOk1', // Add the Firebase UID here
+    },
+});
 
   return new Promise<string>((resolve, reject) => {
     const unsubscribe = onSnapshot(docRef, (snap) => {

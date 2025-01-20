@@ -11,17 +11,17 @@ const reviews = [
     {
         name : 'Jean Luc San',
         time : '2 months ago',
-        review : 'Very warm welcome, competent team, great time on the circuit, nothing but happiness)'
+        review : 'Very warm welcome, competent team, great time on the circuit, nothing but happiness'
     },
     {
         name : 'Gilles Bruner',
         time : '2 years ago',
-        review : 'The setting, exceptional, the infrastructures, perfect and then the quality of the whole team , without exception, combining courtesy, passion, kindness and competenceto recommend without any reservation and with your eyes closed)'
+        review : 'The setting, exceptional, the infrastructures, perfect and then the quality of the whole team , without exception, combining courtesy, passion, kindness and competenceto recommend without any reservation and with your eyes closed'
     },
     {
         name : 'Pierre',
         time : '2 years ago',
-        review : 'What a welcome! Received like friends, by an available and competent team. What a family! Who knows how to share the passion for cars with you, all audiences included!)'
+        review : 'What a welcome! Received like friends, by an available and competent team. What a family! Who knows how to share the passion for cars with you, all audiences included!'
     },
 ]
 

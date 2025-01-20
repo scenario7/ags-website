@@ -6,6 +6,7 @@ const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.otf', weight: '700' });
 
+
 const HeroSection = () => {
   return (
     <div className="relative w-full h-screen">
@@ -36,7 +37,7 @@ const HeroSection = () => {
             <h1
               className={`text-4xl md:text-6xl text-white font-bold ${futuraLight.className}`}
             >
-              Control the Speed. <br /> Feel the Adrenaline.
+              Control the Speed. <br /> Feel the Adrenaline
             </h1>
             <h2 className={`${expansiva.className} text-xs md:text-md text-white tracking-widest`}>
               SINGLE-SEATER DRIVING EXPERIENCES

@@ -35,7 +35,7 @@ const SectionTwo = () => {
         />
         <ActivityCard
           image={img14.src}
-          link="/events"
+          link="/corporate-events"
           title="Events & Companies"
         />
         <ActivityCard
