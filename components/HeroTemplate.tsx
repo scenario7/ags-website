@@ -34,7 +34,7 @@ const HeroTemplate: React.FC<HeroTemplateProps> = ({ image, title, subtitle }) =
         </h1>
         <div className="bg-gradient-to-r md:from-[#ED2939] from-transparent via-[#ED2939] to-transparent h-1 w-36 md:w-72"></div>
         <p
-          className={`${expansiva.className} tracking-widest capitalize text-[12px] md:text-sm text-[#09144A] text-left`}
+          className={`${expansiva.className} tracking-widest uppercase text-[12px] md:text-sm text-[#09144A] text-left`}
         >
           {subtitle}
         </p>

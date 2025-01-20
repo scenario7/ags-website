@@ -3,5 +3,38 @@
         "title1" : "Control the Speed.",
         "title2" : "Feel the Adrenaline",
         "subtitle" : "SINGLE-SEATER DRIVING EXPERIENCES"
+    },
+    "SectionFour" : {
+        "title" : "A History Of Passion",
+        "p1" : "Founded in 1969 by racing driver Henri Julien, Automobiles Gonfaronnaises Sportives (AGS) is a motor racing institution, having competed in the Formula 1 World Championship alongside the likes of Gabriele Tarquini, Yannick Dalmas and Philippe Streiff.",
+        "p2" : "Building on its heritage, AGS is now committed to supporting future drivers and sharing its passion with all those who dream of discovering motor racing."
+    },
+    "CorporateEvents" : {
+        "title" : "Events & Companies",
+        "subtitle" : "Our solutions for professionals",
+        "smallTitle" : "Excellence on Track",
+        "p1" :"Offer your staff or clients an unforgettable driving experience, perfectly tailored to their wishes and needs. We'll take care of the entire organisation of your corporate event, guaranteeing you a tailor-made experience.",
+        "p2" : "Take advantage of our top-of-the-range facilities: changing rooms, showers, briefing rooms, professional simulator, reception room, visit to the workshop, as well as exclusive privatisation of the circuit with direct access to the track and even the possibility of arriving by helicopter. If you wish, we can also take care of booking transport, accommodation, catering and many other logistical aspects to facilitate your event.",
+        "p3" : "Choose from our various driving packages: Formula 4, Formula 1, WSR 3.5, or let yourself be tempted by a first drive in an Oreca FLM09. You can also bring your own car. We provide full FIA-standard equipment (overalls, gloves, helmet, HANS, shoes, balaclava, socks) to ensure the safety and comfort of every participant.",
+        "p4" : "You will be supervised by our mechanics and engineers, as well as by professional coaches who will give the briefings, observe the driving, and carry out a personalised debriefing, including an analysis of the videos and data. Finally, you can display your POS material on site for an event that reflects your image."
+    },
+    "NavBar" : {
+        "home":"Home",
+        "exp":"Driving Experiences",
+        "corp":"Corporate Events",
+        "acad":"Driver Academy",
+        "events":"Events",
+        "history":"Our History",
+        "racing":"Racing",
+        "about":"About Us",
+        "news":"News",
+        "shop":"Shop",
+        "contact":"Contact Us"
+    },
+    "DrivingExperiences" : {
+        "title" : "Driving Experiences",
+        "subtitle" : "BE A RACING DRIVER DURING THE DAY",
+        "p1" : "With over 25 years' experience in Formula 1 driving courses, as well as 7 years' participation in the Formula 1 World Championship from 1986 to 1992, AGS is the ideal partner for an unforgettable experience!",
+        "p2" : "From Formula 4 to Formula 1, come and discover how to drive a single-seater in complete safety. Briefings, provision of equipment, professional coaches... AGS takes care of everything!"
     }
 }

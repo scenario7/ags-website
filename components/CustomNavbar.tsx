@@ -15,20 +15,10 @@ import {
   User,
 } from "firebase/auth";
 import localFont from "next/font/local";
+import { useRouter } from "next/navigation";
+import { useTranslations } from "use-intl";
 
-const menuItems = [
-  { name: "Home", link: "/" },
-  { name: "Driving Experiences", link: "/driving-experiences" },
-  { name: "Corporate Events", link: "/corporate-events" },
-  { name: "Driver Academy", link: "/academy" },
-  { name: "Events", link: "/events" },
-  { name: "Our History", link: "/history" },
-  { name: "Racing", link: "/racing" },
-  { name: "About Us", link: "/facilities" },
-  { name: "News", link: "/news" },
-  { name: "Shop", link: "/shop" },
-  { name: "Contact Us", link: "/contact" },
-];
+
 const futuraMedium = localFont({ src: '../public/fonts/futura/futura-medium.ttf' });
 
 
@@ -38,6 +28,24 @@ interface CustomNavbarProps {
 
 const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [locale, setLocale] = useState<string>("");
+  const router = useRouter()
+
+  const t = useTranslations("NavBar")
+
+const menuItems = [
+  { name: t("home"), link: "/" },
+  { name: t("exp"), link: "/driving-experiences" },
+  { name: t("corp"), link: "/corporate-events" },
+  { name: t("acad"), link: "/academy" },
+  { name: t("events"), link: "/events" },
+  { name: t("history"), link: "/history" },
+  { name: t("racing"), link: "/racing" },
+  { name: t("about"), link: "/facilities" },
+  { name: t("news"), link: "/news" },
+  { name: t("shop"), link: "/shop" },
+  { name: t("contact"), link: "/contact" },
+];
 
   // Initialize Firebase Auth
   const app = initFirebase();
@@ -63,6 +71,24 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
       console.error("Sign-out error:", error);
     }
   };
+
+  useEffect(() => {
+    const cookieLocale = document.cookie.split("; ").find((row) => row.startsWith("MYNEXTAPP_LOCALE="))?.split("=")[1]
+    if(cookieLocale){
+      setLocale(cookieLocale)
+    } else {
+      const browserLocale = navigator.language.slice(0,2)
+      setLocale(browserLocale)
+      document.cookie = `MYNEXTAPP_LOCALE=${browserLocale};`
+      router.refresh()
+    }
+  }, [router])
+
+  const changeLocale = (newLocale: string) => {
+    setLocale(newLocale);
+    document.cookie = `MYNEXTAPP_LOCALE=${newLocale};`
+    router.refresh()
+  }
 
   // Track user authentication state
   useEffect(() => {
@@ -114,6 +140,26 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
         </Link>
       </div>
       <div className="navbar-end">
+      <div className="py-3 flex items-center gap-3 px-5">
+      <div className="flex items-center gap-3">
+        <button
+          className={`border p-2 font-bold rounded-md text-sm ${
+            locale === "en" ? "bg-white text-black" : ""
+          }`}
+          onClick={() => changeLocale("en")}
+        >
+          EN
+        </button>
+        <button
+          className={`border p-2 font-bold rounded-md text-sm ${
+            locale === "fr" ? "bg-white text-black" : ""
+          }`}
+          onClick={() => changeLocale("fr")}
+        >
+          FR
+        </button>
+      </div>
+    </div>
         {user ? (
           <div className="dropdown dropdown-end">
             <div

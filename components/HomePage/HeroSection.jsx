@@ -2,12 +2,16 @@ import localFont from 'next/font/local';
 import NavBar from '../NavBar';
 import img from '@/public/images/10.jpg'
 import CustomNavbar from '../CustomNavbar';
+import { useTranslations } from 'next-intl';
 const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light.ttf' });
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.otf', weight: '700' });
 
 
 const HeroSection = () => {
+
+  const t = useTranslations("HeroSection")
+
   return (
     <div className="relative w-full h-screen">
       {/* Background Video */}
@@ -35,12 +39,12 @@ const HeroSection = () => {
         <div className="flex flex-grow items-center justify-center">
           <div className="flex flex-col gap-5 md:gap-10 items-center justify-center text-center z-10">
             <h1
-              className={`text-4xl md:text-6xl text-white font-bold ${futuraLight.className}`}
+              className={`text-4xl md:text-6xl text-white font-bold ${futuraLight.className} capitalize`}
             >
-              Control the Speed. <br /> Feel the Adrenaline
+              {t("title1")} <br /> {t("title2")}
             </h1>
-            <h2 className={`${expansiva.className} text-xs md:text-md text-white tracking-widest`}>
-              SINGLE-SEATER DRIVING EXPERIENCES
+            <h2 className={`${expansiva.className} text-xs md:text-md text-white tracking-widest uppercase`}>
+              {t("subtitle")}
             </h2>
             <a href="/driving-experiences">
               <button

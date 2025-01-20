@@ -1,3 +1,4 @@
+"use client"
 import HeroTemplate from "@/components/HeroTemplate"
 import img from '@/public/images/14.jpg'
 import localFont from 'next/font/local';
@@ -12,6 +13,7 @@ import corp6 from '@/public/images/corporate/6.jpg'
 import corp7 from '@/public/images/corporate/7.jpg'
 import CustomFooter from "@/components/CustomFooter";
 import CustomNavbar from "@/components/CustomNavbar";
+import { useTranslations } from "next-intl";
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
@@ -21,21 +23,23 @@ const images = [
 ]
 
 
-const page = () => {
+const Page = () => {
+
+    const t = useTranslations("CorporateEvents")
+
   return (
     <div className="flex flex-col">
         <CustomNavbar isHomePage={false}/>
         <div className=" items-center justify-center px-3 md:px-10">
-            <HeroTemplate image={img.src} title="Events & Companies" subtitle="OUR SOLUTIONS FOR PROFESSIONALS"/>
+            <HeroTemplate image={img.src} title={t("title")} subtitle={t("subtitle")}/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
-                <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Excellence on Track</h1>
+                <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("smallTitle")}</h1>
                 <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
-                Offer your staff or clients an unforgettable driving experience, perfectly tailored to their wishes and needs. We&apos;ll take care of the entire organisation of your corporate event, guaranteeing you a tailor-made experience.<br/>
-                Take advantage of our top-of-the-range facilities: changing rooms, showers, briefing rooms, professional simulator, reception room, visit to the workshop, as well as exclusive privatisation of the circuit with direct access to the track and even the possibility of arriving by helicopter.<br/>
-                If you wish, we can also take care of booking transport, accommodation, catering and many other logistical aspects to facilitate your event. Choose from our various driving packages: Formula 4, Formula 1, WSR 3.5, or let yourself be tempted by a first drive in an Oreca FLM09. You can also bring your own car. We provide full FIA-standard equipment (overalls, gloves, helmet, HANS, shoes, balaclava, socks) to ensure the safety and comfort of every participant.<br/>
-                You will be supervised by our mechanics and engineers, as well as by professional coaches who will give the briefings, observe the driving, and carry out a personalised debriefing, including an analysis of the videos and data.<br/>
-                Finally, you can display your POS material on site for an event that reflects your image.<br/>
+                {t("p1")}<br/>
+                {t("p2")}<br/>
+                {t("p3")}<br/>
+                {t("p4")}
                 </p>
             </div>
             <div
@@ -76,4 +80,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

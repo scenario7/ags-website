@@ -1,0 +1,40 @@
+{
+    "HeroSection" : {
+        "title1" : "MAITRISEZ LA VITESSE",
+        "title2" : "RESSENTEZ L'ADRENALINE",
+        "subtitle" : "Stages de pilotage en monoplace"
+    },
+    "SectionFour" : {
+        "title" : "UNE HISTOIRE DE PASSION",
+        "p1" : "Fondée en 1969 par le pilote Henri Julien, Automobiles Gonfaronnaises Sportives (AGS) est une institution de la course automobile, ayant participé au championnat du monde de Formule 1 notamment aux côtés de Gabriele Tarquini, Yannick Dalmas ou Philippe Streiff.",
+        "p2" : "Fort de son héritage, AGS s’engage aujourd’hui dans l’accompagnement de futurs pilotes et partage sa passion avec tous ceux qui rêvent de découvrir la course automobile."
+    },
+    "CorporateEvents" : {
+        "title" : "Evènementiel et entreprises",
+        "subtitle" : "Nos solutions pour les professionnels",
+        "smallTitle" : "L’EXCELLENCE SUR CIRCUIT",
+        "p1" :"Offrez à vos collaborateurs ou clients une expérience de pilotage inoubliable, parfaitement adaptée à leurs envies et besoins. Nous nous chargeons de l’organisation complète de votre événement d’entreprise, vous garantissant une expérience sur mesure.",
+        "p2" : "Profitez d'infrastructures haut de gamme : vestiaires, douches, salles de briefing, simulateur professionnel, salle de réception, visite de l’atelier, ainsi que la privatisation exclusive du circuit avec accès direct à la piste et même la possibilité d'arrivée en hélicoptère.",
+        "p3" : "Si vous le souhaitez, nous pouvons également nous occuper de la réservation des transports, de l’hébergement, du catering, et de bien d’autres aspects logistiques pour faciliter votre événement.",
+        "p4" : "Choisissez parmi nos différentes offres de pilotage : Formule 4, Formule 1, WSR 3.5, GP2, ou laissez-vous tenter par un baptême à bord d'une Oreca FLM09. Vous avez également la possibilité de venir avec votre propre voiture. Nous fournissons un équipement complet aux normes FIA (combinaison, gants, casque, HANS, chaussures, cagoule, chaussettes) pour assurer la sécurité et le confort de chaque participant. Vous serez encadrés par nos mécaniciens et ingénieurs, ainsi que par des coachs professionnels qui assureront les briefings, observeront le pilotage, et réaliseront un débriefing personnalisé, incluant une analyse des vidéos et des données. Enfin, vous pouvez afficher vos supports de PLV sur place pour un événement à votre image."
+    },
+    "NavBar" : {
+        "home":"Home",
+        "exp":"Expériences de pilotage",
+        "corp":"Evènementiel et entreprises",
+        "acad":"Ecole de pilotage",
+        "events":"Evènements",
+        "history":"Notre histoire",
+        "racing":"Racing",
+        "about":"About Us",
+        "news":"News",
+        "shop":"Shop",
+        "contact":"Contact Us"
+    },
+    "DrivingExperiences" : {
+        "title" : "EXPERIENCES DE PILOTAGE",
+        "subtitle" : "Devenez pilote de course le temps d’une journée",
+        "p1" : "Avec plus de 25 ans d’expérience dans le domaine des stages de pilotage sur Formule 1, ainsi que 7 ans de participation au Championnat du Monde de Formule 1 de 1986 à 1992, AGS est le partenaire idéal pour vivre une expérience inoubliable !",
+        "p2" : "De la Formule 4 à la Formule 1, venez découvrir le pilotage d’une monoplace en toute sécurité. Briefing, mise à disposition de l’équipement, coachs professionnels... AGS se charge de tout !"
+    }
+}

@@ -232,10 +232,10 @@ const Page = () => {
 
                 <label
                   htmlFor="terms-and-conditions"
-                  className={`${futuraMedium.className} text-sm text-gray-700 cursor-pointer`}
+                  className={`${futuraMedium.className} text-sm text-gray-700 cursor-pointer pb-10`}
                 >
                   I have read and agree to the{" "}
-                  <a href="gs://ags-website-dc96a.firebasestorage.app/terms.pdf" target="_blank" className="text-blue-500 underline">
+                  <a href="https://firebasestorage.googleapis.com/v0/b/ags-website-dc96a.firebasestorage.app/o/terms.pdf?alt=media&token=78ce6fce-457b-41f8-8052-575338fb044f" target="_blank" className="text-blue-500 underline">
                     Terms and Conditions
                   </a>
                   .
