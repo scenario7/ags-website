@@ -22,7 +22,7 @@ const Page = () => {
       <div className="flex flex-col items-center justify-center px-3 md:px-10">
         <HeroTemplate image={img1.src} title={t("title")} subtitle={t("subtitle")} />
         <div className='flex flex-col items-center gap-3 py-10 px-10'>
-          <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl}`}>Choose an Experience</h1>
+          <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl}`}>Experiences</h1>
           <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
           <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
             {t("p1")}<br />

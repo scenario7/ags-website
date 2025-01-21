@@ -14,6 +14,7 @@ import race8 from '@/public/images/racing/8.jpg'
 import race9 from '@/public/images/racing/9.jpg'
 import CustomFooter from '@/components/CustomFooter'
 import CustomNavbar from '@/components/CustomNavbar'
+import { useTranslations } from 'next-intl'
 
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
@@ -23,50 +24,55 @@ const images = [
     race1, race2, race3, race4, race5, race6, race7, race8, race9
 ]
 
+
+
+const Page = () => {
+
+    const t = useTranslations("Racing")
+
 const infoCards = [
     {
-        title : "Vehicles",
+        title : t("B1T"),
         points : [
-            "Vehicle hire",
-            "Taking charge of your vehicle",
-            "Vehicle preparation",
-            "Possibility of decorating the vehicle (sponsors)"
+            t("B1P1"),
+            t("B1P2"),
+            t("B1P3"),
+            t("B1P4")
         ],
         color : "2341FF"
     },
     {
-        title : "Preparation",
+        title : t("B2T"),
         points : [
-            "We offer you the best possible preparation!",
-            "Driving Sessions on the circuit (Mainly the Circuit du Var)",
-            "Full support from professional coaches, mechanics and engineers",
+            t("B2P1"),
+            t("B2P2"),
+            t("B2P3"),
         ],
         color : "002654"
     },
     {
-        title : "Competition",
+        title : t("B3T"),
         points : [
-            "Transport to and from the vehicle(s)",
-            "Presence of coaches, mechanics and engineers",
-            "Registration and administrative support",
+            t("B3P1"),
+            t("B3P2"),
+            t("B3P3"),
         ],
         color : "1B2C99"
     },
     
 ]
 
-const page = () => {
   return (
     <div className="flex flex-col">
     <CustomNavbar isHomePage={false}/>
     <div className=" items-center justify-center px-3 md:px-10">
         <HeroTemplate image={img.src} title="Racing Team" subtitle=""/>
         <div className='flex flex-col items-center gap-3 py-10 px-10'>
-                <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Participate in a Race or Championship with AGS</h1>
+                <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
                 <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
-                With our recognised experience and expertise, we offer you the opportunity to take part in some of the most prestigious championships and motor races.<br/>
-                We are with you every step of the way, from the initial preparation to the finish line, making sure you have the best possible conditions to achieve your goals. Together, we make every race an unforgettable experience, where performance, passion and excellence meet.<br/>
+                {t("p1")}<br/>
+                {t("p2")}<br/>
                 </p>
                 <a href="">
                     <button className={`bg-[#2341FF] px-3 py-2 text-white ${inter.className} tracking-tighter font-medium rounded-lg`}>
@@ -103,4 +109,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

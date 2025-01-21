@@ -107,7 +107,6 @@ export const experiences = [
         price: 1650,
         priceID: "price_1QfHzGG0uhOoAJjDUPJ2Xhxb",
         laps: [
-          { quantity: "3x8", car: "F3" },
           { quantity: "2x8", car: "F4" },
         ],
         addons: addons,
@@ -118,7 +117,6 @@ export const experiences = [
         price: 2200,
         priceID: "price_1QfHzZG0uhOoAJjDZtqWlvn2",
         laps: [
-          { quantity: "5x8", car: "F3" },
           { quantity: "4x8", car: "F4" },
         ],
         addons: addons,
@@ -129,7 +127,6 @@ export const experiences = [
         price: 2500,
         priceID: "price_1QfHzpG0uhOoAJjDhl9FRm9Y",
         laps: [
-          { quantity: "7x8", car: "F3" },
           { quantity: "5x8", car: "F4" },
         ],
         addons: addons,

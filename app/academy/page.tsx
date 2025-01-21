@@ -11,55 +11,59 @@ import { FaCalendar, FaPersonMilitaryPointing } from 'react-icons/fa6'
 import { FaCar, FaFlagCheckered } from 'react-icons/fa'
 import CustomFooter from '@/components/CustomFooter'
 import CustomNavbar from '@/components/CustomNavbar'
+import { useTranslations } from 'next-intl'
 
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 
 
+
+const Page = () => {
+
+    const t = useTranslations("DriverAcademy")
+
 const whyUsPoints = [
     {
-        title : 'Tailor Made Training',
-        description : 'Our advanced training courses offer personalised sessions and tailor-made coaching workshops, adapted to the specific needs of each rider, such as braking. These targeted courses enable precise and effective technical development.',
+        title : t("B1T"),
+        description : t("B1D"),
         image : img1,
         icon : (<FaFlagCheckered className='w-8 h-8'/>)
 
     },
     {
-        title : 'Full Support',
-        description : 'Our expert coaches accompany the drivers from start to finish, with detailed debriefings based on video analysis and technical data, ensuring continuous progress and optimised performance.',
+        title : t("B2T"),
+        description : t("B2D"),
         image : img2,
         icon : (<FaPersonMilitaryPointing className='w-8 h-8'/>)
 
     },
     {
-        title : 'Discovering Talent',
-        description : 'We make it a point of honour to identify and train new talent. Our courses are designed to reveal the potential of young drivers and prepare them for the challenges of professional racing.',
+        title : t("B3T"),
+        description : t("B3D"),
         image : img3,
         icon : (<FaCar className='w-8 h-8'/>)
 
     },
     {
-        title : 'Exclusive Experiences',
-        description : 'We offer the possibility of privatising a days training or booking one on other circuits such as the Circuit Paul Ricard, the Circuit Club de Nevers Magny-Cours.',
+        title : t("B4T"),
+        description : t("B4D"),
         image : img4,
         icon : (<FaCalendar className='w-8 h-8'/>)
 
     },
 ]
 
-
-const page = () => {
   return (
     <div className="flex flex-col">
         <CustomNavbar isHomePage={false}/>
         <div className=" items-center justify-center px-3 md:px-10">
-            <HeroTemplate image={img.src} title="Driver Academy" subtitle="LEVEL UP YOUR RACING TECHNIQUE"/>
+            <HeroTemplate image={img.src} title={t("title")} subtitle={t("subtitle")}/>
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
-                <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Tailor Made Training</h1>
+                <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
                 <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
-                We offer tailor-made driving courses, designed to help each young talent progress towards their competition goals. Whether it&apos;s a one-off session or a complete training programme, our expert coaches are with you every step of the way.<br/>
-                Our mission: to reveal and develop your potential, while equipping you with the advanced technical skills to excel on the track. With personalised follow-up and detailed analyses, we help you to become an accomplished driver, ready to take on the challenges of the biggest circuits.
+                {t("p1")}<br/>
+                {t("p2")}
                 </p>
             </div>
             <div
@@ -77,7 +81,7 @@ const page = () => {
             <div className='flex md:flex-row flex-col items-center justify-between tracking-tighter'>
             <div className='flex flex-col items-center md:items-start md:text-left text-center px-5 py-5'>
                 <h2 className={`${inter.className} text-white font-semibold`}>
-                    Starts from
+                    {t("starts")}
                 </h2>
                 <h2 className={`${inter.className} text-white font-semibold text-5xl`}>
                     €3500/-
@@ -86,7 +90,7 @@ const page = () => {
             <div className={`bg-[#1B2C9930] rounded-lg px-5 py-5 flex items-center md:items-end gap-5 flex-col ${futuraMedium.className} tracking-tight`}>
             <a href="mailto:stage@agsracing.com">
                     <button className={`bg-[#1B2C99] px-3 py-2 text-white rounded-lg`}>
-                        Reservations by Email Only
+                        {t("reservations")}
                     </button>
                 </a>
                 <a>
@@ -123,4 +127,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
