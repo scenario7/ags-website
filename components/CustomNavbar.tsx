@@ -183,10 +183,10 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                 className="dropdown-content menu rounded-box z-[1] p-2 shadow bg-white"
               >
                 <li>
-                  <button onClick={() => changeLocale("en")}>English</button>
+                  <button onClick={() => changeLocale("en")} className={`${locale === 'en' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>English</button>
                 </li>
                 <li>
-                  <button onClick={() => changeLocale("fr")}>French</button>
+                  <button onClick={() => changeLocale("fr")} className={`${locale === 'fr' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>French</button>
                 </li>
               </ul>
             </div>
@@ -364,10 +364,10 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                 className="dropdown-content menu rounded-box z-[1] p-2 shadow bg-white"
               >
                 <li>
-                  <button onClick={() => changeLocale("en")}>English</button>
+                  <button onClick={() => changeLocale("en")} className={`${locale === 'en' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>English</button>
                 </li>
                 <li>
-                  <button onClick={() => changeLocale("fr")}>French</button>
+                  <button onClick={() => changeLocale("fr")} className={`${locale === 'fr' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>French</button>
                 </li>
               </ul>
             </div>
