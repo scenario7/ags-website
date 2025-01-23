@@ -108,7 +108,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
     <div>
       {isSmallScreen ? (
         <div
-          className={`navbar py-5 px-10 ${isHomePage ? "bg-[#1c4773]" : "bg-transparent"} bg-opacity-80`}
+          className={`navbar py-5 px-10 ${isHomePage ? "bg-gradient-to-b from-[#1c477390] to-[#1c477350]" : "bg-transparent"} bg-opacity-80`}
         >
           <div className="navbar-start">
             <div className="dropdown">
@@ -159,28 +159,37 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
           </div>
           <div className="navbar-end">
             <div className="py-3 flex items-center gap-3 px-5">
-              <div className="flex items-center gap-3">
-                <button
-                  className={`border p-2 font-bold rounded-md text-sm ${
-                    locale === "en"
-                      ? "bg-blue-900 text-white"
-                      : "bg-white text-black"
-                  }`}
-                  onClick={() => changeLocale("en")}
+            <div className="dropdown dropdown-bottom">
+              <div tabIndex={0} role="button" className=" m-1">
+                <svg
+                  data-slot="icon"
+                  fill="none"
+                  strokeWidth="1.5"
+                  stroke="white"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  className="w-6"
                 >
-                  🇬🇧
-                </button>
-                <button
-                  className={`border p-2 font-bold rounded-md text-sm ${
-                    locale === "fr"
-                      ? "bg-blue-900 text-white"
-                      : "bg-white text-black"
-                  }`}
-                  onClick={() => changeLocale("fr")}
-                >
-                  🇫🇷
-                </button>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                  ></path>
+                </svg>
               </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu rounded-box z-[1] p-2 shadow bg-white"
+              >
+                <li>
+                  <button onClick={() => changeLocale("en")}>English</button>
+                </li>
+                <li>
+                  <button onClick={() => changeLocale("fr")}>French</button>
+                </li>
+              </ul>
+            </div>
             </div>
             {user ? (
               <div className="dropdown dropdown-end">
@@ -262,20 +271,20 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
               className={`menu menu-horizontal px-1 ${isHomePage ? "text-white" : "text-black"}`}
             >
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/">{t("home")}</Link>
               </li>
               <li>
                 <details>
                   <summary>Activities</summary>
                   <ul className="p-2 bg-white text-black z-20">
                     <li>
-                      <Link href="/driving-experiences">Driving Experiences</Link>
+                      <Link href="/driving-experiences">{t("exp")}</Link>
                     </li>
                     <li>
-                      <Link href="/corporate-events">Events & Companies</Link>
+                      <Link href="/corporate-events">{t("corp")}</Link>
                     </li>
                     <li>
-                      <Link href="/academy">Driver Academy</Link>
+                      <Link href="/academy">{t("acad")}</Link>
                     </li>
                   </ul>
                 </details>
@@ -285,7 +294,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                   <summary>Services</summary>
                   <ul className="p-2 bg-white text-black z-20">
                     <li>
-                      <Link href="/racing">Racing</Link>
+                      <Link href="/racing">{t("racing")}</Link>
                     </li>
                     <li>
                       <Link href="/workshop">Workshop</Link>
@@ -311,22 +320,22 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                   <summary>About us</summary>
                   <ul className="p-2 bg-white text-black z-20">
                     <li>
-                      <Link href="/facilities">Facilities</Link>
+                      <Link href="/facilities">{t("about")}</Link>
                     </li>
                     <li>
-                      <Link href="/history">Our History</Link>
+                      <Link href="/history">{t("history")}</Link>
                     </li>
                   </ul>
                 </details>
               </li>
               <li>
-                <Link href="/news">News</Link>
+                <Link href="/news">{t("news")}</Link>
               </li>
               <li>
-                <Link href="/shop">Shop</Link>
+                <Link href="/shop">{t("shop")}</Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact">{t("contact")}</Link>
               </li>
             </ul>
           </div>
