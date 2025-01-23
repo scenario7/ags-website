@@ -2,6 +2,7 @@ import logoBlue from '@/images/AGSBlueLogo.png'
 import localFont from "next/font/local";
 import { Inter } from "next/font/google"
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
 
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 const futuraLight = localFont({ src: '../public/fonts/futura/futura-std-light.ttf' });
@@ -68,10 +69,10 @@ const CustomFooter = () => {
       <div className="hidden md:flex flex-col text-right tracking-tighter gap-2">
         <p className={`${futuraMedium.className}`}>Follow Us</p>
         <div className="flex gap-2">
-          <FaTiktok className="h-8 w-8 text-[#0B1237]" />
-          <FaInstagram className="h-8 w-8 text-[#0B1237]" />
-          <FaFacebook className="h-8 w-8 text-[#0B1237]" />
-          <FaLinkedin className="h-8 w-8 text-[#0B1237]" />
+          <Link href='https://www.tiktok.com/@agsformule1?is_from_webapp=1&sender_device=pc'><FaTiktok className="h-8 w-8 text-[#0B1237]" /></Link>
+          <Link href='https://www.instagram.com/agsformule1/'><FaInstagram className="h-8 w-8 text-[#0B1237]" /></Link>
+          <Link href='https://www.facebook.com/agsformule1?locale=fr_FR'><FaFacebook className="h-8 w-8 text-[#0B1237]" /></Link>
+          <Link href='https://www.linkedin.com/company/ags-formule-1-racing-events/'><FaLinkedin className="h-8 w-8 text-[#0B1237]" /></Link>
         </div>
       </div>
     </div>

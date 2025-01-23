@@ -5,6 +5,7 @@ import ActivityCard from '@/components/HomePage/ActivityCard'
 import img1 from '@/public/images/1.jpg'
 import img14 from '@/public/images/14.jpg'
 import img15 from '@/public/images/15.jpg'
+import { useTranslations } from 'next-intl';
 
 const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light.ttf' });
 const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.otf', weight: '700' });
@@ -12,16 +13,20 @@ const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.t
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 const SectionTwo = () => {
+
+
+  const t = useTranslations("SectionTwo")
+
   return (
     <div className="flex flex-col px-10 py-10 w-full">
       {/* Header Section */}
       <div className="flex flex-col items-center md:items-start gap-2 text-center">
-        <h2 className={`${futuraMedium.className} tracking-tighter text-2xl md:text-3xl md:text-left text-center`}>Activities</h2>
+        <h2 className={`${futuraMedium.className} tracking-tighter text-2xl md:text-3xl md:text-left text-center`}>{t("h1")}</h2>
         <div className="bg-gradient-to-r to-transparent from-transparent via-[#ED2939] md:from-[#ED2939] h-1 w-36"></div>
         <p
-          className={`text-center md:text-left ${futuraMedium.className} text-xs md:text-md`}
+          className={`text-center md:text-left ${futuraMedium.className} text-md`}
         >
-          Whether you want to discover the thrill of driving a single-seater, offer your staff or clients a unique event that reflects your image, or get involved in competition, AGS has the solution!
+          {t("p1")}
         </p>
       </div>
 

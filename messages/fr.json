@@ -109,5 +109,43 @@
         "car1" : "Depuis Nice, prendre l’A8 puis bifurquer vers l’A57 direction Toulon. Prendre, immédiatement après la bifurcation, la sortie n°13 (Le Cannet des Maures/Le Luc) sur l’A57.",
         "car2" : "Depuis Aix en Provence, prendre l’A8 puis bifurquer vers l’A57 direction Toulon. Prendre, immédiatement après la bifurcation, la sortie n°13 (Le Cannet des Maures/Le Luc) sur l’A57.",
         "car3" : "Depuis Toulon, prendre l’A57 direction Nice et prendre la sortie n°13 (Le Cannet des Maures/Le Luc)."
-    }
+    },
+    "SectionOne" : {
+        "h1" : "Nous vous faisons vivre l'expérience ultime du sport automobile",
+        "p1" : "Vous rêvez de piloter une vraie voiture de Formule 1 ? Vous souhaitez vivre les sensations d’une monoplace au volant d’une Formule 4 ou 3.5 ? N'attendez plus !",
+        "p2" : "Avec plus de 25 ans d'expérience dans les stages de pilotage de Formule 1, ainsi que 7 ans de participation au Championnat du Monde de Formule 1 de 1986 à 1992, AGS est votre partenaire idéal !"
+    },
+    "SectionTwo" : {
+        "h1" : "Activités",
+        "p1" : "Que vous souhaitiez découvrir les sensations du pilotage d'une monoplace, proposer à vos collaborateurs ou à vos clients un événement unique à votre image, ou encore vous impliquer en compétition, AGS a la solution !"
+    },
+    "Workshop": {
+    "title": "L'atelier",
+    "subtitle": "Un savoir-faire unique",
+    "p1": " Nous réalisons des restaurations et de l'entretien / maintenance de voitures de courses historiques. ",
+    "p2": "Grâce à un outillage performant, AGS peut également prendre en charge une reconstruction complète jusqu’à obtention du Passeport Technique Historique et l’inscription en compétition.",
+    "h1": "Nos réalisations",
+    "h2": "Nos prestations",
+          "service1": "Moulage de siège pilote",
+          "service2": "Fabrication d'arceau sur mesure à la taille du pilote (GRD F3)",
+          "service3": "Fabrication de colonne de direction sur mesure avec moyeu escamotable (ARGO coupe Alfa)",
+          "service4": "Fabrication et installation de système d'alimentation carburant (Fuel box, lift pump, HP pump) sur les F1 AGS (JH24 et JH25)",
+          "service5": "Conception et fabrication de faisceau électrique (habitacle, châssis, etc.) sur les F1 AGS (JH24 et JH25)",
+          "service6": "Réglages châssis ajusté au poids du pilote (F1 AGS, Formule Ford, F3 GRD, GT40, LMP3, etc.)",
+          "service7": "Restauration avec remise en état suivant les spécifications de période, à partir de photos et d'informations d'anciens acteurs des GP (mécaniciens, ingénieurs, etc.) (AGS JH24 et JH25)",
+          "service8": "Remise en route de véhicules stockés depuis longtemps (Porsche 962, FR3.5 T08, etc.)",
+          "service9": "Fabrication de ligne d'échappement (Formule Ford)",
+          "service10": "Scan 3D, modélisation informatique et fabrication de pièces complexes (chappes de train Sirocco Silhouette, pédales McLaren MP4-8, etc.)",
+          "service11": "Déplacement sur circuit, pour des coachings privés avec analyse acquisitions de données (Lédenon Crémona, Castellet, etc.)",
+          "service12": "Installation radios et caméra type AIM",
+          "service13": "Amélioration refroidissement moteur (installation SPAL avec déclenchement automatique sur Ligier JS51)",
+          "service14": "Révision et réfection moteurs (V8 Cosworth DFV et DFR, V6 Alfa, etc.) et boite de vitesse (longitudinales, transversales)",
+    "h3" : "Gardiennage",
+    "p3" : "Nous stockons dans un endroit sécurisé vos véhicules. Ils seront prêts pour vos séances de roulage sur le circuit du Var (accès direct à la piste) et vos compétitions. Rien de plus simple : tout se passe au même endroit !"
+  },
+  "Trading" : {
+    "h1" : "Envie d'acheter un véhicule de collection ou de compétition ? Le vendre ? Vous êtes au bon endroit !",
+    "p1" : "Grâce à notre expérience et notre réseau, nous proposons également un service d’achat & vente de véhicules de compétition, y compris les F1 historiques. Nous mettons toute notre expertise à votre service en vous accompagnant lors de la recherche d’un véhicule.",
+    "p2" : "Attention, nous vendons beaucoup de véhicules offmarket (F1, sport proto, ...). Peu importe votre recherche, contactez-nous !"
+  }
 }

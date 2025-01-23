@@ -26,16 +26,19 @@ const Page = () => {
 const facilities = [
     {
         name : t("f1"),
+        link :"/workshop",
         image : img19,
         description : (<p>{t("f1p1")}<br/><div className='pt-3'/>{t("f1p2")}</p>)
     },
     {
         name : t("f2"),
+        link :"",
         image : img20,
         description : (<p>{t("f2p1")}</p>)
     },
     {
         name : t("f3"),
+        link :"",
         image : img21,
         description : (<p>
             {t("f3p1")}
@@ -107,7 +110,7 @@ const waysToReach = [
                     {facilities.map((facility) => {
                         return(
                             <div className='flex flex-col gap-5 items-center' key={facility.name}>
-                                <ActivityCard image={facility.image.src} link='' title={facility.name}/>
+                                <ActivityCard image={facility.image.src} link={facility.link} title={facility.name}/>
                                 <div className={`${inter.className} text-center md:text-left tracking-tighter font-medium`}>
                                     {facility.description}
                                 </div>

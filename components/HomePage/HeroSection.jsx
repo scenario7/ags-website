@@ -10,10 +10,10 @@ const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.
 
 const HeroSection = () => {
 
-  const t = useTranslations("HeroSection")
+  const t = useTranslations("HeroSection");
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-[75vh]"> {/* Adjusted height to 3/4th of the viewport */}
       {/* Background Video */}
       <video
         src='https://res.cloudinary.com/dp79lqyv8/video/upload/v1736838771/pafux1hyt4wtrwamtn0j.mp4'
@@ -24,16 +24,13 @@ const HeroSection = () => {
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
 
-      {/* <img src={img.src} alt="" className="absolute top-0 left-0 w-full h-full object-cover"/> */}
-
-
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#10101080] via-[#10101030] to-[#10101080] opacity-100"></div>
 
       {/* Foreground Content */}
       <div className="absolute inset-0 flex flex-col">
         {/* Navbar at the top */}
-        <CustomNavbar isHomePage={true}/>
+        <CustomNavbar isHomePage={true} />
 
         {/* Centered Content */}
         <div className="flex flex-grow items-center justify-center">
@@ -48,7 +45,7 @@ const HeroSection = () => {
             </h2>
             <a href="/driving-experiences">
               <button
-                className={`${futuraMedium.className} bg-gradient-to-tr from-[#1B2C99] to-[#0B1237] text-white px-3 py-2`}
+                className={`${futuraMedium.className} bg-[#1B2C99] hover:bg-blue-500 transition-colors text-lg text-white px-3 py-2`}
               >
                 BOOK NOW
               </button>

@@ -27,7 +27,7 @@ const Page = () => {
 
   return (
     <div className="flex flex-col px-3 md:px-10 justify-between min-h-screen">
-      <CustomNavbar isHomePage={false} />
+      <CustomNavbar isHomePage={false}/>
       <HeroTemplate image={img17.src} title={t("title")} subtitle="" />
       <div className="flex flex-col items-center w-full gap-3 py-5">
         <h1
