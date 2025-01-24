@@ -12,7 +12,7 @@ const futuraMedium = localFont({
   src: "../../../public/fonts/futura/futura-medium.ttf",
 });
 const expansiva = localFont({
-  src: "../../../public/fonts/expansiva/expansiva.otf",
+  src: "../../../public/fonts/expansiva/Expansiva.otf",
 });
 
 const Page = () => {
