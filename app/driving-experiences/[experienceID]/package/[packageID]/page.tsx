@@ -17,11 +17,6 @@ import "cally";
 const futuraMedium = localFont({
   src: "../../../../../public/fonts/futura/futura-medium.ttf",
 });
-const expansiva = localFont({
-  src: "../../../../../public/fonts/expansiva/expansiva-bold.otf",
-  weight: "700",
-});
-
 const Page = () => {
   const { packageID, experienceID } = useParams();
   const { toast } = useToast();
@@ -108,20 +103,6 @@ const Page = () => {
     ].filter((id): id is string => id !== undefined);
 
     const bookingDetails = selectedDate;
-    const details = {
-      firstName : firstName,
-      lastName : lastName,
-      height : height,
-      weight : weight,
-      age : age,
-      head : headCircumference,
-      waist : waistCircumference,
-      thigh : thighCircumference,
-      leg : legLength,
-      shoulder : shoulderWidth,
-      shoe : shoeSize,
-      date : selectedDate
-    }
 
     try {
       // Start the checkout process

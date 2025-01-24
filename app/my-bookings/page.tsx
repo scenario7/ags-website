@@ -23,20 +23,6 @@ interface Payment {
   metadata : Metadata
 }
 
-interface details{
-  firstName : string,
-  lastName : string,
-  height : string,
-  weight : string,
-  age : string,
-  head : string,
-  waist : string,
-  thigh : string,
-  leg : string,
-  shoulder :string,
-  shoe : string,
-  date : string,
-}
 
 interface Charges {
     data : ChargesData[]
@@ -58,7 +44,7 @@ interface Metadata{
     leg : string,
     shoulder :string,
     shoe : string,
-    date : string,
+    bookingDate : string,
 }
 
 interface Item {
@@ -142,7 +128,7 @@ const Page = () => {
             <img src={`https://barcodeapi.org/api/${payment.id}`} alt="" className="rounded-lg w-36 h-36"/>
             <ul className="text-white">
                 <li className={`${futuraMedium.className} text-black text-center text-2xl md:text-left`} key={payment.items[0].description}>{payment.items[0].description}</li>
-                <p className={`${futuraMedium.className} text-white rounded-full bg-blue-500 text-center mb-3 mt-3`}>{payment.metadata.date}</p>
+                <p className={`${futuraMedium.className} text-white rounded-full bg-blue-500 text-center mb-3 mt-3`}>{payment.metadata.bookingDate}</p>
                 {payment.items.slice(1).map((item) => {
                     return(
                         <li className={`${futuraMedium.className} text-stone-500 text-center md:text-left`} key={item.description}>{item.description}</li>
