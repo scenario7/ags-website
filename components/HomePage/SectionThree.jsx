@@ -89,7 +89,7 @@ const SectionThree = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-5 md:gap-10">
             {reviews.map((map) => {
                 return(
-                    <div className="bg-[#1B2C99] px-5 py-5 flex flex-col gap-2 md:gap-3 rounded-xl" key={map.name}>
+                    <div className="bg-[#060D30] px-5 py-5 flex flex-col gap-2 md:gap-3 rounded-xl" key={map.name}>
                         <h3 className={`text-white ${futuraMedium.className} text-lg`}>{map.name}</h3>
                         <h4 className={`text-stone-300 ${inter.className} text-sm tracking-tighter`}>{map.time}</h4>
                         <p className={`${inter.className} text-white md:text-md text-xs tracking-tight`}>{map.review}</p>

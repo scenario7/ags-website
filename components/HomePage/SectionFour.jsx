@@ -27,7 +27,7 @@ const SectionFour = () => {
       <img 
         src={img0.src} 
         alt="" 
-        className="h-80 w-full object-cover rounded-lg shadow-[-20px_20px_0_0_#1B2C99]"
+        className="h-80 w-full object-cover rounded-lg shadow-[-20px_20px_0_0_#060D30]"
         />
 
 

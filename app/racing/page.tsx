@@ -69,7 +69,7 @@ const infoCards = [
         <HeroTemplate image={img.src} title="Racing Team" subtitle=""/>
         <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
-                <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
+                <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
                 {t("p1")}<br/>
                 {t("p2")}<br/>

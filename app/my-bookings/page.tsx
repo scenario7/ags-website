@@ -8,6 +8,7 @@ import { collection, getDocs, query } from "firebase/firestore";
 import { auth, db } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { User } from "firebase/auth";
+import MoonLoader from 'react-spinners/MoonLoader'
 
 const futuraMedium = localFont({ src: "../../public/fonts/futura/futura-medium.ttf" });
 
@@ -19,6 +20,22 @@ interface Payment {
   status: string;
   items : Item[];
   charges : Charges
+  metadata : Metadata
+}
+
+interface details{
+  firstName : string,
+  lastName : string,
+  height : string,
+  weight : string,
+  age : string,
+  head : string,
+  waist : string,
+  thigh : string,
+  leg : string,
+  shoulder :string,
+  shoe : string,
+  date : string,
 }
 
 interface Charges {
@@ -27,6 +44,21 @@ interface Charges {
 
 interface ChargesData{
     receipt_url : string
+}
+
+interface Metadata{
+    firstName : string,
+    lastName : string,
+    height : string,
+    weight : string,
+    age : string,
+    head : string,
+    waist : string,
+    thigh : string,
+    leg : string,
+    shoulder :string,
+    shoe : string,
+    date : string,
 }
 
 interface Item {
@@ -97,7 +129,7 @@ const Page = () => {
       </div>
       <div className="flex flex-col items-center py-10 gap-5">
         {loading ? (
-          <p>Loading...</p>
+          <MoonLoader/>
         ) : user && payments.length === 0 ? (
           <p>No bookings found</p>
         ) : (
@@ -109,7 +141,8 @@ const Page = () => {
                 <div className="flex  gap-10">
             <img src={`https://barcodeapi.org/api/${payment.id}`} alt="" className="rounded-lg w-36 h-36"/>
             <ul className="text-white">
-                <li className={`${futuraMedium.className} text-black text-center text-2xl pb-3 md:text-left`} key={payment.items[0].description}>{payment.items[0].description}</li>
+                <li className={`${futuraMedium.className} text-black text-center text-2xl md:text-left`} key={payment.items[0].description}>{payment.items[0].description}</li>
+                <p className={`${futuraMedium.className} text-white rounded-full bg-blue-500 text-center mb-3 mt-3`}>{payment.metadata.date}</p>
                 {payment.items.slice(1).map((item) => {
                     return(
                         <li className={`${futuraMedium.className} text-stone-500 text-center md:text-left`} key={item.description}>{item.description}</li>

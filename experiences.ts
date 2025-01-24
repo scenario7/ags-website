@@ -73,6 +73,7 @@ export const experiences = [
   {
     name: "F4",
     link: "/driving-experiences/f4",
+    subtitle : "Discover single-seater driving in complete safety thanks to our Formula 4 Experience. Adrenalin and thrills guaranteed!",
     experienceID: "f4",
     image: img2,
     checkoutImages : [f4Checkout1, f4Checkout2, f4Checkout3, f4Checkout4],
@@ -136,6 +137,7 @@ export const experiences = [
   {
     name: "F3.5",
     link: "/driving-experiences/f35",
+    subtitle : "Discover single-seater driving in complete safety thanks to our Formula 3.5 Experience. Adrenalin and thrills guaranteed!",
     experienceID: "f35",
     checkoutImages : [f35Checkout1, f35Checkout2, f35Checkout3, f35Checkout4],
     image: img4,
@@ -204,6 +206,7 @@ export const experiences = [
   {
     name: "F1",
     link: "/driving-experiences/f1",
+    subtitle : "Discover single-seater driving in complete safety thanks to our Formula 1 Experience. Adrenalin and thrills guaranteed!",
     experienceID: "f1",
     checkoutImages : [f1Checkout1, f1Checkout2, f1Checkout3, f1Checkout4],
     image: img3,

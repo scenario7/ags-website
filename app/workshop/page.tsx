@@ -69,7 +69,7 @@ const Page = () => {
                 {t("p2")}
                 </p>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
-                <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
+                <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
                 <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10'>
                     {cars.map((car) => {
                         return(
@@ -80,7 +80,7 @@ const Page = () => {
                     })}
                 </div>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h2")}</h1>
-                <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
+                <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
                 <ul className='list-disc'>
                     {services.map((service) => {
                         return(
@@ -91,7 +91,7 @@ const Page = () => {
                     })}
                 </ul>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h3")}</h1>
-                <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
+                <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
                 <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
                {t("p3")}
                 </p>

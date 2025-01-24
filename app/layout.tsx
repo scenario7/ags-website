@@ -28,7 +28,7 @@ export default async function RootLayout({
   const locale = await getLocale();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-theme="light">
       <NextIntlClientProvider messages={messages}>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F6F9FF]`}

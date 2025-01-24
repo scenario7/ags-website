@@ -22,7 +22,7 @@ const Page = () => {
         <div className='flex flex-col md:flex-row py-10 gap-20'>
             <div className='md:w-1/2 flex flex-col items-center gap-10'>
             <h1 className={`${futuraMedium.className} tracking-tighter md:text-center text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
-            <div className='bg-gradient-to-r from-transparent via-[#2341FF] to-transparent h-1 w-1/4'></div>
+            <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
             </div>
             <div className='flex flex-col md:w-1/2'>
                 <p className={`${inter.className}`}>

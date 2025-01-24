@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
   	extend: {
+		daisyui: {
+			themes: ["light", "dark", "cupcake"],
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

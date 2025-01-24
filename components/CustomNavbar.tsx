@@ -158,14 +158,14 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
             </Link>
           </div>
           <div className="navbar-end">
-            <div className="py-3 flex items-center gap-3 px-5">
+            <div className="py-3 flex items-center gap-1 px-5">
             <div className="dropdown dropdown-bottom">
               <div tabIndex={0} role="button" className=" m-1">
                 <svg
                   data-slot="icon"
                   fill="none"
                   strokeWidth="1.5"
-                  stroke="white"
+                  stroke={isHomePage ? "white" : "black"}
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
@@ -346,7 +346,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                   data-slot="icon"
                   fill="none"
                   strokeWidth="1.5"
-                  stroke="white"
+                  stroke={isHomePage ? "white" : "black"}
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                   aria-hidden="true"
@@ -380,7 +380,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                 >
                   <div className="w-5 md:w-10 rounded-full bg-white p-3">
                     <img
-                      src="https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png"
+                      src={"https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png"}
                       alt="User Avatar"
                     />
                   </div>

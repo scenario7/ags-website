@@ -10,7 +10,20 @@ import {
 
 export const getCheckoutUrl = async (
   app: FirebaseApp,
-  priceIds: string[]
+  priceIds: string[],
+  bookingDetails: string,
+  firstName : string,
+  lastName : string,
+  height : string,
+  weight : string,
+  age : string,
+  head : string,
+  waist : string,
+  thigh : string,
+  leg : string,
+  shoulder :string,
+  shoe : string,
+  date : string,
 ): Promise<string> => {
   const auth = getAuth(app);
   const userId = auth.currentUser?.uid;
@@ -37,7 +50,20 @@ export const getCheckoutUrl = async (
     cancel_url: window.location.origin + "/cancel",
     mode: "payment",
     metadata: {
-        firebaseUID: 'shaVteV4blO5rTWAgK95pmhmyOk1', // Add the Firebase UID here
+        firebaseUID: 'shaVteV4blO5rTWAgK95pmhmyOk1', 
+        date : bookingDetails,
+        firstName : firstName,
+  lastName : lastName,
+  height : height,
+  weight : weight,
+  age : age,
+  head : head,
+  waist : waist,
+  thigh : thigh,
+  leg : leg,
+  shoulder :shoulder,
+  shoe : shoe,
+  date : date,
     },
 });
 

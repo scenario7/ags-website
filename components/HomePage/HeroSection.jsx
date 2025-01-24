@@ -45,7 +45,7 @@ const HeroSection = () => {
             </h2>
             <a href="/driving-experiences">
               <button
-                className={`${futuraMedium.className} bg-[#1B2C99] hover:bg-blue-500 transition-colors text-lg text-white px-3 py-2`}
+                className={`${futuraMedium.className} bg-[#446890] hover:bg-[#060D30] transition-colors text-lg text-white px-3 py-2`}
               >
                 BOOK NOW
               </button>
