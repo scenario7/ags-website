@@ -312,6 +312,12 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                     <li>
                       <a href="/events">France Historic GP</a>
                     </li>
+                    <li>
+                      <a href="">iM4</a>
+                    </li>
+                    <li>
+                      <a href="">Du Kart à la F1</a>
+                    </li>
                   </ul>
                 </details>
               </li>
