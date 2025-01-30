@@ -19,10 +19,10 @@ import f35Checkout1 from '@/public/images/checkout/f35/1.jpg'
 import f35Checkout2 from '@/public/images/checkout/f35/2.jpg'
 import f35Checkout3 from '@/public/images/checkout/f35/3.jpg'
 import f35Checkout4 from '@/public/images/checkout/f35/4.jpg'
-import f4Checkout1 from '@/public/images/checkout/f35/1.jpg'
-import f4Checkout2 from '@/public/images/checkout/f35/2.jpg'
-import f4Checkout3 from '@/public/images/checkout/f35/3.jpg'
-import f4Checkout4 from '@/public/images/checkout/f35/4.jpg'
+import f4Checkout1 from '@/public/images/checkout/f4/1.jpg'
+import f4Checkout2 from '@/public/images/checkout/f4/2.jpg'
+import f4Checkout3 from '@/public/images/checkout/f4/3.jpg'
+import f4Checkout4 from '@/public/images/checkout/f4/4.jpg'
 
 const addons = [
   {

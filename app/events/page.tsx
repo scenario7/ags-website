@@ -23,7 +23,7 @@ const page = () => {
   return (
     <div>
       <CustomNavbar isHomePage={false} />
-      <div className="flex flex-col px-3 md:px-10">
+      <div className="flex flex-col px-3 md:px-10 items-center">
         <HeroTemplate
           image={img22.src}
           title="France Historic GP"
@@ -138,6 +138,13 @@ const page = () => {
           </ul>
         </div>
         </div>
+        <a href="/contact">
+          <button
+            className={`${futuraMedium.className} bg-[#446890] hover:bg-[#060D30] transition-colors text-white px-3 py-2`}
+          >
+            Contact Us
+          </button>
+        </a>
       </div>
       <CustomFooter />
     </div>

@@ -23,7 +23,6 @@ export const getCheckoutUrl = async (
   leg: string,
   shoulder: string,
   shoe: string,
-  date: string
 ): Promise<string> => {
   const auth = getAuth(app);
   const userId = auth.currentUser?.uid;
@@ -62,7 +61,7 @@ export const getCheckoutUrl = async (
       leg: leg,
       shoulder: shoulder,
       shoe: shoe,
-      bookingDate: date,
+      bookingDate: bookingDetails,
     },
   });
 

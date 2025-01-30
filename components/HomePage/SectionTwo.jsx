@@ -20,11 +20,11 @@ const SectionTwo = () => {
   return (
     <div className="flex flex-col px-10 py-10 w-full">
       {/* Header Section */}
-      <div className="flex flex-col items-center md:items-start gap-2 text-center">
+      <div className="flex flex-col items-center md:items-start gap-5 text-center">
         <h2 className={`${futuraMedium.className} tracking-tighter text-2xl md:text-3xl md:text-left text-center`}>{t("h1")}</h2>
         <div className="bg-gradient-to-r to-transparent from-transparent via-[#ED2939] md:from-[#ED2939] h-1 w-36"></div>
         <p
-          className={`text-center md:text-left ${futuraMedium.className} text-md`}
+          className={`text-center md:text-left ${inter.className} text-lg tracking-tighter`}
         >
           {t("p1")}
         </p>

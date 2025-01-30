@@ -224,7 +224,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
             ) : (
               <button
                 onClick={handleSignIn}
-                className={`btn btn-sm px-4 py-2 text-white rounded-md ${futuraMedium.className}`}
+                className={`btn btn-sm bg-blue-900 px-4 py-2 text-white rounded-md ${futuraMedium.className}`}
               >
                 Sign In
               </button>
@@ -410,7 +410,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
             ) : (
               <button
                 onClick={handleSignIn}
-                className={`btn btn-sm px-4 py-2 text-white rounded-md ${futuraMedium.className}`}
+                className={`btn btn-sm px-4 py-2 bg-blue-900 text-white rounded-md ${futuraMedium.className}`}
               >
                 Sign In
               </button>

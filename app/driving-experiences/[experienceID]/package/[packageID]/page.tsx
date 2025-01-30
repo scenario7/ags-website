@@ -22,7 +22,9 @@ const Page = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [firstName, setFirstName] = useState(auth.currentUser?.displayName || '');
+  const [firstName, setFirstName] = useState(
+    auth.currentUser?.displayName || ""
+  );
   const [lastName, setLastName] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
@@ -35,6 +37,16 @@ const Page = () => {
   const [shoeSize, setShoeSize] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
 
+  const isCheckoutDisabled =
+    !termsAccepted || // Terms and Conditions must be accepted
+    loading || // Prevent multiple clicks while loading
+    !firstName.trim() ||
+    !lastName.trim() ||
+    !height.trim() ||
+    !weight.trim() ||
+    !headCircumference.trim() ||
+    !shoeSize.trim() ||
+    !selectedDate.trim();
 
   // Assuming `experiences` data is available (imported or declared above this component)
   const experience = experiences.find(
@@ -106,7 +118,11 @@ const Page = () => {
 
     try {
       // Start the checkout process
-      const checkoutUrl = await getCheckoutUrl(app, priceIds, bookingDetails, firstName,
+      const checkoutUrl = await getCheckoutUrl(
+        app,
+        priceIds,
+        bookingDetails,
+        firstName,
         lastName,
         height,
         weight,
@@ -117,7 +133,7 @@ const Page = () => {
         legLength,
         shoulderWidth,
         shoeSize,
-        selectedDate);
+      );
       router.push(checkoutUrl);
 
       toast({
@@ -213,58 +229,75 @@ const Page = () => {
             </div>
             <div>
               <select
-                defaultValue="Choose a Date"
-                className="select select-ghost"
+                className="select select-ghost select-lg bg-[#060D30] text-white"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
               >
-                <option disabled={true}>Choose a Date</option>
-                <option>18th January, 2025</option>
-                <option>31st January, 2025</option>
-                <option>22nd February, 2025</option>
-                <option>28th February, 2025</option>
-                <option>18th April, 2025</option>
-                <option>22nd April, 2025</option>
-                <option>26th May, 2025</option>
-                <option>13th June, 2025</option>
-                <option>14th June, 2025</option>
-                <option>12th September, 2025</option>
-                <option>26th September, 2025</option>
-                <option>17th October, 2025</option>
-                <option>24th October, 2025</option>
-                <option>31st October, 2025</option>
+                <option value="" className="" disabled>
+                  Choose a Date
+                </option>
+                <option value="18th January, 2025">18th January, 2025</option>
+                <option value="31st January, 2025">31st January, 2025</option>
+                <option value="22nd February, 2025">22nd February, 2025</option>
+                <option value="28th February, 2025">28th February, 2025</option>
+                <option value="18th April, 2025">18th April, 2025</option>
+                <option value="22nd April, 2025">22nd April, 2025</option>
+                <option value="26th May, 2025">26th May, 2025</option>
+                <option value="13th June, 2025">13th June, 2025</option>
+                <option value="14th June, 2025">14th June, 2025</option>
+                <option value="12th September, 2025">
+                  12th September, 2025
+                </option>
+                <option value="26th September, 2025">
+                  26th September, 2025
+                </option>
+                <option value="17th October, 2025">17th October, 2025</option>
+                <option value="24th October, 2025">24th October, 2025</option>
+                <option value="31st October, 2025">31st October, 2025</option>
               </select>
             </div>
           </div>
           <div className="grid grid-cols-4 gap-3">
-            <input
-              type="text"
-              className="input input-bordered w-full col-span-2"
-              placeholder="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-            <input
-              type="text"
-              className="input input-bordered w-full max-w-xs"
-              placeholder="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-            />
-            <input
-              type="number"
-              className="input input-bordered w-full max-w-xs"
-              placeholder="Height"
-              value={height}
-              onChange={(e) => setHeight(e.target.value)}
-            />
-            <input
-              type="number"
-              className="input input-bordered w-full max-w-xs"
-              placeholder="Weight"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-            />
+            <label className="input input-bordered flex items-center gap-2 col-span-2">
+              <input
+                type="text"
+                className="w-full "
+                placeholder="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+              <span className="badge badge-error text-white">Required</span>
+            </label>
+            <label className="input input-bordered flex items-center gap-2">
+              <input
+                type="text"
+                className="w-full max-w-xs"
+                placeholder="Last Name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+              <span className="badge badge-error text-white">Required</span>
+            </label>
+            <label className="input input-bordered flex items-center gap-2">
+              <input
+                type="number"
+                className="w-full max-w-xs"
+                placeholder="Height"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+              />
+              <span className="badge badge-error text-white">Required</span>
+            </label>
+            <label className="input input-bordered flex items-center gap-2">
+              <input
+                type="number"
+                className=" w-full max-w-xs"
+                placeholder="Weight"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+              />
+              <span className="badge badge-error text-white">Required</span>
+            </label>
             <input
               type="number"
               className="input input-bordered w-full max-w-xs"
@@ -272,13 +305,16 @@ const Page = () => {
               value={age}
               onChange={(e) => setAge(e.target.value)}
             />
-            <input
-              type="number"
-              className="input input-bordered w-full max-w-xs"
-              placeholder="Head Circumference"
-              value={headCircumference}
-              onChange={(e) => setHeadCircumference(e.target.value)}
-            />
+            <label className="input input-bordered flex items-center gap-2">
+              <input
+                type="number"
+                className="w-full max-w-xs"
+                placeholder="Head Circumference"
+                value={headCircumference}
+                onChange={(e) => setHeadCircumference(e.target.value)}
+              />
+              <span className="badge badge-error text-white">Required</span>
+            </label>
             <input
               type="number"
               className="input input-bordered w-full max-w-xs"
@@ -307,23 +343,29 @@ const Page = () => {
               value={shoulderWidth}
               onChange={(e) => setShoulderWidth(e.target.value)}
             />
-            <input
-              type="number"
-              className="input input-bordered w-full max-w-xs"
-              placeholder="Shoe Size"
-              value={shoeSize}
-              onChange={(e) => setShoeSize(e.target.value)}
-            />
+            <label className="input input-bordered flex items-center gap-2">
+              <input
+                type="number"
+                className="w-full max-w-xs"
+                placeholder="Shoe Size"
+                value={shoeSize}
+                onChange={(e) => setShoeSize(e.target.value)}
+              />
+              <span className="badge badge-error text-white">Required</span>
+            </label>
           </div>
-          <div className="flex items-center gap-2">
-            <Checkbox
+          <div className="flex items-center gap-2 py-10">
+            <input
               id="terms-and-conditions"
-              onCheckedChange={(checked) => setTermsAccepted(checked === true)}
+              type="checkbox"
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}
+              className="checkbox"
             />
 
             <label
               htmlFor="terms-and-conditions"
-              className={`${futuraMedium.className} text-sm text-gray-700 cursor-pointer pb-10`}
+              className={`${futuraMedium.className} text-sm text-gray-700 cursor-pointer`}
             >
               I have read and agree to the{" "}
               <a
@@ -359,11 +401,9 @@ const Page = () => {
             <div className="flex flex-col items-start gap-2">
               <button
                 onClick={purchase}
-                disabled={!termsAccepted || loading} // Disable if T&C not accepted or loading
+                disabled={isCheckoutDisabled} // Disable if T&C not accepted or loading
                 className={`flex items-center gap-2 px-5 py-3 rounded-lg ${
-                  !termsAccepted || loading
-                    ? "cursor-not-allowed opacity-50"
-                    : ""
+                  isCheckoutDisabled ? "cursor-not-allowed opacity-50" : ""
                 }`}
               >
                 {loading ? (
