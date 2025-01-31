@@ -147,5 +147,8 @@
     "h1" : "Want to buy a collector's or competition vehicle? Sell it ? You are in the right place !",
     "p1" : "Thanks to our experience and our network, we also offer a purchase & sale service for competition vehicles, including historic F1 cars. We put all our expertise at your service by supporting you when searching for a vehicle.",
     "p2" : "Please note, we sell a lot of offmarket vehicles (F1, sport proto, etc.). Whatever your search, contact us!"
+  },
+  "Payments" : {
+    "warning" : "We ask you to fill in the form below as accurately as possible, so that the equipment provided guarantees your safety and comfort throughout this incredible experience!"
   }
 }

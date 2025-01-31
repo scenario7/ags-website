@@ -7,10 +7,11 @@ interface ActivityCardProps {
   image: string;
   title: string;
   link: string;
+  subtitle? : string;
   dontShowArrows?: boolean;  // Add the optional dontShowArrows prop
 }
 
-const ActivityCard: React.FC<ActivityCardProps> = ({ image, title, link, dontShowArrows }) => {
+const ActivityCard: React.FC<ActivityCardProps> = ({ image, title, link, subtitle, dontShowArrows }) => {
   return (
     <a href={link} className="block w-80 h-96 relative overflow-hidden rounded-lg group">
       {/* Image */}
@@ -26,11 +27,14 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ image, title, link, dontSho
       ></div>
 
       {/* Title */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
       <h2
-        className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center text-white font-bold z-20 ${futuraLight.className} text-3xl opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300`}
+        className={`text-center text-white font-bold ${futuraLight.className} text-3xl`}
       >
         {title}
       </h2>
+      <p className="text-white text-center text-xs w-full pt-5">{subtitle}</p>
+      </div>
 
       {/* Icon (Arrow) */}
       {!dontShowArrows && (  // Conditionally render the arrow button

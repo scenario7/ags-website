@@ -7,6 +7,7 @@ import ActivityCard from "@/components/HomePage/ActivityCard";
 import { experiences } from "@/experiences";
 import CustomNavbar from "@/components/CustomNavbar";
 import localFont from "next/font/local";
+import { InstagramEmbed } from 'react-social-media-embed';
 
 const futuraMedium = localFont({
   src: "../../../public/fonts/futura/futura-medium.ttf",
@@ -150,6 +151,9 @@ const Page = () => {
           </ul>
         </div>
       </div>
+      </div>
+      <div className="flex flex-col items-center">
+        <InstagramEmbed url="https://www.instagram.com/share/BBiWoY73Tz" width={328} captioned />
       </div>
       <CustomFooter />
     </div>

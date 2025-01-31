@@ -13,6 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import CustomNavbar from "@/components/CustomNavbar";
 import "cally";
+import { useTranslations } from "next-intl";
 
 const futuraMedium = localFont({
   src: "../../../../../public/fonts/futura/futura-medium.ttf",
@@ -104,6 +105,11 @@ const Page = () => {
     const authUser = auth.currentUser; // Check the current user
 
     if (!authUser) {
+      toast({
+        title: "Authentication Required",
+        description: "Please sign in to make a booking",
+        variant: "destructive",
+      });
       handleSignIn();
       setLoading(false); // Ensure loading state resets
       return;
@@ -132,15 +138,11 @@ const Page = () => {
         thighCircumference,
         legLength,
         shoulderWidth,
-        shoeSize,
+        shoeSize
       );
       router.push(checkoutUrl);
 
-      toast({
-        title: "Booking Successful",
-        description: "Your booking has been confirmed and saved.",
-        variant: "default",
-      });
+
     } catch (error) {
       console.error("Error completing purchase:", error);
       toast({
@@ -157,6 +159,8 @@ const Page = () => {
     experience && packageData
       ? `${experience.name} ${packageData.name} Checkout`
       : "Package Not Found";
+
+  const t = useTranslations("Payments")
 
   return (
     <div>
@@ -257,7 +261,7 @@ const Page = () => {
               </select>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             <label className="input input-bordered flex items-center gap-2 col-span-2">
               <input
                 type="text"
@@ -353,6 +357,22 @@ const Page = () => {
               />
               <span className="badge badge-error text-white">Required</span>
             </label>
+          </div>
+          <div role="alert" className="alert w-3/4 bg-white mt-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="stroke-info h-6 w-6 shrink-0"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span>{t("warning")}</span>
           </div>
           <div className="flex items-center gap-2 py-10">
             <input

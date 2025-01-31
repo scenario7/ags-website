@@ -147,5 +147,8 @@
     "h1" : "Envie d'acheter un véhicule de collection ou de compétition ? Le vendre ? Vous êtes au bon endroit !",
     "p1" : "Grâce à notre expérience et notre réseau, nous proposons également un service d’achat & vente de véhicules de compétition, y compris les F1 historiques. Nous mettons toute notre expertise à votre service en vous accompagnant lors de la recherche d’un véhicule.",
     "p2" : "Attention, nous vendons beaucoup de véhicules offmarket (F1, sport proto, ...). Peu importe votre recherche, contactez-nous !"
+  },
+  "Payments" : {
+    "warning" : "Nous vous demandons de bien vouloir remplir le formulaire ci-dessous en étant le plus précis possible afin que l'équipement mis à votre disposition garantisse votre sécurité et votre confort tout au long de cette incroyable expérience !"
   }
 }
