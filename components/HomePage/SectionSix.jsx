@@ -20,7 +20,7 @@ const SectionSix = () => {
             alt=""
             className="relative h-14"
         />
-        <div className="absolute inset-0 bg-[#0B1237] mix-blend-lighten"></div>
+        <div className="absolute inset-0 bg-[#060D30] mix-blend-lighten"></div>
         </div>
     </div>
   )

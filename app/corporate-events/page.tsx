@@ -60,7 +60,7 @@ const Page = () => {
                         Reservations by Email Only
                     </button>
                 </a>
-                <a>
+                <a href="https://firebasestorage.googleapis.com/v0/b/website-d40d6.firebasestorage.app/o/AGS%20EVENTS%202025%20-%20EN.pdf?alt=media&token=21c21e6d-d111-4cb4-87fa-baaa7e822573" target="_blank">
                     <button className={`text-[#1B2C99] px-5 py-2 bg-white rounded-lg`}>
                         Download PDF
                     </button>

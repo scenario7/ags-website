@@ -6,6 +6,7 @@ import SectionFour from '@/components/HomePage/SectionFour'
 import SectionSix from '@/components/HomePage/SectionSix'
 import CustomFooter from '@/components/CustomFooter'
 import SectionSeven from '@/components/HomePage/SectionSeven'
+import SectionEight from '@/components/HomePage/SectionEight'
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <SectionFour/>
       <SectionSeven/>
       <SectionSix/>
+      <SectionEight/>
       <CustomFooter/>
     </div>
   );

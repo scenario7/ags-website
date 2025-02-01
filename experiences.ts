@@ -61,12 +61,6 @@ const addons = [
     price: 50,
     priceID: "price_1QfKJOG0uhOoAJjDJBNgmZ2B",
   },
-  {
-    title: "Simulator Session with Coach",
-    description: "1 hour session with coach.",
-    price: 700,
-    priceID: "price_1QfKJlG0uhOoAJjDGFTWCsV5",
-  },
 ];
 
 export const experiences = [

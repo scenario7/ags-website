@@ -141,8 +141,6 @@ const Page = () => {
         shoeSize
       );
       router.push(checkoutUrl);
-
-
     } catch (error) {
       console.error("Error completing purchase:", error);
       toast({
@@ -160,7 +158,7 @@ const Page = () => {
       ? `${experience.name} ${packageData.name} Checkout`
       : "Package Not Found";
 
-  const t = useTranslations("Payments")
+  const t = useTranslations("Payments");
 
   return (
     <div>
@@ -178,7 +176,7 @@ const Page = () => {
             Review Your Selection
           </h1>
           <div className="bg-gradient-to-r from-transparent via-[#1C4773] to-transparent h-1 w-1/2"></div>
-          <div className="flex flex-col md:flex-row justify-evenly items-center gap-20 w-full py-10">
+          <div className="flex flex-col md:flex-row justify-evenly items-center md:items-start gap-20 w-full py-10">
             <div className="grid grid-cols-2 md:grid-cols-1 gap-3 justify-between">
               {experience?.checkoutImages.map((image) => {
                 return (
@@ -197,43 +195,53 @@ const Page = () => {
               >
                 ADD ONS
               </h2>
-              {packageData?.addons.map((addon, index) => (
-                <div key={index} className="flex items-center gap-3 py-2">
-                  {/* Custom Checkbox */}
-                  <Checkbox
-                    id={`addon-${index}`}
-                    name={`addon-${addon.title}`}
-                    value={addon.title}
-                    className="peer rounded-none peer-checked:bg-red-200"
-                    onCheckedChange={() => handleAddonChange(addon)}
-                  />
-                  <label
-                    htmlFor={`addon-${index}`}
-                    className="flex items-center gap-2 cursor-pointer text-sm text-gray-700"
-                  >
-                    {/* Addon Title, Description, and Price */}
-                    <div className="flex flex-col justify-between">
-                      <div className="flex flex-col items-start text-left">
-                        <h1 className={`${futuraMedium.className} text-lg`}>
-                          {addon.title}
-                        </h1>
-                        <p
-                          className={`text-gray-500 ${futuraMedium.className}`}
-                        >
-                          {addon.description}
-                        </p>
-                      </div>
-                      <p
-                        className={`text-gray-900 ${futuraMedium.className} text-lg font-bold`}
-                      >{`€${addon.price}`}</p>
-                    </div>
-                  </label>
-                </div>
-              ))}
+              {packageData?.addons
+  .filter((addon) => {
+    // Show Lunch addon only when packageID is "Discover" and experienceID is "f4"
+    if (addon.title === "Lunch (if not included)") {
+      return packageID === "Discover" && experienceID === "f4";
+    }
+    return true; // Keep all other addons
+  })
+  .map((addon, index) => (
+    <div key={index} className="flex items-center gap-3 py-2">
+      <Checkbox
+        id={`addon-${index}`}
+        name={`addon-${addon.title}`}
+        value={addon.title}
+        className="peer rounded-none peer-checked:bg-red-200"
+        onCheckedChange={() => handleAddonChange(addon)}
+      />
+      <label
+        htmlFor={`addon-${index}`}
+        className="flex items-center gap-2 cursor-pointer text-sm text-gray-700"
+      >
+        <div className="flex flex-col justify-between">
+          <div className="flex flex-col items-start text-left">
+            <h1 className={`${futuraMedium.className} text-lg`}>
+              {addon.title}
+            </h1>
+            <p className={`text-gray-500 ${futuraMedium.className}`}>
+              {addon.description}
+            </p>
+          </div>
+          <p className={`text-gray-900 ${futuraMedium.className} text-lg font-bold`}>
+            €{addon.price}
+          </p>
+        </div>
+      </label>
+    </div>
+  ))}
+
             </div>
             <div>
+            <h2
+                className={`${futuraMedium.className} text-2xl text-center md:text-left pb-10`}
+              >
+                Choose a Date
+              </h2>
               <select
-                className="select select-ghost select-lg bg-[#060D30] text-white"
+                className="select select-ghost select-lg"
                 value={selectedDate}
                 onChange={(e) => setSelectedDate(e.target.value)}
               >
