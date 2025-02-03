@@ -13,10 +13,20 @@ const SectionEight = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex md:flex-row flex-col py-20 md:justify-between md:px-20 items-center">
       <blockquote
         className="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/agsformule1"
+        data-instgrm-version="12"
+      ></blockquote>
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/im4cup"
+        data-instgrm-version="12"
+      ></blockquote>
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/dukartalaf1.byags"
         data-instgrm-version="12"
       ></blockquote>
     </div>
