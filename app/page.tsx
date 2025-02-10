@@ -14,15 +14,15 @@ export default function Home() {
     <div>
       <HeroSection/>
       <SectionOne/>
-      <div className='divider py-10 px-36'></div>
+      <div className='divider px-36'></div>
       <SectionTwo/>
-      <div className='divider py-10 px-36'></div>
+      <div className='divider px-36'></div>
       <SectionThree/>
-      <div className='divider py-10 px-36'></div>
+      <div className='divider px-36 pb-10'></div>
       <SectionFour/>
-      <div className='divider py-10 px-36'></div>
+      <div className='divider px-36 pt-10'></div>
       <SectionSeven/>
-      <div className='divider py-10 px-36'></div>
+      <div className='divider px-36'></div>
       <SectionSix/>
       <SectionEight/>
       <CustomFooter/>

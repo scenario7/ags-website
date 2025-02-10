@@ -19,23 +19,23 @@ const SectionFour = () => {
   const t = useTranslations("SectionFour");
 
   return (
-    <div className="flex md:flex-row flex-col px-10 py-10 items-center gap-10">
+    <div className="flex md:flex-row flex-col px-10 py-20 items-center gap-10 bg-[#060D30]">
       <div className="flex flex-col items-center md:items-start gap-5 text-center">
         <h2
-          className={`${futuraMedium.className} md:text-left text-center tracking-tighter text-2xl md:text-3xl`}
+          className={`${futuraMedium.className} md:text-left text-white text-center tracking-tighter text-2xl md:text-3xl`}
         >
           {t("title")}
         </h2>
         <div className="bg-gradient-to-r to-transparent from-transparent via-[#ED2939] md:from-[#ED2939] h-1 w-56"></div>
         <p
-          className={`text-center md:text-lg md:text-left ${inter.className} tracking-tight`}
+          className={`text-center md:text-lg md:text-left ${inter.className} tracking-tight text-white`}
         >
           {t("p1")}
           <br /> {t("p2")}
         </p>
         <a href="/history">
           <button
-            className={`${futuraMedium.className} hover:bg-[#446890] bg-[#060D30] transition-colors text-white px-3 py-2`}
+            className={`${futuraMedium.className} hover:bg-[#446890] bg-white transition-colors text-black px-3 py-2`}
           >
             Our History
           </button>
