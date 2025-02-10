@@ -26,7 +26,7 @@ const HeroTemplate: React.FC<HeroTemplateProps> = ({ image, title, subtitle }) =
       </div>
 
       {/* Text Content */}
-      <div className="absolute inset-y-0 left-0 w-[40%] flex flex-col items-start justify-center pl-10 gap-5 z-10">
+      <div className="absolute inset-y-0 left-0 md:w-[40%] w-[60%] flex flex-col items-start justify-center pl-10 gap-5 z-10">
         <h1
           className={`text-3xl md:text-6xl tracking-tighter text-[#09144A] text-left ${futuraMedium.className}`}
         >
@@ -34,7 +34,7 @@ const HeroTemplate: React.FC<HeroTemplateProps> = ({ image, title, subtitle }) =
         </h1>
         <div className="bg-gradient-to-r md:from-[#ED2939] from-transparent via-[#ED2939] to-transparent h-1 w-36 md:w-72"></div>
         <p
-          className={`${expansiva.className} tracking-widest uppercase text-[12px] md:text-sm text-[#09144A] text-left`}
+          className={`${expansiva.className} tracking-widest uppercase text-[12px] md:text-sm text-xs text-[#09144A] text-left`}
         >
           {subtitle}
         </p>

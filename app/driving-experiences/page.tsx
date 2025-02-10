@@ -25,7 +25,7 @@ const Page = () => {
           <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl}`}>Experiences</h1>
           <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
           <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
-            {t("p1")}<br />
+            {t("p1")}
             {t("p2")}
           </p>
         </div>

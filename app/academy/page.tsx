@@ -61,12 +61,7 @@ const whyUsPoints = [
             <div className='flex flex-col items-center gap-3 py-10 px-10'>
                 <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
                 <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
-                <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
-                {t("p1")}<br/>
-                {t("p2")}
-                </p>
-            </div>
-            <div
+                <div
             style={{
                 backgroundImage: `
                 linear-gradient(to right, #1B2C99, rgba(0, 0, 0, 0)), 
@@ -75,7 +70,7 @@ const whyUsPoints = [
                 backgroundSize: 'cover', // Ensures the image covers the entire div
                 backgroundPosition: 'center', // Centers the image
             }}
-            className="rounded-lg"
+            className="rounded-lg w-full mt-5"
             >
             {/* Optional: Content over the background */}
             <div className='flex md:flex-row flex-col items-center justify-between tracking-tighter'>
@@ -101,13 +96,19 @@ const whyUsPoints = [
             </div>
             </div>
             </div>
-            <div className='flex flex-col items-center gap-3 py-20'>
+                <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm pt-5`}>
+                {t("p1")}<br/>
+                {t("p2")}
+                </p>
+            </div>
+
+            <div className='flex flex-col items-center gap-3 py-10'>
             <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>Why Us</h1>
             <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
             <div className='py-10 grid grid-cols-1 gap-10'>
-            {whyUsPoints.map((point) => {
+            {whyUsPoints.map((point, index) => {
                 return(
-                    <div className='flex md:flex-row flex-col md:text-left text-center items-center gap-10 justify-center' key={point.title}>
+                    <div key={index} className={`flex ${index%2===0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:text-left text-center items-center gap-10 justify-center' key={point.title}`}>
                         <div className='bg-[#0B1237] rounded-full p-5 text-white'>
                             {point.icon}
                         </div>

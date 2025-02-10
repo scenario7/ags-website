@@ -96,13 +96,22 @@ const infoCards = [
                 )
             })}
         </div>
-        <div className="grid grid-cols-2 items-center gap-5 md:gap-20 py-10">
-            {images.map((image, index) => {
-                return(
-                    <img src={image.src} alt="Hello" key={image.src} className={`w-full h-full ${index==images.length - 1 ? 'col-span-2' : 'col-span-1'}`}/>
-                )
-            })}
-        </div>
+        <div className="overflow-hidden">
+            <div className="flex gap-10 py-10 animate-scroll">
+              {images.map((image, index) => (
+                <img key={index} src={image.src} alt="" className="h-60 px-5" />
+              ))}
+              {/* Duplicate the images for seamless scrolling */}
+              {images.map((image, index) => (
+                <img
+                  key={`duplicate-${index}`}
+                  src={image.src}
+                  alt=""
+                  className="h-60"
+                />
+              ))}
+            </div>
+          </div>
     </div>
     <CustomFooter/>
     </div>

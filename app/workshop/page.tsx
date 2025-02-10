@@ -73,7 +73,7 @@ const Page = () => {
                 <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10'>
                     {cars.map((car) => {
                         return(
-                            <div key={car} className={`bg-[#060D30] shadow-md rounded-lg p-4 text-white ${futuraMedium.className} text-center`}>
+                            <div key={car} className={`bg-[#060D30] hover:bg-[#060D3090] transition-colors shadow-md rounded-lg p-4 text-white ${futuraMedium.className} text-center`}>
                                 {car}
                             </div>
                         )
@@ -84,7 +84,7 @@ const Page = () => {
                 <ul className='list-disc'>
                     {services.map((service) => {
                         return(
-                            <li key={service} className={`py-3`}>
+                            <li key={service} className={`${inter.className} tracking-tighter py-3 text-left md:text-md text-sm`}>
                                 {service}
                             </li>
                         )

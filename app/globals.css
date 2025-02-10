@@ -112,3 +112,10 @@ body {
   gap: 10px; /* Match your gap value */
   animation: scroll 20s linear infinite; /* Adjust speed by changing '20s' */
 }
+
+.animate-scroll-reviews {
+  display: flex;
+  gap: 10px; /* Match your gap value */
+  animation: scroll 40s linear infinite; /* Adjust speed by changing '20s' */
+}
+

@@ -12,7 +12,6 @@ import { experiences } from "@/experiences";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import CustomNavbar from "@/components/CustomNavbar";
-import "cally";
 import { useTranslations } from "next-intl";
 
 const futuraMedium = localFont({
@@ -196,46 +195,49 @@ const Page = () => {
                 ADD ONS
               </h2>
               {packageData?.addons
-  .filter((addon) => {
-    // Show Lunch addon only when packageID is "Discover" and experienceID is "f4"
-    if (addon.title === "Lunch (if not included)") {
-      return packageID === "Discover" && experienceID === "f4";
-    }
-    return true; // Keep all other addons
-  })
-  .map((addon, index) => (
-    <div key={index} className="flex items-center gap-3 py-2">
-      <Checkbox
-        id={`addon-${index}`}
-        name={`addon-${addon.title}`}
-        value={addon.title}
-        className="peer rounded-none peer-checked:bg-red-200"
-        onCheckedChange={() => handleAddonChange(addon)}
-      />
-      <label
-        htmlFor={`addon-${index}`}
-        className="flex items-center gap-2 cursor-pointer text-sm text-gray-700"
-      >
-        <div className="flex flex-col justify-between">
-          <div className="flex flex-col items-start text-left">
-            <h1 className={`${futuraMedium.className} text-lg`}>
-              {addon.title}
-            </h1>
-            <p className={`text-gray-500 ${futuraMedium.className}`}>
-              {addon.description}
-            </p>
-          </div>
-          <p className={`text-gray-900 ${futuraMedium.className} text-lg font-bold`}>
-            €{addon.price}
-          </p>
-        </div>
-      </label>
-    </div>
-  ))}
-
+                .filter((addon) => {
+                  // Show Lunch addon only when packageID is "Discover" and experienceID is "f4"
+                  if (addon.title === "Lunch (if not included)") {
+                    return packageID === "Discover" && experienceID === "f4";
+                  }
+                  return true; // Keep all other addons
+                })
+                .map((addon, index) => (
+                  <div key={index} className="flex items-center gap-3 py-2">
+                    <Checkbox
+                      id={`addon-${index}`}
+                      name={`addon-${addon.title}`}
+                      value={addon.title}
+                      className="peer rounded-none peer-checked:bg-red-200"
+                      onCheckedChange={() => handleAddonChange(addon)}
+                    />
+                    <label
+                      htmlFor={`addon-${index}`}
+                      className="flex items-center gap-2 cursor-pointer text-sm text-gray-700"
+                    >
+                      <div className="flex flex-col justify-between">
+                        <div className="flex flex-col items-start text-left">
+                          <h1 className={`${futuraMedium.className} text-lg`}>
+                            {addon.title}
+                          </h1>
+                          <p
+                            className={`text-gray-500 ${futuraMedium.className}`}
+                          >
+                            {addon.description}
+                          </p>
+                        </div>
+                        <p
+                          className={`text-gray-900 ${futuraMedium.className} text-lg font-bold`}
+                        >
+                          €{addon.price}
+                        </p>
+                      </div>
+                    </label>
+                  </div>
+                ))}
             </div>
             <div>
-            <h2
+              <h2
                 className={`${futuraMedium.className} text-2xl text-center md:text-left pb-10`}
               >
                 Choose a Date

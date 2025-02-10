@@ -49,7 +49,7 @@ export const getCheckoutUrl = async (
     cancel_url: window.location.origin + "/cancel",
     mode: "payment",
     metadata: {
-      firebaseUID: "shaVteV4blO5rTWAgK95pmhmyOk1",
+      firebaseUID: auth.currentUser.uid,
       firstName: firstName,
       lastName: lastName,
       height: height,
@@ -64,6 +64,8 @@ export const getCheckoutUrl = async (
       bookingDate: bookingDetails,
     },
   });
+
+  console.log("THIS IS THE DOCREF" , docRef)
 
   return new Promise<string>((resolve, reject) => {
     const unsubscribe = onSnapshot(docRef, (snap) => {
