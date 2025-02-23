@@ -17,6 +17,9 @@ const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 const futuraMedium = localFont({
   src: "../../public/fonts/futura/futura-medium.ttf",
 });
+const futuraCondensed = localFont({
+  src: "../../public/fonts/futura/futura-condensed.ttf",
+});
 const images = [img1, img2, img3, img4, img5, img6];
 
 const page = () => {
@@ -63,7 +66,7 @@ const page = () => {
             Prestations
           </h2>
           <div className="bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4"></div>
-          <ul className={`${futuraMedium.className} list-disc py-10`}>
+          <ul className={`${futuraMedium.className} list-disc py-10 px-10`}>
             <li>A day of training in F4 on the Circuit du Var</li>
             <li>Seat moulding and car adjustments</li>
             <li>2 simulator sessions beforehand</li>
@@ -89,10 +92,16 @@ const page = () => {
             The Event
           </h2>
           <div className="bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4"></div>
-          <div className="stats">
-            <div className="stat items-center bg-[#060D30]">
-              <div className="stat-title text-gray-400">Spectators in 2024</div>
-              <div className="stat-value text-center text-white">80,000</div>
+          <div className=" items-center bg-[#ffffff] shadow-lg py-5 px-10 rounded-xl flex flex-col-reverse gap-3">
+            <div
+              className={`${inter.className} tracking-tighter font-semibold text-gray-400`}
+            >
+              Spectators in 2024
+            </div>
+            <div
+              className={`${futuraCondensed.className} uppercase font-bold text-6xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}
+            >
+              80,000
             </div>
           </div>
           <h2 className={`${futuraMedium.className} text-xl tracking-tighter`}>
@@ -107,36 +116,34 @@ const page = () => {
             naturally-aspirated V10 engine.
           </p>
         </div>
-        <div className="flex w-full justify-between gap-10 py-10 ">
-        <div className="flex flex-col items-center gap-5 py-10 w-full bg-[#060D30] rounded-2xl">
-          <h2
-            className={`${futuraMedium.className} text-3xl md:w-1/2 text-center text-white`}
-          >
-            Program
-          </h2>
-          <div className="bg-gradient-to-r from-transparent via-[#ffffff] to-transparent h-1 w-1/4"></div>
-          <ul className={`${futuraMedium.className} text-center text-white`}>
-            <li>5 driving sessions</li>
-            <li>20 minutes per session</li>
-            <li>280km over the weekend</li>
-            <li>Coaching, video and data analysis</li>
-          </ul>
-        </div>
-        <div className="flex flex-col items-center gap-5 py-10 w-full bg-[#060D30] rounded-2xl">
-          <h2
-            className={`${futuraMedium.className} text-3xl md:w-1/2 text-center text-white`}
-          >
-            F4 Car Details
-          </h2>
-          <div className="bg-gradient-to-r from-transparent via-[#ffffff] to-transparent h-1 w-1/4"></div>
-          <ul className={`${futuraMedium.className} text-center text-white`}>
-            <li>FIA carbon monocoque</li>
-            <li>2.0 Renault Sport 4 cylinder turbo engine</li>
-            <li>160hp</li>
-            <li>500kg</li>
-            <li>SADEV 6-speed sequential gearbox with paddle shift</li>
-          </ul>
-        </div>
+        <div className="flex md:flex-row flex-col w-full justify-between gap-10 py-10 ">
+          <div className="flex  md:flex-row flex-col items-center justify-between px-10 gap-5 py-10 w-full bg-[#052756] rounded-2xl">
+            <h2
+              className={`${futuraCondensed.className} uppercase font-bold text-6xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}
+            >
+              Program
+            </h2>
+            <ul className={`${futuraMedium.className} text-center text-white`}>
+              <li>5 driving sessions</li>
+              <li>20 minutes per session</li>
+              <li>280km over the weekend</li>
+              <li>Coaching, video and data analysis</li>
+            </ul>
+          </div>
+          <div className="flex md:flex-row flex-col items-center justify-between px-10 gap-5 py-10 w-full bg-[#052756] rounded-2xl">
+            <h2
+              className={`${futuraCondensed.className} uppercase font-bold text-6xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}
+            >
+              Car Details
+            </h2>
+            <ul className={`${futuraMedium.className} text-center text-white`}>
+              <li>FIA carbon monocoque</li>
+              <li>2.0 Renault Sport 4 cylinder turbo engine</li>
+              <li>160hp</li>
+              <li>500kg</li>
+              <li>SADEV 6-speed sequential gearbox with paddle shift</li>
+            </ul>
+          </div>
         </div>
         <a href="/contact">
           <button

@@ -14,19 +14,21 @@ const expansiva = localFont({
   src: "../../public/fonts/expansiva/expansiva-bold.otf",
   weight: "700",
 });
+const futuraCondensed = localFont({
+  src: "../../public/fonts/futura/futura-condensed.ttf",
+});
 
 const SectionFour = () => {
   const t = useTranslations("SectionFour");
 
   return (
-    <div className="flex md:flex-row flex-col px-10 py-20 items-center gap-10 bg-[#060D30]">
+    <div className="flex md:flex-row flex-col px-10 py-20 items-center gap-10 bg-[#052756]">
       <div className="flex flex-col items-center md:items-start gap-5 text-center">
         <h2
-          className={`${futuraMedium.className} md:text-left text-white text-center tracking-tighter text-2xl md:text-3xl`}
+          className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}
         >
           {t("title")}
         </h2>
-        <div className="bg-gradient-to-r to-transparent from-transparent via-[#ED2939] md:from-[#ED2939] h-1 w-56"></div>
         <p
           className={`text-center md:text-lg md:text-left ${inter.className} tracking-tight text-white`}
         >
@@ -45,7 +47,7 @@ const SectionFour = () => {
         <img
           src={img0.src}
           alt=""
-          className="h-80 w-full object-cover rounded-lg shadow-[-20px_20px_0_0_#060D30]"
+          className="h-80 w-full object-cover rounded-lg"
         />
       </div>
     </div>

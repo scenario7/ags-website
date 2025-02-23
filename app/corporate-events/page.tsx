@@ -18,6 +18,9 @@ import { useTranslations } from "next-intl";
 const futuraMedium = localFont({
   src: "../../public/fonts/futura/futura-medium.ttf",
 });
+const futuraCondensed = localFont({
+  src: "../../public/fonts/futura/futura-condensed.ttf",
+});
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 const images = [corp1, corp2, corp3, corp4, corp5, corp6, corp7];
@@ -28,19 +31,45 @@ const Page = () => {
   return (
     <div className="flex flex-col">
       <CustomNavbar isHomePage={false} />
-      <div className=" items-center justify-center px-3 md:px-10">
-        <HeroTemplate
-          image={img.src}
-          title={t("title")}
-          subtitle={t("subtitle")}
-        />
-        <div className="flex flex-col items-center gap-3 py-10 px-10">
+      <div className=" items-center justify-center ">
+        <div className="px-3 md:px-10">
+          <HeroTemplate
+            image={img.src}
+            title={t("title")}
+            subtitle={t("subtitle")}
+          />
+        </div>
+        <div className="flex flex-col items-center gap-5 py-10 px-10 bg-[#052756] mt-10">
           <h1
-            className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}
+            className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff90]`}
           >
             {t("smallTitle")}
           </h1>
-          <div className="bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4"></div>
+
+          <p
+            className={`${inter.className} tracking-tighter text-center md:text-lg text-sm text-white`}
+          >
+            <span className="mb-5 block">{t("p1")}</span>
+            <span className="mb-5 block">{t("p2")}</span>
+            <span className="mb-5 block">{t("p3")}</span>
+            <span className="block">{t("p4")}</span>
+          </p>
+          <div className="overflow-hidden">
+            <div className="flex gap-10 py-10 animate-scroll">
+              {images.map((image, index) => (
+                <img key={index} src={image.src} alt="" className="h-60 px-5" />
+              ))}
+              {/* Duplicate the images for seamless scrolling */}
+              {images.map((image, index) => (
+                <img
+                  key={`duplicate-${index}`}
+                  src={image.src}
+                  alt=""
+                  className="h-60"
+                />
+              ))}
+            </div>
+          </div>
           <div
             style={{
               backgroundImage: `
@@ -74,31 +103,6 @@ const Page = () => {
                 </button>
               </a>
             </div>
-          </div>
-          <p
-            className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}
-          >
-            <span className="mb-5 block">{t("p1")}</span>
-            <span className="mb-5 block">{t("p2")}</span>
-            <span className="mb-5 block">{t("p3")}</span>
-            <span className="block">{t("p4")}</span>
-          </p>
-        </div>
-
-        <div className="overflow-hidden">
-          <div className="flex gap-10 py-10 animate-scroll">
-            {images.map((image, index) => (
-              <img key={index} src={image.src} alt="" className="h-60 px-5" />
-            ))}
-            {/* Duplicate the images for seamless scrolling */}
-            {images.map((image, index) => (
-              <img
-                key={`duplicate-${index}`}
-                src={image.src}
-                alt=""
-                className="h-60"
-              />
-            ))}
           </div>
         </div>
       </div>

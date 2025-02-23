@@ -6,13 +6,15 @@ const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light.ttf' });
 const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
 const expansiva = localFont({ src: '../../public/fonts/expansiva/expansiva-bold.otf', weight: '700' });
+const futuraCondensed = localFont({
+  src: "../../public/fonts/futura/futura-condensed.ttf",
+});
 
 const SectionSix = () => {
   return (
-    <div className="flex flex-col items-center gap-10 py-10">
-        <div className='flex flex-col items-center gap-3'>
-            <h1 className={`${futuraMedium.className} tracking-tighter text-2xl md:text-3xl`}>Our Partners</h1>
-            <div className="bg-gradient-to-r to-transparent from-transparent via-[#ED2939] h-1 w-56"></div>
+    <div className="flex w-full justify-between items-center gap-10 py-20 px-10 bg-[#052756]">
+        <div className='flex items-center gap-3'>
+            <h1 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}>Partners</h1>
         </div>
         <div className="relative">
         <img
@@ -20,7 +22,7 @@ const SectionSix = () => {
             alt=""
             className="relative h-14"
         />
-        <div className="absolute inset-0 bg-[#060D30] mix-blend-lighten"></div>
+        <div className="absolute inset-0"></div>
         </div>
     </div>
   )

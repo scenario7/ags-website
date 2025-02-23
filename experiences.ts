@@ -11,20 +11,19 @@ import f1packageHeader1 from "@/public/images/11.jpg";
 import f1packageHeader2 from "@/public/images/12.jpg";
 import f1packageHeader3 from "@/public/images/13.jpg";
 
-import f1Checkout1 from '@/public/images/checkout/f35/1.jpg'
-import f1Checkout2 from '@/public/images/checkout/f35/2.jpg'
-import f1Checkout3 from '@/public/images/checkout/f35/3.jpg'
-import f1Checkout4 from '@/public/images/checkout/f35/4.jpg'
-import f35Checkout1 from '@/public/images/checkout/f1/1.jpg'
-import f35Checkout2 from '@/public/images/checkout/f1/2.jpg'
-import f35Checkout3 from '@/public/images/checkout/f1/3.jpg'
-import f35Checkout4 from '@/public/images/checkout/f1/4.jpg'
+import f1Checkout1 from '@/public/images/checkout/f1/1.jpg'
+import f1Checkout2 from '@/public/images/checkout/f1/2.jpg'
+import f1Checkout3 from '@/public/images/checkout/f1/3.jpg'
+import f1Checkout4 from '@/public/images/checkout/f1/4.jpg'
+import f35Checkout1 from '@/public/images/checkout/f35/1.jpg'
+import f35Checkout2 from '@/public/images/checkout/f35/2.jpg'
+import f35Checkout3 from '@/public/images/checkout/f35/3.jpg'
+import f35Checkout4 from '@/public/images/checkout/f35/4.jpg'
 import f4Checkout1 from '@/public/images/checkout/f4/1.jpg'
 import f4Checkout2 from '@/public/images/checkout/f4/2.jpg'
 import f4Checkout3 from '@/public/images/checkout/f4/3.jpg'
 import f4Checkout4 from '@/public/images/checkout/f4/4.jpg'
 
-import { useTranslations } from "next-intl";
 
 const addons = [
   {

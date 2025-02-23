@@ -6,6 +6,8 @@ import client from "@/app/client";
 const futuraMedium = localFont({
   src: "../../public/fonts/futura/futura-medium.ttf",
 });
+const futuraCondensed = localFont({ src: '../../public/fonts/futura/futura-condensed.ttf' });
+
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 interface Article {
@@ -75,9 +77,8 @@ const SectionSeven = async () => {
     <div className="px-3 md:px-10 py-10">
       <div className="flex flex-col items-start py-10">
         <div className="flex items-center gap-3">
-          <div className="bg-[#ED2939] w-3 h-3 rounded-full shadow-lg shadow-[#ED2939] animate-blink"></div>
-          <h1 className={`${futuraMedium.className} underline text-3xl`}>
-            NEWS
+          <h1 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}>
+          NEWS
           </h1>
         </div>
       </div>

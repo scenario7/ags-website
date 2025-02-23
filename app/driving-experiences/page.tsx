@@ -10,7 +10,7 @@ import { experiences } from '@/experiences'
 import CustomNavbar from '@/components/CustomNavbar'
 import { useTranslations } from 'next-intl'
 
-const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
+const futuraCondensed = localFont({ src: '../../public/fonts/futura/futura-condensed.ttf' });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
 const Page = () => {
@@ -22,9 +22,8 @@ const Page = () => {
       <div className="flex flex-col items-center justify-center px-3 md:px-10">
         <HeroTemplate image={img1.src} title={t("title")} subtitle={t("subtitle")} />
         <div className='flex flex-col items-center gap-3 py-10 px-10'>
-          <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl}`}>Experiences</h1>
-          <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
-          <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
+          <h1 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-6xl bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}>Experiences</h1>
+          <p className={`${inter.className} tracking-tighter text-center md:text-lg text-sm`}>
             {t("p1")}
             {t("p2")}
           </p>
