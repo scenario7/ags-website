@@ -1,7 +1,9 @@
+'use client'
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import img0 from "@/public/images/0.JPG";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 const futuraLight = localFont({
@@ -24,11 +26,15 @@ const SectionFour = () => {
   return (
     <div className="flex md:flex-row flex-col px-10 py-20 items-center gap-10 bg-[#052756]">
       <div className="flex flex-col items-center md:items-start gap-5 text-center">
-        <h2
+        <motion.h2
           className={`${futuraCondensed.className} uppercase font-bold text-5xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}
+          initial={{ opacity: 0, y: 50 }} // Starts hidden and below
+          whileInView={{ opacity: 1, y: 0 }} // Animates only when in view
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }} // Starts when 20% of element is visible
         >
           {t("title")}
-        </h2>
+        </motion.h2>
         <p
           className={`text-center md:text-lg md:text-left ${inter.className} tracking-tight text-white`}
         >

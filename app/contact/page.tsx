@@ -12,6 +12,7 @@ const futuraMedium = localFont({
 });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
+
 const Page = () => {
   const [formData, setFormData] = useState({
     first_name: "",
@@ -65,15 +66,11 @@ const Page = () => {
             className="bg-[#0B1237] shadow-lg rounded-lg p-6 w-full max-w-lg"
           >
             <h2
-              className={`${futuraMedium.className} text-white text-2xl tracking-tighter`}
+              className={`${futuraMedium.className} text-white text-2xl tracking-tighter pb-5`}
             >
               Get in Touch
             </h2>
-            <p
-              className={`${inter.className} text-white text-sm tracking-tighter`}
-            >
-              You can reach out to us anytime.
-            </p>
+
             {submitted && (
               <p className="text-green-600 mb-4">
                 Thank you for your message! We will get back to you soon.

@@ -77,15 +77,17 @@ const Page = async () => {
   return (
     <div>
       <CustomNavbar isHomePage={false} />
-      <div className="px-3 md:px-10">
+      <div className="">
+        <div className='px-3 md:px-10'>
         <HeroTemplate title="News" subtitle="" image={img1.src} />
-        <div className="flex flex-col items-start py-10">
+        </div>
+        <div className="flex flex-col items-start py-10 px-3 md:px-10">
           <div className="flex items-center gap-3">
             <div className="bg-[#ED2939] w-3 h-3 rounded-full shadow-lg shadow-[#ED2939] animate-blink"></div>
             <h1 className={`${futuraMedium.className} underline text-3xl`}>LATEST</h1>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-10 items-center py-5">
+        <div className="flex flex-col md:flex-row gap-10 items-center bg-[#052756] mb-10 px-3 md:px-10 py-10">
           <img src={articles[0].image} alt="" className="h-96 w-96 object-cover" />
           <div className="flex flex-col items-start gap-5 px-3 ">
             <p className={`${inter.className} text-white uppercase bg-[#ED2939] px-3 py-1`}>
@@ -94,15 +96,15 @@ const Page = async () => {
             <h2 className={`${inter.className} tracking-tighter text-gray-400`}>
               {articles[0].date}
             </h2>
-            <h2 className={`${futuraMedium.className} text-4xl tracking-tighter`}>
+            <h2 className={`${futuraMedium.className} text-4xl text-white tracking-tighter`}>
               {articles[0].title}
             </h2>
-            <p className={`${inter.className} tracking-tighter w-3/4`}>
+            <p className={`${inter.className} text-white tracking-tighter w-3/4`}>
               {articles[0].description}
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 px-3 md:px-10">
           {articles.slice(1).map((article: Article) => (
             <div className="flex md:flex-row flex-col items-center gap-5" key={article.slug}>
               <img src={article.image} alt={article.title} className="h-72 w-72 object-cover" />
