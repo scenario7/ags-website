@@ -21,7 +21,7 @@ const SectionTwo = () => {
     <div className="flex flex-col px-10 gap-10 py-20 w-full bg-[#052756]">
       {/* Header Section */}
       <div className="flex flex-col items-center md:items-start gap-5 text-center">
-        <h2 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}>{t("h1")}</h2>
+        <h2 className={`${futuraCondensed.className} uppercase font-bold text-6xl md:text-8xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}>{t("h1")}</h2>
       </div>
 
       {/* Grid Section */}

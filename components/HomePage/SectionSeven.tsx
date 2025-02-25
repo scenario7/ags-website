@@ -77,7 +77,7 @@ const SectionSeven = async () => {
     <div className="px-3 md:px-10 py-10">
       <div className="flex flex-col items-start py-10">
         <div className="flex items-center gap-3">
-          <h1 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}>
+          <h1 className={`${futuraCondensed.className} uppercase font-bold text-5xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}>
           NEWS
           </h1>
         </div>

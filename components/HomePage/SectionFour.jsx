@@ -25,7 +25,7 @@ const SectionFour = () => {
     <div className="flex md:flex-row flex-col px-10 py-20 items-center gap-10 bg-[#052756]">
       <div className="flex flex-col items-center md:items-start gap-5 text-center">
         <h2
-          className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}
+          className={`${futuraCondensed.className} uppercase font-bold text-5xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}
         >
           {t("title")}
         </h2>

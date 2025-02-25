@@ -17,7 +17,7 @@ import CustomNavbar from '@/components/CustomNavbar'
 import { useTranslations } from 'next-intl'
 
 
-const futuraMedium = localFont({ src: '../../public/fonts/futura/futura-medium.ttf' });
+const futuraCondensed = localFont({ src: '../../public/fonts/futura/futura-condensed.ttf' });
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 
 const images = [
@@ -68,9 +68,8 @@ const infoCards = [
     <div className=" items-center justify-center px-3 md:px-10">
         <HeroTemplate image={img.src} title="Racing Team" subtitle=""/>
         <div className='flex flex-col items-center gap-3 py-10 px-10'>
-                <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
-                <div className='bg-gradient-to-r from-transparent via-[#060D30] to-transparent h-1 w-1/4'></div>
-                <p className={`${inter.className} tracking-tighter text-center md:text-md text-sm`}>
+                <h1 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-5xl bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}>{t("h1")}</h1>
+                <p className={`${inter.className} tracking-tighter text-center md:text-lg text-sm`}>
                 {t("p1")}<br/>
                 {t("p2")}<br/>
                 </p>
@@ -84,11 +83,11 @@ const infoCards = [
             {infoCards.map((infoCard) => {
                 return(
                     <div className={`bg-[#${infoCard.color}] py-10 px-10 flex flex-col gap-10 rounded-2xl shadow-lg`} key={infoCard.title}>
-                        <h3 className={`${futuraMedium.className} text-3xl text-center text-white`}>{infoCard.title}</h3>
+                        <h3 className={`${futuraCondensed.className} text-4xl uppercase text-center text-white`}>{infoCard.title}</h3>
                         <div>
                         {infoCard.points.map((point) => {
                             return(
-                                <p className={`text-white ${inter.className}`} key={point}>• {point}</p>
+                                <p className={`text-white ${inter.className} tracking-tight`} key={point}>• {point}</p>
                             )
                         })}
                         </div>

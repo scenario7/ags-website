@@ -49,8 +49,8 @@ export default function SectionThree() {
   return (
     <div className="flex flex-col items-center py-20 gap-20">
       {/* Heading */}
-      <div className="flex justify-between w-full items-center px-10">
-        <h2 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}>
+      <div className="flex md:flex-row flex-col gap-10 justify-between w-full items-center px-10">
+        <h2 className={`${futuraCondensed.className} uppercase font-bold text-5xl md:text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#002654] to-[#00265440]`}>
           Reviews
         </h2>
         <div className="flex flex-col items-center">

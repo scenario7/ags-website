@@ -14,7 +14,7 @@ const SectionSix = () => {
   return (
     <div className="flex w-full justify-between items-center gap-10 py-20 px-10 bg-[#052756]">
         <div className='flex items-center gap-3'>
-            <h1 className={`${futuraCondensed.className} uppercase font-bold text-2xl md:text-8xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}>Partners</h1>
+            <h1 className={`${futuraCondensed.className} uppercase font-bold text-5xl md:text-8xl md:text-left text-center bg-gradient-to-r bg-clip-text text-transparent from-[#ffffff] to-[#ffffff40]`}>Partners</h1>
         </div>
         <div className="relative">
         <img
