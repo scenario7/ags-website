@@ -99,12 +99,12 @@ const Page = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 bg-[#052756] px-3 md:px-10 py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 bg-[#05275640] px-3 md:px-10 py-10">
             {cars.map((car) => {
               return (
                 <div
                   key={car}
-                  className={`bg-[#000000] hover:bg-[#000000] transition-colors shadow-md rounded-lg p-4 text-white ${futuraMedium.className} text-center`}
+                  className={`bg-[#052756] transition-colors shadow-md rounded-lg p-4 text-white ${futuraMedium.className} text-center`}
                 >
                   {car}
                 </div>

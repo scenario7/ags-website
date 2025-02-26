@@ -7,11 +7,11 @@ import { Inter } from "next/font/google";
 import CustomFooter from "@/components/CustomFooter";
 import CustomNavbar from "@/components/CustomNavbar";
 
-const futuraMedium = localFont({
-  src: "../../public/fonts/futura/futura-medium.ttf",
-});
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 
+const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
+const futuraCondensed = localFont({
+  src: "../../public/fonts/futura/futura-condensed.ttf",
+});
 
 const Page = () => {
   const [formData, setFormData] = useState({
@@ -53,24 +53,25 @@ const Page = () => {
 
   return (
     <div>
-        <CustomNavbar isHomePage={false}/>
+      <CustomNavbar isHomePage={false} />
+      <div className="">
         <div className="px-3 md:px-10">
         <HeroTemplate
           image={img26.src}
           subtitle="GET IN TOUCH"
           title="Contact Us"
         />
-        <div className="flex flex-col md:flex-row gap-10 items-center py-10 justify-evenly">
+        </div>
+        <div className="px-3 md:px-10 flex bg-[#0B1237] flex-col md:flex-row gap-10 items-center py-10 justify-evenly mt-10">
           <form
             onSubmit={handleSubmit}
-            className="bg-[#0B1237] shadow-lg rounded-lg p-6 w-full max-w-lg"
+            className=" shadow-lg rounded-lg p-6 w-full max-w-lg"
           >
             <h2
-              className={`${futuraMedium.className} text-white text-2xl tracking-tighter pb-5`}
+              className={`${futuraCondensed.className} text-white text-5xl uppercase tracking-tighter pb-5`}
             >
               Get in Touch
             </h2>
-
             {submitted && (
               <p className="text-green-600 mb-4">
                 Thank you for your message! We will get back to you soon.
@@ -84,7 +85,7 @@ const Page = () => {
                 value={formData.first_name}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 p-3 block w-full rounded-full bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 p-3 block w-full rounded-lg bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="First Name"
               />
               <input
@@ -94,7 +95,7 @@ const Page = () => {
                 value={formData.last_name}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-lg bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Last Name"
               />
             </div>
@@ -106,7 +107,7 @@ const Page = () => {
                 value={formData.town}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 p-3 block w-full rounded-full bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 p-3 block w-full rounded-lg bg-white border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Town"
               />
               <input
@@ -116,7 +117,7 @@ const Page = () => {
                 value={formData.country}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-lg bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Country"
               />
             </div>
@@ -128,7 +129,7 @@ const Page = () => {
                 value={formData.email}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-lg bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Your email"
               />
             </div>
@@ -140,7 +141,7 @@ const Page = () => {
                 value={formData.phone}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-lg bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Phone Number"
               />
             </div>
@@ -152,7 +153,7 @@ const Page = () => {
                 value={formData.request}
                 onChange={(e) => handleChange(e)}
                 required
-                className="mt-1 block w-full rounded-full bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-lg bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Request"
               />
             </div>
@@ -164,7 +165,7 @@ const Page = () => {
                 onChange={(e) => handleChange(e)}
                 required
                 rows={4}
-                className="mt-1 block w-full rounded-xl bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full rounded-lg bg-white p-3 border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 placeholder="Your message"
               ></textarea>
             </div>
@@ -177,20 +178,40 @@ const Page = () => {
           </form>
           <div className="flex flex-col items-center text-center gap-10">
             <div className="flex flex-col gap-5">
-            <h2 className={`${futuraMedium.className} text-3xl tracking-tighter`}>Contact Information</h2>
-            <p className={`${inter.className} flex flex-col tracking-tighter`}>
+              <h2
+                className={`${futuraCondensed.className} text-white text-5xl uppercase tracking-tighter pb-5`}
+              >
+                Contact Information
+              </h2>
+              <p
+                className={`${inter.className} flex flex-col tracking-tighter text-white`}
+              >
                 <a href="mailto:stage@agsracing.com">stage@agsracing.com</a>
                 <a href="tel:+33(0)648686912">+33 (0) 6 48 68 69 12</a>
-            </p>
+              </p>
             </div>
             <div className="flex flex-col gap-5">
-            <h2 className={`${futuraMedium.className} text-3xl tracking-tighter`}>How to Find Us</h2>
-            <div><iframe className="rounded-xl shadow-lg" width="100%" height="300" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=AGS%20Formule%201+(AGS%20Formule%201)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps tracker sport</a></iframe></div>
+              <h2
+                className={`${futuraCondensed.className} text-white text-5xl uppercase tracking-tighter pb-5`}
+              >
+                How to Find Us
+              </h2>
+              <div>
+                <iframe
+                  className="rounded-xl shadow-lg"
+                  width="100%"
+                  height="300"
+                  scrolling="no"
+                  src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=AGS%20Formule%201+(AGS%20Formule%201)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                >
+                  <a href="https://www.gps.ie/">gps tracker sport</a>
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <CustomFooter/>
+      <CustomFooter />
     </div>
   );
 };

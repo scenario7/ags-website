@@ -20,6 +20,9 @@ const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 const futuraCondensed = localFont({
   src: "../../public/fonts/futura/futura-condensed.ttf",
 });
+const futuraMedium = localFont({
+  src: "../../public/fonts/futura/futura-medium.ttf",
+});
 
 const Page = () => {
   const t = useTranslations("History");
@@ -46,12 +49,13 @@ const Page = () => {
           <p className="text-center">{t("p5")}</p>
 
           <p className="text-center">{t("p6")}</p>
-          <a
-            href="/contact"
-            className="px-3 text-center py-2 w-1/4 rounded-2xl bg-blue-700 text-white"
-          >
-            Contact Us &rarr;
-          </a>
+                  <a href="/contact">
+                      <button
+                        className={`${futuraMedium.className} bg-[#446890] hover:bg-[#44689040] transition-colors hover:text-black text-white px-3 py-2`}
+                      >
+                        Contact Us &rarr;
+                      </button>
+                    </a>
         </div>
         <div className="overflow-hidden">
           <div className="flex gap-10 py-10 animate-scroll">
