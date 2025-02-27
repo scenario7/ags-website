@@ -161,6 +161,13 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <a href="/contact" className="flex justify-center">
+        <button
+          className={`${futuraMedium.className} bg-[#446890] hover:bg-[#44689040] transition-colors hover:text-black text-white px-3 py-2`}
+        >
+          Contact Us &rarr;
+        </button>
+      </a>
       <CustomFooter />
     </div>
   );
