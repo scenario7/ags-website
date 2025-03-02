@@ -16,7 +16,6 @@ const SectionOne = () => {
     <div className='flex flex-col items-center py-10 px-10 gap-8'>
         <div className='flex flex-col items-center gap-3'>
             <h1 className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}>{t("h1")}</h1>
-            <div className='bg-gradient-to-r from-transparent via-[#ED2939] to-transparent h-1 w-1/2'></div>
         </div>
         <p className={`text-center ${inter.className} md:text-lg tracking-tighter`}>{t("p1")}<br/>
                 {t("p2")}
