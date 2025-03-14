@@ -14,7 +14,7 @@ import corp7 from "@/public/images/corporate/7.jpg";
 import CustomFooter from "@/components/CustomFooter";
 import CustomNavbar from "@/components/CustomNavbar";
 import { useTranslations } from "next-intl";
-
+import { InstagramEmbed } from "react-social-media-embed";
 const futuraMedium = localFont({
   src: "../../public/fonts/futura/futura-medium.ttf",
 });
@@ -106,6 +106,10 @@ const Page = () => {
           </div>
         </div>
       </div>
+            <div className="flex md:flex-row flex-col w-full justify-center gap-10 py-10 items-center">
+              <InstagramEmbed url="https://www.instagram.com/reel/DE2pWrYMrK3/?utm_source=ig_web_button_share_sheet" width={328} />
+              <InstagramEmbed url="https://www.instagram.com/reel/DDND4dzN_D-/?utm_source=ig_web_button_share_sheet" width={328} />
+            </div>
       <CustomFooter />
     </div>
   );
