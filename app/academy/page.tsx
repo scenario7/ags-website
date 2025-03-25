@@ -1,17 +1,19 @@
+'use client'
 import React from "react";
 import HeroTemplate from "@/components/HeroTemplate";
 import img from "@/public/images/15.jpg";
+import img4 from "@/public/images/academy/4.jpg";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import img1 from "@/public/images/academy/1.jpg";
 import img2 from "@/public/images/academy/2.jpg";
 import img3 from "@/public/images/academy/3.jpg";
-import img4 from "@/public/images/academy/4.jpg";
 import { FaCalendar, FaPersonMilitaryPointing } from "react-icons/fa6";
 import { FaCar, FaFlagCheckered } from "react-icons/fa";
 import CustomFooter from "@/components/CustomFooter";
 import CustomNavbar from "@/components/CustomNavbar";
 import { useTranslations } from "next-intl";
+import { InstagramEmbed } from "react-social-media-embed";
 
 const futuraMedium = localFont({
   src: "../../public/fonts/futura/futura-medium.ttf",
@@ -160,6 +162,12 @@ const Page = () => {
             })}
           </div>
         </div>
+      </div>
+      <div className="flex md:flex-row flex-col w-full justify-center gap-10 py-10 items-center">
+        <InstagramEmbed
+          url="https://www.instagram.com/reel/DDND4dzN_D-/?utm_source=ig_web_button_share_sheet"
+          width={328}
+        />
       </div>
       <a href="/contact" className="flex justify-center">
         <button
