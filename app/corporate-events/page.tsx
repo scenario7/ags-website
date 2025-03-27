@@ -34,7 +34,7 @@ const Page = () => {
       <div className=" items-center justify-center ">
         <div className="px-3 md:px-10">
           <HeroTemplate
-            image={img.src}
+            image={corp5.src}
             title={t("title")}
             subtitle={t("subtitle")}
           />
