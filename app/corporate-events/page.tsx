@@ -1,6 +1,5 @@
 "use client";
 import HeroTemplate from "@/components/HeroTemplate";
-import img from "@/public/images/14.jpg";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import img2 from "@/public/images/15.jpg";
