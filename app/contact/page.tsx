@@ -8,6 +8,7 @@ import CustomFooter from "@/components/CustomFooter";
 import CustomNavbar from "@/components/CustomNavbar";
 
 
+
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
 const futuraCondensed = localFont({
   src: "../../public/fonts/futura/futura-condensed.ttf",

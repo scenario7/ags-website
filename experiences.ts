@@ -4,12 +4,12 @@ import img4 from "@/public/images/4.jpg";
 import f4packageHeader1 from "@/public/images/5.jpg"; // Example header images
 import f4packageHeader2 from "@/public/images/6.jpg";
 import f4packageHeader3 from "@/public/images/7.jpg";
-import f35packageHeader1 from "@/public/images/8.jpg";
-import f35packageHeader2 from "@/public/images/9.jpg";
-import f35packageHeader3 from "@/public/images/10.jpg";
-import f1packageHeader1 from "@/public/images/11.jpg";
-import f1packageHeader2 from "@/public/images/12.jpg";
-import f1packageHeader3 from "@/public/images/13.jpg";
+import f1packageHeader1 from "@/public/images/8.jpg";
+import f1packageHeader2 from "@/public/images/9.jpg";
+import f1packageHeader3 from "@/public/images/10.jpg";
+import f35packageHeader1 from "@/public/images/11.jpg";
+import f35packageHeader2 from "@/public/images/12.jpg";
+import f35packageHeader3 from "@/public/images/13.jpg";
 
 import f1Checkout1 from '@/public/images/checkout/f1/1.jpg'
 import f1Checkout2 from '@/public/images/checkout/f1/2.jpg'
@@ -135,7 +135,7 @@ export const experiences = [
     subtitle : "Discover single-seater driving in complete safety thanks to our Formula 3.5 Experience. Adrenalin and thrills guaranteed!",
     experienceID: "f35",
     checkoutImages : [f35Checkout1, f35Checkout2, f35Checkout3, f35Checkout4],
-    image: img4,
+    image: img3,
     description: {
       text: "Climb the ranks of single-seaters by discovering Formula 3.5. A school of Formula 1, these single-seaters offer impressive sensations!",
       points: [
@@ -204,7 +204,7 @@ export const experiences = [
     subtitle : "Discover single-seater driving in complete safety thanks to our Formula 1 Experience. Adrenalin and thrills guaranteed!",
     experienceID: "f1",
     checkoutImages : [f1Checkout1, f1Checkout2, f1Checkout3, f1Checkout4],
-    image: img3,
+    image: img4,
     description: {
       text: "The ultimate F1 experience, driving one of the most iconic cars on the planet at incredible speeds.",
       points: [
