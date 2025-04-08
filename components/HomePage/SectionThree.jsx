@@ -120,16 +120,16 @@ export default function SectionThree() {
                   className="w-8 h-8 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
-                  <h1
+                  <h3
                     className={`${futuraMedium.className} text-lg text-white tracking-tighter`}
                   >
                     {review.name}
-                  </h1>
-                  <h2
+                  </h3>
+                  <h3
                     className={`${futuraMedium.className} text-sm text-gray-400`}
                   >
                     {review.time}
-                  </h2>
+                  </h3>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 const futuraLight = localFont({ src: '../../public/fonts/futura/futura-std-light.ttf' });
 
@@ -15,9 +16,10 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ image, title, link, subtitl
   return (
     <a href={link} className="block w-80 h-96 relative overflow-hidden rounded-lg group">
       {/* Image */}
-      <img
+      <Image
         src={image}
         alt={title}
+        fill
         className="absolute inset-0 object-cover w-full h-full"
       />
 

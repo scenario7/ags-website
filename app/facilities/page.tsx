@@ -25,6 +25,7 @@ const Page = () => {
   const facilities = [
     {
       name: t("f1"),
+      clickable: true,
       link: "/workshop",
       image: img19,
       description: (
@@ -38,12 +39,14 @@ const Page = () => {
     },
     {
       name: t("f2"),
+      clickable: false,
       link: "",
       image: img20,
       description: <p>{t("f2p1")}</p>,
     },
     {
       name: t("f3"),
+      clickable: false,
       link: "",
       image: img21,
       description: (
@@ -114,6 +117,7 @@ const Page = () => {
                     image={facility.image.src}
                     link={facility.link}
                     title={facility.name}
+                    dontShowArrows={!facility.clickable}
                   />
                   <div
                     className={`${inter.className} text-center md:text-left tracking-tighter font-medium`}

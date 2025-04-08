@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google"
 import { FaTiktok, FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import Link from 'next/link';
+import logo from '../public/images/branding/drclogo.png'
 
 const inter = Inter({ subsets : ["latin"] ,weight : ["400", "500", "600"]})
 const futuraLight = localFont({ src: '../public/fonts/futura/futura-std-light.ttf' });
@@ -11,7 +12,8 @@ const expansiva = localFont({ src: '../public/fonts/expansiva/expansiva-bold.otf
 
 const CustomFooter = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between px-10 py-16 text-[#0B1237]">
+  <div className='flex flex-col px-10 py-5 gap-5'>
+    <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between text-[#0B1237]">
       {/* Left Section */}
       <div className="hidden md:flex flex-col items-center gap-2">
         <p className={`text-left ${futuraMedium.className} tracking-tighter`}>
@@ -75,6 +77,11 @@ const CustomFooter = () => {
           <Link href='https://www.linkedin.com/company/ags-formule-1-racing-events/'><FaLinkedin className="h-8 w-8 text-[#0B1237]" /></Link>
         </div>
       </div>
+    </div>
+    <div className='flex gap-3 items-center justify-end'>
+    <h3 className={`text-center ${futuraLight.className}`}>Developed and maintained by DesiRacingCo</h3>
+    <img src={logo.src} alt="" className='h-12'/>
+    </div>
     </div>
   );
 };

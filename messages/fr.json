@@ -2,7 +2,8 @@
     "HeroSection" : {
         "title1" : "MAITRISEZ LA VITESSE",
         "title2" : "RESSENTEZ L'ADRENALINE",
-        "subtitle" : "Stages de pilotage en monoplace"
+        "subtitle" : "Stages de pilotage en monoplace",
+        "bookNow": "Réservez maintenant"
     },
     "SectionFour" : {
         "title" : "UNE HISTOIRE DE PASSION",

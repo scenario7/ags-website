@@ -44,7 +44,6 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
     { name: t("racing"), link: "/racing" },
     { name: t("about"), link: "/facilities" },
     { name: t("news"), link: "/news" },
-    { name: t("shop"), link: "/shop" },
     { name: t("contact"), link: "/contact" },
   ];
 
@@ -101,6 +100,30 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
     });
     return () => unsubscribe();
   }, [auth]);
+
+  useEffect(() => {
+  const allDetails = document.querySelectorAll("details");
+
+  const handleToggle = (event: Event) => {
+    setTimeout(() => {
+      allDetails.forEach((detail) => {
+        if (detail !== event.target) {
+          detail.removeAttribute("open");
+        }
+      });
+    }, 10); // Small delay (~10ms) gives DOM time to apply the `open` state
+  };
+
+  allDetails.forEach((detail) => {
+    detail.addEventListener("toggle", handleToggle);
+  });
+
+  return () => {
+    allDetails.forEach((detail) => {
+      detail.removeEventListener("toggle", handleToggle);
+    });
+  };
+}, []);
 
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
 
@@ -336,9 +359,6 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
               </li>
               <li>
                 <Link href="/news">{t("news")}</Link>
-              </li>
-              <li>
-                <Link href="/shop">{t("shop")}</Link>
               </li>
               <li>
                 <Link href="/contact">{t("contact")}</Link>
