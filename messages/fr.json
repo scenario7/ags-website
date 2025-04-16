@@ -55,6 +55,18 @@
         "B4T" : "Expériences exclusives",
         "B4D" : "Nous offrons la possibilité de privatiser une journée de stage ou d’en réserver un sur d'autres circuits comme le Circuit Paul Ricard, le Circuit Club de Nevers Magny-Cours, et le Circuit Sidi Daoui (Maroc)."
     },
+"Track": {
+  "desc": "Le Circuit du Var servait autrefois de piste d’essai pour les Formule 1 d’AGS. Aujourd’hui, il est principalement utilisé pour des stages ou des track-days. Un tracé technique qui rassemble virages rapides et secteurs sinueux.",
+  "subtitle": "Le Circuit",
+  "pt1": "Tracé de 2,2km",
+  "pt2": "Accès privé à la piste",
+  "pt3": "depuis AGS",
+  "pt4": "Box AGS en pit lane",
+  "pt5": "Service de secours piste",
+  "pt6": "Assurance RC organisateur",
+  "pt7": "Assurance test day"
+},
+
     "History" : {
         "title" : "NOTRE HISTOIRE",
         "h1" : "UN NOUVEAU DEPART POUR AGS",

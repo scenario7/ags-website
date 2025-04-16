@@ -8,6 +8,7 @@ import { experiences } from "@/experiences";
 import CustomNavbar from "@/components/CustomNavbar";
 import localFont from "next/font/local";
 import { InstagramEmbed } from "react-social-media-embed";
+import { useTranslations } from "next-intl";
 
 const futuraMedium = localFont({
   src: "../../../public/fonts/futura/futura-medium.ttf",
@@ -17,6 +18,7 @@ const expansiva = localFont({
 });
 
 const Page = () => {
+  const t = useTranslations("Track")
   const { experienceID } = useParams();
   const experience = experiences.find(
     (exp) => exp.experienceID === experienceID
@@ -92,7 +94,7 @@ const Page = () => {
           <h1
             className={`${futuraMedium.className} tracking-tighter md:text-left text-center text-2xl md:text-4xl`}
           >
-            The Track
+            {t("subtitle")}
           </h1>
           <div className="bg-gradient-to-r from-transparent via-[#1C4773] to-transparent h-1 w-1/4"></div>
           <div className="flex flex-col md:flex-row gap-10 items-center py-10">
@@ -129,18 +131,16 @@ const Page = () => {
             </div>
             <div className="md:w-1/2 text-center md:text-left text-sm flex flex-col gap-5">
               <p className={`${futuraMedium.className}`}>
-                The Circuit du Var used to be a test track for AGS Formula 1
-                cars. Today, it is mainly used for training courses and track
-                days. A technical layout that combines fast corners and twisty
-                sections.
+                {t("desc")}
               </p>
               <ul className={`${futuraMedium.className} list-disc`}>
-                <li>Length - 2.2km</li>
-                <li>Private Access from AGS</li>
-                <li>AGS pit lane box</li>
-                <li>Track rescue service</li>
-                <li>Organiser&apos;s liability insurance</li>
-                <li>Test day insurance</li>
+                <li>{t("pt1")}</li>
+                <li>{t("pt2")}</li>
+                <li>{t("pt3")}</li>
+                <li>{t("pt4")}</li>
+                <li>{t("pt5")}</li>
+                <li>{t("pt6")}</li>
+                <li>{t("pt7")}</li>
               </ul>
             </div>
           </div>
@@ -171,7 +171,7 @@ const Page = () => {
       </div>
       <div className="flex flex-col items-center">
         <InstagramEmbed
-          url="https://www.instagram.com/share/BBiWoY73Tz"
+          url="https://www.instagram.com/reel/DDND4dzN_D-/?igsh=QkFPZUYxZHJiTw%3D%3D"
           width={328}
           captioned
         />

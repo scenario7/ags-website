@@ -83,6 +83,10 @@
     "B3P2": "Presence of coaches, mechanics and engineers",
     "B3P3": "Registration and administrative support"
   },
+  "Track" : {
+    "desc" : "The Circuit du Var used to be a test track for AGS Formula 1 cars. Today, it is mainly used for training courses and track days. A technical layout that combines fast corners and twisty sections.",
+    "subtitle" : "The Track"
+  },
   "Facilities": {
     "title": "Facilities & Location",
     "p1": "Located in a green setting in the heart of the Plaine des Maures, on the Circuit du Var, the AGS facilities allow us to enjoy the very best of motor sport!",

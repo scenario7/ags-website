@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import HeroTemplate from "@/components/HeroTemplate";
 import CustomFooter from "@/components/CustomFooter";
 import localFont from "next/font/local";
 import { Checkbox } from "@/components/ui/checkbox";
-import { auth, initFirebase } from "@/firebase";
+import { auth, db, initFirebase } from "@/firebase";
 import { getCheckoutUrl } from "./stripePayments";
 import { useRouter } from "next/navigation";
 import { experiences } from "@/experiences";
@@ -13,6 +13,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 import CustomNavbar from "@/components/CustomNavbar";
 import { useTranslations } from "next-intl";
+import { collection, getDocs } from "firebase/firestore";
 
 const futuraMedium = localFont({
   src: "../../../../../public/fonts/futura/futura-medium.ttf",
@@ -36,6 +37,7 @@ const Page = () => {
   const [shoulderWidth, setShoulderWidth] = useState("");
   const [shoeSize, setShoeSize] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
+  const [availableDates, setAvailableDates] = useState<string[]>([]);
 
   const isCheckoutDisabled =
     !termsAccepted || // Terms and Conditions must be accepted
@@ -159,6 +161,37 @@ const Page = () => {
 
   const t = useTranslations("Payments");
 
+  useEffect(() => {
+    const fetchDates = async () => {
+      try {
+        const snapshot = await getDocs(collection(db, "bookingDates"));
+        const dates = snapshot.docs.map((doc) => {
+          const data = doc.data();
+          const timestamp = data.date;
+  
+          // If the date is a Firestore Timestamp, convert to string
+          if (timestamp?.toDate) {
+            return timestamp.toDate().toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            });
+          }
+  
+          // If it's already a string
+          return String(timestamp);
+        });
+  
+        setAvailableDates(dates.sort());
+      } catch (error) {
+        console.error("Error fetching booking dates:", error);
+      }
+    };
+  
+    fetchDates();
+  }, []);
+  
+
   return (
     <div>
       <CustomNavbar isHomePage={false} />
@@ -250,7 +283,12 @@ const Page = () => {
                 <option value="" className="" disabled>
                   Choose a Date
                 </option>
-                <option value="18th January, 2025">18th January, 2025</option>
+                {availableDates.map((date) => (
+                  <option key={date} value={date}>
+                    {date}
+                  </option>
+                ))}
+                {/* <option value="18th January, 2025">18th January, 2025</option>
                 <option value="31st January, 2025">31st January, 2025</option>
                 <option value="22nd February, 2025">22nd February, 2025</option>
                 <option value="28th February, 2025">28th February, 2025</option>
@@ -267,7 +305,7 @@ const Page = () => {
                 </option>
                 <option value="17th October, 2025">17th October, 2025</option>
                 <option value="24th October, 2025">24th October, 2025</option>
-                <option value="31st October, 2025">31st October, 2025</option>
+                <option value="31st October, 2025">31st October, 2025</option> */}
               </select>
             </div>
           </div>
@@ -280,7 +318,7 @@ const Page = () => {
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
-              <span className="badge badge-error text-white">Required</span>
+              <span className="badge badge-info text-white">Required</span>
             </label>
             <label className="input input-bordered flex items-center gap-2">
               <input
@@ -290,7 +328,7 @@ const Page = () => {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
-              <span className="badge badge-error text-white">Required</span>
+              <span className="badge badge-info text-white">Required</span>
             </label>
             <label className="input input-bordered flex items-center gap-2">
               <input
@@ -300,7 +338,7 @@ const Page = () => {
                 value={height}
                 onChange={(e) => setHeight(e.target.value)}
               />
-              <span className="badge badge-error text-white">Required</span>
+              <span className="badge badge-info text-white">Required</span>
             </label>
             <label className="input input-bordered flex items-center gap-2">
               <input
@@ -310,7 +348,7 @@ const Page = () => {
                 value={weight}
                 onChange={(e) => setWeight(e.target.value)}
               />
-              <span className="badge badge-error text-white">Required</span>
+              <span className="badge badge-info text-white">Required</span>
             </label>
             <input
               type="number"
@@ -327,7 +365,7 @@ const Page = () => {
                 value={headCircumference}
                 onChange={(e) => setHeadCircumference(e.target.value)}
               />
-              <span className="badge badge-error text-white">Required</span>
+              <span className="badge badge-info text-white">Required</span>
             </label>
             <input
               type="number"
@@ -365,7 +403,7 @@ const Page = () => {
                 value={shoeSize}
                 onChange={(e) => setShoeSize(e.target.value)}
               />
-              <span className="badge badge-error text-white">Required</span>
+              <span className="badge badge-info text-white">Required</span>
             </label>
           </div>
           <div role="alert" className="alert w-3/4 bg-white mt-10">
