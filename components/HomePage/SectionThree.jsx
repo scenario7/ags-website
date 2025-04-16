@@ -18,23 +18,23 @@ const futuraCondensed = localFont({
 const reviews = [
   {
     profile:
-      "https://t4.ftcdn.net/jpg/06/08/55/73/360_F_608557356_ELcD2pwQO9pduTRL30umabzgJoQn5fnd.jpg",
-    name: "Jean Luc San",
+      "https://randomuser.me/api/portraits/men/36.jpg",
+    name: "Jean",
     time: "2 months ago",
     review:
       "Very warm welcome, competent team, great time on the circuit, nothing but happiness",
   },
   {
     profile:
-      "https://t4.ftcdn.net/jpg/06/08/55/73/360_F_608557356_ELcD2pwQO9pduTRL30umabzgJoQn5fnd.jpg",
-    name: "Gilles Bruner",
+      "https://randomuser.me/api/portraits/men/47.jpg",
+    name: "Gilles",
     time: "2 years ago",
     review:
       "The setting, exceptional, the infrastructures, perfect and then the quality of the whole team, without exception, combining courtesy, passion, kindness, and competence. Highly recommended!",
   },
   {
     profile:
-      "https://t4.ftcdn.net/jpg/06/08/55/73/360_F_608557356_ELcD2pwQO9pduTRL30umabzgJoQn5fnd.jpg",
+      "https://randomuser.me/api/portraits/men/62.jpg",
     name: "Pierre",
     time: "2 years ago",
     review:
