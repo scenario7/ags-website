@@ -106,7 +106,7 @@ export default function SectionThree() {
           {reviews.concat(reviews).map((review, index) => (
             <div
               key={index}
-              className="bg-[#052756] px-5 py-5 flex flex-col justify-between gap-5 rounded-xl hover:shadow-md hover:scale-105 transition-all min-w-[400px]"
+              className="bg-[#052756] px-5 py-5 flex flex-col justify-between gap-5 rounded-xl hover:shadow-md hover:scale-105 transition-all min-w-[400px] border-gray-800 border"
             >
               <p
                 className={`font-semibold text-white tracking-tighter ${inter.className}`}
