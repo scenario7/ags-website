@@ -1,167 +1,167 @@
 {
-    "HeroSection" : {
-        "title1" : "MAITRISEZ LA VITESSE",
-        "title2" : "RESSENTEZ L'ADRENALINE",
-        "subtitle" : "Stages de pilotage en monoplace",
-        "bookNow": "Réservez maintenant"
-    },
-    "SectionFour" : {
-        "title" : "UNE HISTOIRE DE PASSION",
-        "p1" : "Fondée en 1969 par le pilote Henri Julien, Automobiles Gonfaronnaises Sportives (AGS) est une institution de la course automobile, ayant participé au championnat du monde de Formule 1 notamment aux côtés de Gabriele Tarquini, Yannick Dalmas ou Philippe Streiff.",
-        "p2" : "Fort de son héritage, AGS s’engage aujourd’hui dans l’accompagnement de futurs pilotes et partage sa passion avec tous ceux qui rêvent de découvrir la course automobile."
-    },
-    "CorporateEvents" : {
-        "title" : "Evènementiel et entreprises",
-        "subtitle" : "Nos solutions pour les professionnels",
-        "smallTitle" : "L’EXCELLENCE SUR CIRCUIT",
-        "p1" :"Offrez à vos collaborateurs ou clients une expérience de pilotage inoubliable, parfaitement adaptée à leurs envies et besoins. Nous nous chargeons de l’organisation complète de votre événement d’entreprise, vous garantissant une expérience sur mesure.",
-        "p2" : "Profitez d'infrastructures haut de gamme : vestiaires, douches, salles de briefing, simulateur professionnel, salle de réception, visite de l’atelier, ainsi que la privatisation exclusive du circuit avec accès direct à la piste et même la possibilité d'arrivée en hélicoptère.",
-        "p3" : "Si vous le souhaitez, nous pouvons également nous occuper de la réservation des transports, de l’hébergement, du catering, et de bien d’autres aspects logistiques pour faciliter votre événement.",
-        "p4" : "Choisissez parmi nos différentes offres de pilotage : Formule 4, Formule 1, WSR 3.5, GP2, ou laissez-vous tenter par un baptême à bord d'une Oreca FLM09. Vous avez également la possibilité de venir avec votre propre voiture. Nous fournissons un équipement complet aux normes FIA (combinaison, gants, casque, HANS, chaussures, cagoule, chaussettes) pour assurer la sécurité et le confort de chaque participant. Vous serez encadrés par nos mécaniciens et ingénieurs, ainsi que par des coachs professionnels qui assureront les briefings, observeront le pilotage, et réaliseront un débriefing personnalisé, incluant une analyse des vidéos et des données. Enfin, vous pouvez afficher vos supports de PLV sur place pour un événement à votre image."
-    },
-    "NavBar" : {
-        "home":"Home",
-        "exp":"Expériences de pilotage",
-        "corp":"Evènementiel et entreprises",
-        "acad":"Ecole de pilotage",
-        "events":"Evènements",
-        "history":"Notre histoire",
-        "racing":"Racing",
-        "about":"About Us",
-        "news":"News",
-        "shop":"Shop",
-        "contact":"Contact Us"
-    },
-    "DrivingExperiences" : {
-        "title" : "EXPERIENCES DE PILOTAGE",
-        "subtitle" : "Devenez pilote de course le temps d’une journée",
-        "p1" : "Avec plus de 25 ans d’expérience dans le domaine des stages de pilotage sur Formule 1, ainsi que 7 ans de participation au Championnat du Monde de Formule 1 de 1986 à 1992, AGS est le partenaire idéal pour vivre une expérience inoubliable !",
-        "p2" : "De la Formule 4 à la Formule 1, venez découvrir le pilotage d’une monoplace en toute sécurité. Briefing, mise à disposition de l’équipement, coachs professionnels... AGS se charge de tout !"
-    },
-    "DriverAcademy" : {
-        "title" : "ECOLE DE PILOTAGE",
-        "subtitle" : "Perfectionnez votre technique de pilotage",
-        "h1" : "PERFECTIONNEMENT SUR MESURE",
-        "p1" : "Nous proposons des stages de pilotage sur-mesure, conçus pour faire progresser chaque jeune talent vers ses objectifs en compétition. Que ce soit pour une session unique ou un programme de formation complet, nos coachs experts vous accompagnent à chaque étape.",
-        "p2" : "Notre mission : révéler et développer votre potentiel, tout en vous dotant des compétences techniques avancées pour exceller sur la piste. Avec un suivi personnalisé et des analyses détaillées, nous vous aidons à devenir un pilote accompli, prêt à relever les défis des plus grands circuits",
-        "starts" : "A partir de",
-        "reservations" : "Réservations par email uniquement",
-        "B1T" : "Perfectionnement sur-mesure",
-        "B1D" : "Nos stages de perfectionnement offrent des sessions personnalisées et des ateliers de coaching sur-mesure, adaptés aux besoins spécifiques de chaque pilote, tels que le freinage. Ces formations ciblées permettent un développement technique précis et efficace.",
-        "B2T" : "Accompagnement complet",
-        "B2D" : "Nos coachs experts accompagnent les pilotes du début à la fin, avec des débriefings détaillés basés sur des analyses vidéo et des datas techniques, assurant ainsi une progression continue et une optimisation des performances.",
-        "B3T" : "Découverte de talents",
-        "B3D" : "Nous mettons un point d'honneur à repérer et former de nouveaux talents. Nos stages sont conçus pour révéler le potentiel des jeunes pilotes et les préparer aux défis des compétitions professionnelles.",
-        "B4T" : "Expériences exclusives",
-        "B4D" : "Nous offrons la possibilité de privatiser une journée de stage ou d’en réserver un sur d'autres circuits comme le Circuit Paul Ricard, le Circuit Club de Nevers Magny-Cours, et le Circuit Sidi Daoui (Maroc)."
-    },
-"Track": {
-  "desc": "Le Circuit du Var servait autrefois de piste d’essai pour les Formule 1 d’AGS. Aujourd’hui, il est principalement utilisé pour des stages ou des track-days. Un tracé technique qui rassemble virages rapides et secteurs sinueux.",
-  "subtitle": "Le Circuit",
-  "pt1": "Tracé de 2,2km",
-  "pt2": "Accès privé à la piste",
-  "pt3": "depuis AGS",
-  "pt4": "Box AGS en pit lane",
-  "pt5": "Service de secours piste",
-  "pt6": "Assurance RC organisateur",
-  "pt7": "Assurance test day"
-},
+  "HeroSection": {
+    "title1": "MAITRISEZ LA VITESSE",
+    "title2": "RESSENTEZ L'ADRENALINE",
+    "subtitle": "Stages de pilotage en monoplace",
+    "bookNow": "Réservez maintenant"
+  },
+  "SectionFour": {
+    "title": "UNE HISTOIRE DE PASSION",
+    "p1": "Fondée en 1969 par le pilote Henri Julien, Automobiles Gonfaronnaises Sportives (AGS) est une institution de la course automobile, ayant participé au championnat du monde de Formule 1 notamment aux côtés de Gabriele Tarquini, Yannick Dalmas ou Philippe Streiff.",
+    "p2": "Fort de son héritage, AGS s’engage aujourd’hui dans l’accompagnement de futurs pilotes et partage sa passion avec tous ceux qui rêvent de découvrir la course automobile."
+  },
+  "CorporateEvents": {
+    "title": "Evènementiel et entreprises",
+    "subtitle": "Nos solutions pour les professionnels",
+    "smallTitle": "L’EXCELLENCE SUR CIRCUIT",
+    "p1": "Offrez à vos collaborateurs ou clients une expérience de pilotage inoubliable, parfaitement adaptée à leurs envies et besoins. Nous nous chargeons de l’organisation complète de votre événement d’entreprise, vous garantissant une expérience sur mesure.",
+    "p2": "Profitez d'infrastructures haut de gamme : vestiaires, douches, salles de briefing, simulateur professionnel, salle de réception, visite de l’atelier, ainsi que la privatisation exclusive du circuit avec accès direct à la piste et même la possibilité d'arrivée en hélicoptère.",
+    "p3": "Si vous le souhaitez, nous pouvons également nous occuper de la réservation des transports, de l’hébergement, du catering, et de bien d’autres aspects logistiques pour faciliter votre événement.",
+    "p4": "Choisissez parmi nos différentes offres de pilotage : Formule 4, Formule 1, WSR 3.5, GP2, ou laissez-vous tenter par un baptême à bord d'une Oreca FLM09. Vous avez également la possibilité de venir avec votre propre voiture. Nous fournissons un équipement complet aux normes FIA (combinaison, gants, casque, HANS, chaussures, cagoule, chaussettes) pour assurer la sécurité et le confort de chaque participant. Vous serez encadrés par nos mécaniciens et ingénieurs, ainsi que par des coachs professionnels qui assureront les briefings, observeront le pilotage, et réaliseront un débriefing personnalisé, incluant une analyse des vidéos et des données. Enfin, vous pouvez afficher vos supports de PLV sur place pour un événement à votre image."
+  },
+  "NavBar": {
+    "home": "Home",
+    "exp": "Expériences de pilotage",
+    "corp": "Evènementiel et entreprises",
+    "acad": "Ecole de pilotage",
+    "events": "Evènements",
+    "history": "Notre histoire",
+    "racing": "Racing",
+    "about": "About Us",
+    "news": "News",
+    "shop": "Shop",
+    "contact": "Contact Us"
+  },
+  "DrivingExperiences": {
+    "title": "EXPERIENCES DE PILOTAGE",
+    "subtitle": "Devenez pilote de course le temps d’une journée",
+    "p1": "Avec plus de 25 ans d’expérience dans le domaine des stages de pilotage sur Formule 1, ainsi que 7 ans de participation au Championnat du Monde de Formule 1 de 1986 à 1992, AGS est le partenaire idéal pour vivre une expérience inoubliable !",
+    "p2": "De la Formule 4 à la Formule 1, venez découvrir le pilotage d’une monoplace en toute sécurité. Briefing, mise à disposition de l’équipement, coachs professionnels... AGS se charge de tout !"
+  },
+  "DriverAcademy": {
+    "title": "ECOLE DE PILOTAGE",
+    "subtitle": "Perfectionnez votre technique de pilotage",
+    "h1": "PERFECTIONNEMENT SUR MESURE",
+    "p1": "Nous proposons des stages de pilotage sur-mesure, conçus pour faire progresser chaque jeune talent vers ses objectifs en compétition. Que ce soit pour une session unique ou un programme de formation complet, nos coachs experts vous accompagnent à chaque étape.",
+    "p2": "Notre mission : révéler et développer votre potentiel, tout en vous dotant des compétences techniques avancées pour exceller sur la piste. Avec un suivi personnalisé et des analyses détaillées, nous vous aidons à devenir un pilote accompli, prêt à relever les défis des plus grands circuits",
+    "starts": "A partir de",
+    "reservations": "Réservations par email uniquement",
+    "B1T": "Perfectionnement sur-mesure",
+    "B1D": "Nos stages de perfectionnement offrent des sessions personnalisées et des ateliers de coaching sur-mesure, adaptés aux besoins spécifiques de chaque pilote, tels que le freinage. Ces formations ciblées permettent un développement technique précis et efficace.",
+    "B2T": "Accompagnement complet",
+    "B2D": "Nos coachs experts accompagnent les pilotes du début à la fin, avec des débriefings détaillés basés sur des analyses vidéo et des datas techniques, assurant ainsi une progression continue et une optimisation des performances.",
+    "B3T": "Découverte de talents",
+    "B3D": "Nous mettons un point d'honneur à repérer et former de nouveaux talents. Nos stages sont conçus pour révéler le potentiel des jeunes pilotes et les préparer aux défis des compétitions professionnelles.",
+    "B4T": "Expériences exclusives",
+    "B4D": "Nous offrons la possibilité de privatiser une journée de stage ou d’en réserver un sur d'autres circuits comme le Circuit Paul Ricard, le Circuit Club de Nevers Magny-Cours, et le Circuit Sidi Daoui (Maroc)."
+  },
+  "Track": {
+    "desc": "Le Circuit du Var servait autrefois de piste d’essai pour les Formule 1 d’AGS. Aujourd’hui, il est principalement utilisé pour des stages ou des track-days. Un tracé technique qui rassemble virages rapides et secteurs sinueux.",
+    "subtitle": "Le Circuit",
+    "pt1": "Tracé de 2,2km",
+    "pt2": "Accès privé à la piste",
+    "pt3": "depuis AGS",
+    "pt4": "Box AGS en pit lane",
+    "pt5": "Service de secours piste",
+    "pt6": "Assurance RC organisateur",
+    "pt7": "Assurance test day"
+  },
 
-    "History" : {
-        "title" : "NOTRE HISTOIRE",
-        "h1" : "UN NOUVEAU DEPART POUR AGS",
-        "p1" : "AGS Formule 1 (Automobiles Gonfaronnaises Sportives) a participé aux Championnats du Monde de Formule 1 de 86 à 92 grâce à son fondateur Henri Julien. Après ces participations, il développa le concept de stage en Formule 1. Ce fut la principale activité d'AGS pendant des années.",
-        "p2" : "Les installations uniques de cette ancienne écurie basées sur la Côte d'Azur, et un accès privé au circuit du Var en font un cadre exceptionnel pour toute activité sport automobile.",
-        "p3" : "Début 2019, Willy Collignon, propriétaire et dirigeant de l'écurie First Motorsport cherche un deuxième atelier dans le sud de la France. Après de nombreuses recherches, il atterrit à Gonfaron... Dès qu'il entra dans les installations d'AGS, il remarqua le potentiel incroyable de l'écurie. Il décida de s'investir dans son développement.",
-        "p4" : "Depuis août 2019, Willy a pris les rênes de l'écurie. Son objectif ? Donner un nouveau départ à AGS et ramener la compétition dans l'atelier ! ",
-        "p5" : "Son souhait est aussi de faire revivre l'histoire d'AGS : nous reconstruisons les véhicules historiques qui ont roulé en championnat du monde. Les JH25 et 24 de Tarquini ont déjà fait leurs premiers tours de pistes ! ",
-        "p6" : "Vous aussi vous voulez faire partie de notre histoire ?!"
-    },
-    "Racing" : {
-        "h1" : "PARTICIPEZ A UNE COURSE OU UN CHAMPIONNAT AVEC AGS",
-        "p1" : "Forts de notre expérience et de notre expertise reconnue, nous vous offrons l'opportunité de participer à des championnats ou courses automobiles parmi les plus prestigieuses.",
-        "p2" : "Nous vous accompagnons à chaque étape de votre aventure, de la préparation initiale jusqu'à la ligne d'arrivée, en veillant à ce que vous bénéficiez des meilleures conditions possibles pour atteindre vos objectifs. Ensemble, nous faisons de chaque course une expérience inoubliable, où performance, passion et excellence se rencontrent.",
-        "B1T" : "Véhicules",
-        "B1P1" : "Mise en location de véhicules",
-        "B1P2" : "Prise en charge de votre véhicule",
-        "B1P3" : "Préparation du véhicule : besoins techniques, mécaniques, etc.",
-        "B1P4" : "Possibilité de décorer le véhicule (sponsors)",
-        "B2T" : "Préparation",
-        "B2P1" : "Nous vous offrons la meilleure des préparations",
-        "B2P2" : "Session de pilotage sur circuit (principalement le circuit du Var)",
-        "B2P3" : "Encadrement complet avec coachs professionnels, mécaniciens et ingénieurs",
-        "B3T" : "Compétitions",
-        "B3P1" : "Transport aller et retour du/des véhicule(s)",
-        "B3P2" : "Présence de coachs, mécaniciens et ingénieurs",
-        "B3P3" : "Prise en charge de l’inscription et de l’administratif"
-    },
-    "Facilities" : {
-        "title" : "INFRASTRUCTURES ET LOCALISATION",
-        "p1" : "Logées dans un écrin de verdure, au coeur de la Plaine des Maures, sur le Circuit du Var, les installations d’AGS nous permettent de profiter du meilleur du sport automobile !",
-        "p1b1" : "Accueil",
-        "p1b2" : "Salles de réunion (équipées avec TV, tableau et projecteurs)",
-        "p1b3" : "Vestiaire pour les pilotes avec douches Flotte de camions, matériel complet pour l’assistance",
-        "p1b4" : "Accès direct à la piste",
-        "f1" : "Atelier",
-        "f1p1" : "Nous réalisons des restaurations et de l'entretien / maintenance de voitures de courses historiques. ",
-        "f1p2" : "Grâce à un outillage performant, AGS peut également prendre en charge une reconstruction complète jusqu’à obtention du Passeport Technique Historique et l’inscription en compétition.",
-        "f2" : "Réceptif",
-        "f2p1" : "Nous vous proposons lors des journées Driving Experience de déjeuner au coeur de nos installations. Avec deux Formule 1 en exposition et la vue sur le circuit, c’est l’endroit idéal pour passer un moment convivial avant de reprendre le volant.",
-        "f3" : "Accès privé au Circuit du Var",
-        "f3p1" : "Le Circuit du Var servait autrefois de piste d’essai pour les Formule 1 d’AGS. Aujourd’hui, il est principalement utilisé pour des stages ou des track-days. Un tracé technique qui rassemble virages rapides et secteurs sinueux",
-        "f3b1" : "Tracé de 2,2km",
-        "f3b2" : "Accès privé à la piste depuis AGS",
-        "f3b3" : "Box AGS en pit lane",
-        "f3b4" : "Service de secours piste",
-        "f3b5" : "Assurance RC organisateur",
-        "h1" : "Une localisation exceptionnelle",
-        "p2" : "A quelques kilomètres de la French Riviera, AGS se situe au coeur du massif des Maures. Profiter de la nature sous toutes ses formes... Des vignobles aux ports de plaisance en passant par des points de vue à couper le souffle, la région du Var vous offrira le meilleur de la côte méditerranéenne...Sa position centrale vous permet de nous rejoindre de multiples manières :",
-        "loc" : "à 45’ de St Tropez, à moins de deux heures de Monaco",
-        "plane" : "A 1 heure des aéroports de Nice Côte d’Azur et Marseille Marignane, à 40 minutes de l’aéroport de Toulon + aéroports de tourisme à proximité. Héliport sur place.",
-        "train" : "Gare Les Arcs-Draguignan (à 20 minutes en voiture)",
-        "car1" : "Depuis Nice, prendre l’A8 puis bifurquer vers l’A57 direction Toulon. Prendre, immédiatement après la bifurcation, la sortie n°13 (Le Cannet des Maures/Le Luc) sur l’A57.",
-        "car2" : "Depuis Aix en Provence, prendre l’A8 puis bifurquer vers l’A57 direction Toulon. Prendre, immédiatement après la bifurcation, la sortie n°13 (Le Cannet des Maures/Le Luc) sur l’A57.",
-        "car3" : "Depuis Toulon, prendre l’A57 direction Nice et prendre la sortie n°13 (Le Cannet des Maures/Le Luc)."
-    },
-    "SectionOne" : {
-        "h1" : "Nous vous faisons vivre l'expérience ultime du sport automobile",
-        "p1" : "Vous rêvez de piloter une vraie voiture de Formule 1 ? Vous souhaitez vivre les sensations d’une monoplace au volant d’une Formule 4 ou 3.5 ? N'attendez plus !",
-        "p2" : "Avec plus de 25 ans d'expérience dans les stages de pilotage de Formule 1, ainsi que 7 ans de participation au Championnat du Monde de Formule 1 de 1986 à 1992, AGS est votre partenaire idéal !"
-    },
-    "SectionTwo" : {
-        "h1" : "Activités",
-        "p1" : "Que vous souhaitiez découvrir les sensations du pilotage d'une monoplace, proposer à vos collaborateurs ou à vos clients un événement unique à votre image, ou encore vous impliquer en compétition, AGS a la solution !"
-    },
-    "Workshop": {
+  "History": {
+    "title": "NOTRE HISTOIRE",
+    "h1": "UN NOUVEAU DEPART POUR AGS",
+    "p1": "AGS Formule 1 (Automobiles Gonfaronnaises Sportives) a participé aux Championnats du Monde de Formule 1 de 86 à 92 grâce à son fondateur Henri Julien. Après ces participations, il développa le concept de stage en Formule 1. Ce fut la principale activité d'AGS pendant des années.",
+    "p2": "Les installations uniques de cette ancienne écurie basées sur la Côte d'Azur, et un accès privé au circuit du Var en font un cadre exceptionnel pour toute activité sport automobile.",
+    "p3": "Début 2019, Willy Collignon, propriétaire et dirigeant de l'écurie First Motorsport cherche un deuxième atelier dans le sud de la France. Après de nombreuses recherches, il atterrit à Gonfaron... Dès qu'il entra dans les installations d'AGS, il remarqua le potentiel incroyable de l'écurie. Il décida de s'investir dans son développement.",
+    "p4": "Depuis août 2019, Willy a pris les rênes de l'écurie. Son objectif ? Donner un nouveau départ à AGS et ramener la compétition dans l'atelier ! ",
+    "p5": "Son souhait est aussi de faire revivre l'histoire d'AGS : nous reconstruisons les véhicules historiques qui ont roulé en championnat du monde. Les JH25 et 24 de Tarquini ont déjà fait leurs premiers tours de pistes ! ",
+    "p6": "Vous aussi vous voulez faire partie de notre histoire ?!"
+  },
+  "Racing": {
+    "h1": "PARTICIPEZ A UNE COURSE OU UN CHAMPIONNAT AVEC AGS",
+    "p1": "Forts de notre expérience et de notre expertise reconnue, nous vous offrons l'opportunité de participer à des championnats ou courses automobiles parmi les plus prestigieuses.",
+    "p2": "Nous vous accompagnons à chaque étape de votre aventure, de la préparation initiale jusqu'à la ligne d'arrivée, en veillant à ce que vous bénéficiez des meilleures conditions possibles pour atteindre vos objectifs. Ensemble, nous faisons de chaque course une expérience inoubliable, où performance, passion et excellence se rencontrent.",
+    "B1T": "Véhicules",
+    "B1P1": "Mise en location de véhicules",
+    "B1P2": "Prise en charge de votre véhicule",
+    "B1P3": "Préparation du véhicule : besoins techniques, mécaniques, etc.",
+    "B1P4": "Possibilité de décorer le véhicule (sponsors)",
+    "B2T": "Préparation",
+    "B2P1": "Nous vous offrons la meilleure des préparations",
+    "B2P2": "Session de pilotage sur circuit (principalement le circuit du Var)",
+    "B2P3": "Encadrement complet avec coachs professionnels, mécaniciens et ingénieurs",
+    "B3T": "Compétitions",
+    "B3P1": "Transport aller et retour du/des véhicule(s)",
+    "B3P2": "Présence de coachs, mécaniciens et ingénieurs",
+    "B3P3": "Prise en charge de l’inscription et de l’administratif"
+  },
+  "Facilities": {
+    "title": "INFRASTRUCTURES ET LOCALISATION",
+    "p1": "Logées dans un écrin de verdure, au coeur de la Plaine des Maures, sur le Circuit du Var, les installations d’AGS nous permettent de profiter du meilleur du sport automobile !",
+    "p1b1": "Accueil",
+    "p1b2": "Salles de réunion (équipées avec TV, tableau et projecteurs)",
+    "p1b3": "Vestiaire pour les pilotes avec douches Flotte de camions, matériel complet pour l’assistance",
+    "p1b4": "Accès direct à la piste",
+    "f1": "Atelier",
+    "f1p1": "Nous réalisons des restaurations et de l'entretien / maintenance de voitures de courses historiques. ",
+    "f1p2": "Grâce à un outillage performant, AGS peut également prendre en charge une reconstruction complète jusqu’à obtention du Passeport Technique Historique et l’inscription en compétition.",
+    "f2": "Réceptif",
+    "f2p1": "Nous vous proposons lors des journées Driving Experience de déjeuner au coeur de nos installations. Avec deux Formule 1 en exposition et la vue sur le circuit, c’est l’endroit idéal pour passer un moment convivial avant de reprendre le volant.",
+    "f3": "Accès privé au Circuit du Var",
+    "f3p1": "Le Circuit du Var servait autrefois de piste d’essai pour les Formule 1 d’AGS. Aujourd’hui, il est principalement utilisé pour des stages ou des track-days. Un tracé technique qui rassemble virages rapides et secteurs sinueux",
+    "f3b1": "Tracé de 2,2km",
+    "f3b2": "Accès privé à la piste depuis AGS",
+    "f3b3": "Box AGS en pit lane",
+    "f3b4": "Service de secours piste",
+    "f3b5": "Assurance RC organisateur",
+    "h1": "Une localisation exceptionnelle",
+    "p2": "A quelques kilomètres de la French Riviera, AGS se situe au coeur du massif des Maures. Profiter de la nature sous toutes ses formes... Des vignobles aux ports de plaisance en passant par des points de vue à couper le souffle, la région du Var vous offrira le meilleur de la côte méditerranéenne...Sa position centrale vous permet de nous rejoindre de multiples manières :",
+    "loc": "à 45’ de St Tropez, à moins de deux heures de Monaco",
+    "plane": "A 1 heure des aéroports de Nice Côte d’Azur et Marseille Marignane, à 40 minutes de l’aéroport de Toulon + aéroports de tourisme à proximité. Héliport sur place.",
+    "train": "Gare Les Arcs-Draguignan (à 20 minutes en voiture)",
+    "car1": "Depuis Nice, prendre l’A8 puis bifurquer vers l’A57 direction Toulon. Prendre, immédiatement après la bifurcation, la sortie n°13 (Le Cannet des Maures/Le Luc) sur l’A57.",
+    "car2": "Depuis Aix en Provence, prendre l’A8 puis bifurquer vers l’A57 direction Toulon. Prendre, immédiatement après la bifurcation, la sortie n°13 (Le Cannet des Maures/Le Luc) sur l’A57.",
+    "car3": "Depuis Toulon, prendre l’A57 direction Nice et prendre la sortie n°13 (Le Cannet des Maures/Le Luc)."
+  },
+  "SectionOne": {
+    "h1": "Nous vous faisons vivre l'expérience ultime du sport automobile",
+    "p1": "Vous rêvez de piloter une vraie voiture de Formule 1 ? Vous souhaitez vivre les sensations d’une monoplace au volant d’une Formule 4 ou 3.5 ? N'attendez plus !",
+    "p2": "Avec plus de 25 ans d'expérience dans les stages de pilotage de Formule 1, ainsi que 7 ans de participation au Championnat du Monde de Formule 1 de 1986 à 1992, AGS est votre partenaire idéal !"
+  },
+  "SectionTwo": {
+    "h1": "Activités",
+    "p1": "Que vous souhaitiez découvrir les sensations du pilotage d'une monoplace, proposer à vos collaborateurs ou à vos clients un événement unique à votre image, ou encore vous impliquer en compétition, AGS a la solution !"
+  },
+  "Workshop": {
     "title": "L'atelier",
     "subtitle": "Un savoir-faire unique",
     "p1": " Nous réalisons des restaurations et de l'entretien / maintenance de voitures de courses historiques. ",
     "p2": "Grâce à un outillage performant, AGS peut également prendre en charge une reconstruction complète jusqu’à obtention du Passeport Technique Historique et l’inscription en compétition.",
     "h1": "Nos réalisations",
     "h2": "Nos prestations",
-          "service1": "Moulage de siège pilote",
-          "service2": "Fabrication d'arceau sur mesure à la taille du pilote (GRD F3)",
-          "service3": "Fabrication de colonne de direction sur mesure avec moyeu escamotable (ARGO coupe Alfa)",
-          "service4": "Fabrication et installation de système d'alimentation carburant (Fuel box, lift pump, HP pump) sur les F1 AGS (JH24 et JH25)",
-          "service5": "Conception et fabrication de faisceau électrique (habitacle, châssis, etc.) sur les F1 AGS (JH24 et JH25)",
-          "service6": "Réglages châssis ajusté au poids du pilote (F1 AGS, Formule Ford, F3 GRD, GT40, LMP3, etc.)",
-          "service7": "Restauration avec remise en état suivant les spécifications de période, à partir de photos et d'informations d'anciens acteurs des GP (mécaniciens, ingénieurs, etc.) (AGS JH24 et JH25)",
-          "service8": "Remise en route de véhicules stockés depuis longtemps (Porsche 962, FR3.5 T08, etc.)",
-          "service9": "Fabrication de ligne d'échappement (Formule Ford)",
-          "service10": "Scan 3D, modélisation informatique et fabrication de pièces complexes (chappes de train Sirocco Silhouette, pédales McLaren MP4-8, etc.)",
-          "service11": "Déplacement sur circuit, pour des coachings privés avec analyse acquisitions de données (Lédenon Crémona, Castellet, etc.)",
-          "service12": "Installation radios et caméra type AIM",
-          "service13": "Amélioration refroidissement moteur (installation SPAL avec déclenchement automatique sur Ligier JS51)",
-          "service14": "Révision et réfection moteurs (V8 Cosworth DFV et DFR, V6 Alfa, etc.) et boite de vitesse (longitudinales, transversales)",
-    "h3" : "Gardiennage",
-    "p3" : "Nous stockons dans un endroit sécurisé vos véhicules. Ils seront prêts pour vos séances de roulage sur le circuit du Var (accès direct à la piste) et vos compétitions. Rien de plus simple : tout se passe au même endroit !"
+    "service1": "Moulage de siège pilote",
+    "service2": "Fabrication d'arceau sur mesure à la taille du pilote (GRD F3)",
+    "service3": "Fabrication de colonne de direction sur mesure avec moyeu escamotable (ARGO coupe Alfa)",
+    "service4": "Fabrication et installation de système d'alimentation carburant (Fuel box, lift pump, HP pump) sur les F1 AGS (JH24 et JH25)",
+    "service5": "Conception et fabrication de faisceau électrique (habitacle, châssis, etc.) sur les F1 AGS (JH24 et JH25)",
+    "service6": "Réglages châssis ajusté au poids du pilote (F1 AGS, Formule Ford, F3 GRD, GT40, LMP3, etc.)",
+    "service7": "Restauration avec remise en état suivant les spécifications de période, à partir de photos et d'informations d'anciens acteurs des GP (mécaniciens, ingénieurs, etc.) (AGS JH24 et JH25)",
+    "service8": "Remise en route de véhicules stockés depuis longtemps (Porsche 962, FR3.5 T08, etc.)",
+    "service9": "Fabrication de ligne d'échappement (Formule Ford)",
+    "service10": "Scan 3D, modélisation informatique et fabrication de pièces complexes (chappes de train Sirocco Silhouette, pédales McLaren MP4-8, etc.)",
+    "service11": "Déplacement sur circuit, pour des coachings privés avec analyse acquisitions de données (Lédenon Crémona, Castellet, etc.)",
+    "service12": "Installation radios et caméra type AIM",
+    "service13": "Amélioration refroidissement moteur (installation SPAL avec déclenchement automatique sur Ligier JS51)",
+    "service14": "Révision et réfection moteurs (V8 Cosworth DFV et DFR, V6 Alfa, etc.) et boite de vitesse (longitudinales, transversales)",
+    "h3": "Gardiennage",
+    "p3": "Nous stockons dans un endroit sécurisé vos véhicules. Ils seront prêts pour vos séances de roulage sur le circuit du Var (accès direct à la piste) et vos compétitions. Rien de plus simple : tout se passe au même endroit !"
   },
-  "Trading" : {
-    "h1" : "Envie d'acheter un véhicule de collection ou de compétition ? Le vendre ? Vous êtes au bon endroit !",
-    "p1" : "Grâce à notre expérience et notre réseau, nous proposons également un service d’achat & vente de véhicules de compétition, y compris les F1 historiques. Nous mettons toute notre expertise à votre service en vous accompagnant lors de la recherche d’un véhicule.",
-    "p2" : "Attention, nous vendons beaucoup de véhicules offmarket (F1, sport proto, ...). Peu importe votre recherche, contactez-nous !"
+  "Trading": {
+    "h1": "Envie d'acheter un véhicule de collection ou de compétition ? Le vendre ? Vous êtes au bon endroit !",
+    "p1": "Grâce à notre expérience et notre réseau, nous proposons également un service d’achat & vente de véhicules de compétition, y compris les F1 historiques. Nous mettons toute notre expertise à votre service en vous accompagnant lors de la recherche d’un véhicule.",
+    "p2": "Attention, nous vendons beaucoup de véhicules offmarket (F1, sport proto, ...). Peu importe votre recherche, contactez-nous !"
   },
-  "Payments" : {
-    "warning" : "Nous vous demandons de bien vouloir remplir le formulaire ci-dessous en étant le plus précis possible afin que l'équipement mis à votre disposition garantisse votre sécurité et votre confort tout au long de cette incroyable expérience !"
+  "Payments": {
+    "warning": "Nous vous demandons de bien vouloir remplir le formulaire ci-dessous en étant le plus précis possible afin que l'équipement mis à votre disposition garantisse votre sécurité et votre confort tout au long de cette incroyable expérience !"
   }
 }

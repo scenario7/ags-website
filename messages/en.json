@@ -83,9 +83,16 @@
     "B3P2": "Presence of coaches, mechanics and engineers",
     "B3P3": "Registration and administrative support"
   },
-  "Track" : {
-    "desc" : "The Circuit du Var used to be a test track for AGS Formula 1 cars. Today, it is mainly used for training courses and track days. A technical layout that combines fast corners and twisty sections.",
-    "subtitle" : "The Track"
+  "Track": {
+    "desc": "The Circuit du Var used to be a test track for AGS Formula 1 cars. Today, it is mainly used for training courses and track days. A technical layout that combines fast corners and twisty sections.",
+    "subtitle": "The Track",
+    "pt1": "2.2km track",
+    "pt2": "Private access to the track",
+    "pt3": "from AGS",
+    "pt4": "AGS pit lane box",
+    "pt5": "Track rescue service",
+    "pt6": "Organiser's liability insurance",
+    "pt7": "Test day insurance"
   },
   "Facilities": {
     "title": "Facilities & Location",
@@ -145,15 +152,15 @@
     "service12": "AIM type radio and camera installation",
     "service13": "Improved engine cooling (SPAL installation with automatic triggering on Ligier JS51)",
     "service14": "Overhaul and repair of engines (V8 Cosworth DFV and DFR, V6 Alfa, etc.) and gearbox (longitudinales, transverse)",
-    "h3" : "Guarding",
-    "p3" : "We store your vehicles in a secure location. They will be ready for your driving sessions on the Var circuit (direct access to the track) and your competitions. Nothing could be simpler: everything happens in the same place!"
+    "h3": "Guarding",
+    "p3": "We store your vehicles in a secure location. They will be ready for your driving sessions on the Var circuit (direct access to the track) and your competitions. Nothing could be simpler: everything happens in the same place!"
   },
-  "Trading" : {
-    "h1" : "Want to buy a collector's or competition vehicle? Sell it ? You are in the right place !",
-    "p1" : "Thanks to our experience and our network, we also offer a purchase & sale service for competition vehicles, including historic F1 cars. We put all our expertise at your service by supporting you when searching for a vehicle.",
-    "p2" : "Please note, we sell a lot of offmarket vehicles (F1, sport proto, etc.). Whatever your search, contact us!"
+  "Trading": {
+    "h1": "Want to buy a collector's or competition vehicle? Sell it ? You are in the right place !",
+    "p1": "Thanks to our experience and our network, we also offer a purchase & sale service for competition vehicles, including historic F1 cars. We put all our expertise at your service by supporting you when searching for a vehicle.",
+    "p2": "Please note, we sell a lot of offmarket vehicles (F1, sport proto, etc.). Whatever your search, contact us!"
   },
-  "Payments" : {
-    "warning" : "We ask you to fill in the form below as accurately as possible, so that the equipment provided guarantees your safety and comfort throughout this incredible experience!"
+  "Payments": {
+    "warning": "We ask you to fill in the form below as accurately as possible, so that the equipment provided guarantees your safety and comfort throughout this incredible experience!"
   }
 }
