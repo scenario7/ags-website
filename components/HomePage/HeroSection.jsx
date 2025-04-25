@@ -37,7 +37,7 @@ const HeroSection = () => {
         <div className="flex flex-grow items-center justify-center">
           <div className="flex flex-col gap-5 md:gap-10 items-center justify-center text-center z-10">
             <h1
-              className={`text-4xl md:text-6xl text-white font-bold ${futuraLight.className} capitalize`}
+              className={`text-4xl md:text-6xl text-white md:font-bold ${futuraLight.className} capitalize`}
             >
               {t("title1")} <br /> {t("title2")}
             </h1>

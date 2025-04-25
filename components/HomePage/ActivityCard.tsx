@@ -31,7 +31,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ image, title, link, subtitl
       {/* Title */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
       <h2
-        className={`text-center text-white font-bold ${futuraLight.className} text-3xl`}
+        className={`text-center text-white md:font-bold ${futuraLight.className} text-3xl`}
       >
         {title}
       </h2>

@@ -29,7 +29,7 @@ const HeroTemplate: React.FC<HeroTemplateProps> = ({ image, title, subtitle }) =
       </div>
 
       {/* Text Content */}
-      <div className="absolute inset-y-0 left-0 w-full flex flex-col items-center justify-center pl-10 gap-5 z-10">
+      <div className="absolute inset-y-0 left-0 w-full flex flex-col items-center justify-center md:pl-10 gap-5 z-10">
         <h1
           className={`text-3xl md:text-6xl tracking-tighter text-[#ffffff] text-left ${futuraLight.className}`}
         >

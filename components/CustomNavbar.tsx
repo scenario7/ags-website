@@ -102,28 +102,28 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
   }, [auth]);
 
   useEffect(() => {
-  const allDetails = document.querySelectorAll("details");
+    const allDetails = document.querySelectorAll("details");
 
-  const handleToggle = (event: Event) => {
-    setTimeout(() => {
-      allDetails.forEach((detail) => {
-        if (detail !== event.target) {
-          detail.removeAttribute("open");
-        }
-      });
-    }, 10); // Small delay (~10ms) gives DOM time to apply the `open` state
-  };
+    const handleToggle = (event: Event) => {
+      setTimeout(() => {
+        allDetails.forEach((detail) => {
+          if (detail !== event.target) {
+            detail.removeAttribute("open");
+          }
+        });
+      }, 10); // Small delay (~10ms) gives DOM time to apply the `open` state
+    };
 
-  allDetails.forEach((detail) => {
-    detail.addEventListener("toggle", handleToggle);
-  });
-
-  return () => {
     allDetails.forEach((detail) => {
-      detail.removeEventListener("toggle", handleToggle);
+      detail.addEventListener("toggle", handleToggle);
     });
-  };
-}, []);
+
+    return () => {
+      allDetails.forEach((detail) => {
+        detail.removeEventListener("toggle", handleToggle);
+      });
+    };
+  }, []);
 
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
 
@@ -131,7 +131,7 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
     <div>
       {isSmallScreen ? (
         <div
-          className={`navbar py-5 px-10 ${isHomePage ? "bg-gradient-to-b from-[#1c477390] to-[#1c477350]" : "bg-transparent"} bg-opacity-80`}
+          className={`navbar py-5 px-3 ${isHomePage ? "bg-gradient-to-b from-[#1c477390] to-transparent" : "bg-transparent"} bg-opacity-80`}
         >
           <div className="navbar-start">
             <div className="dropdown">
@@ -182,37 +182,47 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
           </div>
           <div className="navbar-end">
             <div className="py-3 flex items-center gap-1 px-5">
-            <div className="dropdown dropdown-bottom">
-              <div tabIndex={0} role="button" className=" m-1">
-                <svg
-                  data-slot="icon"
-                  fill="none"
-                  strokeWidth="1.5"
-                  stroke={isHomePage ? "white" : "black"}
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  className="w-6"
+              <div className="dropdown dropdown-bottom">
+                <div tabIndex={0} role="button" className=" m-1">
+                  <svg
+                    data-slot="icon"
+                    fill="none"
+                    strokeWidth="1.5"
+                    stroke={isHomePage ? "white" : "black"}
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    className="w-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                    ></path>
+                  </svg>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu rounded-box z-[1] p-2 shadow bg-white"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
-                  ></path>
-                </svg>
+                  <li>
+                    <button
+                      onClick={() => changeLocale("en")}
+                      className={`${locale === "en" ? "bg-blue-900 text-white" : "bg-white text-black"}`}
+                    >
+                      English
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      onClick={() => changeLocale("fr")}
+                      className={`${locale === "fr" ? "bg-blue-900 text-white" : "bg-white text-black"}`}
+                    >
+                      French
+                    </button>
+                  </li>
+                </ul>
               </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu rounded-box z-[1] p-2 shadow bg-white"
-              >
-                <li>
-                  <button onClick={() => changeLocale("en")} className={`${locale === 'en' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>English</button>
-                </li>
-                <li>
-                  <button onClick={() => changeLocale("fr")} className={`${locale === 'fr' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>French</button>
-                </li>
-              </ul>
-            </div>
             </div>
             {user ? (
               <div className="dropdown dropdown-end">
@@ -247,9 +257,22 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
             ) : (
               <button
                 onClick={handleSignIn}
-                className={`btn btn-sm bg-blue-900 px-4 py-2 text-white rounded-md ${futuraMedium.className}`}
+                className="text-sm font-semibold tracking-tight sm:text-base bg-blue-800 hover:bg-blue-900 text-white p-2 rounded-full transition-colors duration-200 whitespace-nowrap"
               >
-                Sign In
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-6 rotate-180"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75"
+                  />
+                </svg>
               </button>
             )}
           </div>
@@ -336,10 +359,14 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                       <a href="/events">France Historic GP</a>
                     </li>
                     <li>
-                      <a href="https://im4cup.com/" target="_blank">iM4</a>
+                      <a href="https://im4cup.com/" target="_blank">
+                        iM4
+                      </a>
                     </li>
                     <li>
-                      <a href="https://www.dukartalaf1.com/" target="_blank">Du Kart à la F1</a>
+                      <a href="https://www.dukartalaf1.com/" target="_blank">
+                        Du Kart à la F1
+                      </a>
                     </li>
                   </ul>
                 </details>
@@ -390,10 +417,20 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                 className="dropdown-content menu rounded-box z-[1] p-2 shadow bg-white"
               >
                 <li>
-                  <button onClick={() => changeLocale("en")} className={`${locale === 'en' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>English</button>
+                  <button
+                    onClick={() => changeLocale("en")}
+                    className={`${locale === "en" ? "bg-blue-900 text-white" : "bg-white text-black"}`}
+                  >
+                    English
+                  </button>
                 </li>
                 <li>
-                  <button onClick={() => changeLocale("fr")} className={`${locale === 'fr' ? 'bg-blue-900 text-white' : 'bg-white text-black'}`}>French</button>
+                  <button
+                    onClick={() => changeLocale("fr")}
+                    className={`${locale === "fr" ? "bg-blue-900 text-white" : "bg-white text-black"}`}
+                  >
+                    French
+                  </button>
                 </li>
               </ul>
             </div>
@@ -406,7 +443,9 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ isHomePage }) => {
                 >
                   <div className="w-5 md:w-10 rounded-full bg-white p-3">
                     <img
-                      src={"https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png"}
+                      src={
+                        "https://static-00.iconduck.com/assets.00/user-icon-2046x2048-9pwm22pp.png"
+                      }
                       alt="User Avatar"
                     />
                   </div>
