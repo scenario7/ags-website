@@ -45,6 +45,7 @@ export const getCheckoutUrl = async (
   // Create a one-time checkout session with multiple line items
   const docRef = await addDoc(checkoutSessionRef, {
     line_items: lineItems,
+    allow_promotion_codes : true,
     success_url: window.location.origin + "/success",
     cancel_url: window.location.origin + "/cancel",
     mode: "payment",
