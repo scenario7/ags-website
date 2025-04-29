@@ -100,8 +100,8 @@ export default function SectionThree() {
         <motion.div
           ref={carouselRef}
           className="flex gap-5 md:gap-10"
-          animate={{ x: [0, -width, 0] }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          animate={{ x: [0, -width] }}
+          transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
         >
           {reviews.concat(reviews).map((review, index) => (
             <div
