@@ -103,7 +103,7 @@ export const experiences = [
         price: 1650,
         priceID: "price_1QmxJxP0Ikxz9uNccNhKydfc",
         laps: [
-          { quantity: "2x8", car: "F4" },
+          { quantity: "3x8", car: "F4" },
         ],
         addons: addons,
       },

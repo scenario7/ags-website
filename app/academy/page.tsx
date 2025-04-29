@@ -112,7 +112,10 @@ const Page = () => {
                     {t("reservations")}
                   </button>
                 </a>
-                <a>
+                <a
+                  download
+                  href="https://firebasestorage.googleapis.com/v0/b/website-d40d6.firebasestorage.app/o/AGS%20Driver%20Academy%202025%20-%20EN%20(1).pdf?alt=media&token=1d6695b4-7649-44b7-9518-ef06448b4df5"
+                >
                   <button
                     className={`text-[#1B2C99] px-5 py-2 bg-white rounded-lg`}
                   >
