@@ -38,8 +38,7 @@ const Page = () => {
     setResult("Sending...");
     const data = new FormData(e.currentTarget);
 
-    data.append("access_key", "f81d6703-1086-4a46-ab4f-1e1f23b3210f");
-
+    data.append("access_key", "645f820b-8717-445b-aa22-e3ac8c688be7");
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: data,
